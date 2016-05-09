@@ -1,0 +1,30 @@
+{
+	"general": {
+		"use": "",
+	},
+
+	"graph": {
+		"create": "",
+		"create_graph_table": "",
+		"create_vertex_table": "",
+		"create_edge_table": "",
+		"delete": "",
+		"select": "",
+		"update": "",
+		"clear": ""
+	},
+	"vertex": {
+		"select": "",
+		"insert": "",
+		"update": "",
+		"delete": "",
+		"clear": ""
+	},
+	"edge": {
+		"select": "",
+		"insert": "",
+		"update": "",
+		"delete": "",
+		"clear": ""
+	}
+}

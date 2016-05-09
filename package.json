@@ -1,0 +1,53 @@
+{
+  "name": "thruster",
+  "version": "0.0.0",
+  "description": "The Dynamic/Static Graph Distributed Database",
+  "homepage": "http://www.thrusterdb.com",
+  "author": {
+    "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama",
+    "email": "victor.uceta@gmail.com",
+    "url": "https://github.com/ThrusterDB"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "database",
+    "graph",
+    "distributed",
+    "dynamic",
+    "compute",
+    "data mining"
+  ],
+  "devDependencies": {
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.13.0",
+    "babel-eslint": "^4.1.8",
+    "eslint-plugin-babel": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-babel": "^5.1.0",
+    "del": "^2.0.2",
+    "babel-core": "^5.5.0",
+    "isparta": "^3.0.3"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "git@github.com:ThrusterDB/thruster.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "private": true
+}
