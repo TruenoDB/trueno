@@ -1,0 +1,41 @@
+{
+
+	"general": {
+		"use": "./query_templates/general_use.qryt"
+	},
+
+	"graph": {
+		"create": "./query_templates/graph_create.qryt",
+		"create_graph_table": "./query_templates/graph_create_graph_table.qryt",
+		"create_vertex_table": "./query_templates/graph_create_vertex_table.qryt",
+		"create_edge_table": "./query_templates/graph_create_edge_table.qryt",
+
+    "import": "./query_templates/graph_import.qryt",
+
+    "clear":  "",
+    "select": "",
+    "delete": "./query_templates/graph_delete.qryt",
+		"update": ""
+	},
+
+	"vertex": {
+    "clear": "",
+		"select": "",
+		"insert": "",
+		"update": "",
+		"delete": "",
+
+    "list":      "./query_templates/vertex_list_all.qryt",
+    "neighbors": "./query_templates/vertex_neighbors.qryt"
+	},
+
+	"edge": {
+    "clear": "",
+    "select": "",
+    "insert": "",
+    "update": "",
+    "delete": ""
+	}
+
+}
+

@@ -1,0 +1,2 @@
+CREATE KEYSPACE <%= name %>
+WITH replication = {'class': '<%= strategy %>', 'replication_factor' : <%= replicationFactor %>};
