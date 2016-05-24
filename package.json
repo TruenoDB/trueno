@@ -1,12 +1,12 @@
 {
-  "name": "thruster",
+  "name": "trueno",
   "version": "0.0.0",
   "description": "The Dynamic/Static Graph Distributed Database",
-  "homepage": "http://www.thrusterdb.com",
+  "homepage": "http://www.trueno.io",
   "author": {
     "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama",
     "email": "victor.uceta@gmail.com",
-    "url": "https://github.com/ThrusterDB"
+    "url": "https://github.com/TruenoDB"
   },
   "files": [
     "dist"
@@ -44,7 +44,7 @@
       "mocha": true
     }
   },
-  "repository": "git@github.com:ThrusterDB/thruster.git",
+  "repository": "git@github.com:TruenoDB/trueno.git",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
