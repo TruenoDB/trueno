@@ -30,7 +30,7 @@ class RPC_client {
 
   }
 
-  expose(procedureName, procedureFunction){
+  expose(procedureName, procedureFunction) {
     /* Insert the procedure in the collection */
     this._procudures.push(
       {
@@ -39,26 +39,23 @@ class RPC_client {
       });
   }
 
-  call(event) {
+  call() {
 
     /* This instance object reference */
-    let self = this;
+    var self = this;
 
     /* Extracting arguments */
-    let upperArgs = arguments;
+    var upperArgs = arguments;
 
     /* Promise to be returned */
     return new Promise((resolve, reject) => {
-      /* Emit event on this socket */
-      self._socket.emit.apply(upperArgs);
 
-      let listener = () => {
-        resolve.apply(null, arguments);
-      };
+      /* Emit event on this socket */
+      self._socket.emit.apply(self._socket, upperArgs);
 
       /* Await for response */
-      self._socket.once('_'+event, () => {
-          resolve.apply(null, arguments);
+      self._socket.once('_'+upperArgs[0]+'_response', (args) => {
+        resolve(args);
       });
     });
   }
@@ -66,27 +63,23 @@ class RPC_client {
   /**
    * Listen for connection at the assigned port or 8000 by default.
    */
-  connect() {
+  connect(connCallback, discCallback) {
 
     /* This instance object reference */
-    let self = this;
+    var self = this;
 
     /* Listening for connections */
-    this._socket = io(this._host+':'+this._port);
+    this._socket = io.connect(this._host + ':' + this._port, {reconnect: true});
 
-    return new Promise((resolve, reject) => {
-      /* Set connection event handler */
-      self._socket.on('connect', () => {
+    /* Set connection event handler */
+    this._socket.on('connect', () => {
 
-        /* Adding RPM functions */
-        self._procudures.forEach((proc) => {
-          /* Adding listener to each call */
-          self._socket.on(proc.name, proc.fn);
-        });
-        /* resolving promise */
-        resolve();
-      });
+      /* Adding RPM functions */
+
+      /* resolving promise */
+      connCallback();
     });
+
   }
 
 }

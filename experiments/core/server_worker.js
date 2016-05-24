@@ -6,23 +6,47 @@
  * Description:
  *
  */
-//let sticky = require('socketio-sticky-session');
-//
-sticky(() => {
+let RPC = require('../../lib/core/communication/rpc');
 
-  let RPC = require('../../lib/core/communication/rpc');
-  /* Get new server instance */
-  let rpc = new RPC();
+/* Get new server instance */
+let rpc = new RPC(8000);
 
-  /* Start listening */
-  rpc.listen().then((socket)=>{
+/* Exposing methods */
+rpc.expose('my_method_1',(reply, args) => {
 
-    console.log(socket.id + 'have connect to worker ');
+  console.log("params: " + args);
 
-  });
+  /* returning */
+  reply({answer:'hello from my_method_1!'});
+});
 
-  return rpc.server;
+/* Exposing methods */
+rpc.expose('my_method_2',(reply, args) => {
 
-}).listen(8000, () => {
-  console.log('server started on 8000 port');
+  console.log("params: " + args);
+
+  /* returning */
+  reply({answer:'NO no no from my_method_2!'});
+});
+
+/* Exposing methods */
+rpc.expose('my_method_3',(reply, args) => {
+
+  console.log("params: " + args);
+
+  /* returning */
+  reply({answer:'Again? from my_method_3!'});
+
+});
+
+
+/* Start listening */
+rpc.listen((socket)=>{
+
+  console.log(socket.id + ' have connect to worker ');
+
+}, (socket)=>{
+
+  console.log(socket.id  + ' disconnected!');
+
 });
