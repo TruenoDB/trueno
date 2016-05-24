@@ -6,7 +6,7 @@
  * Description:
  *
  */
-var RPC = require('../core/rpc_client');
+let RPC = require('../../lib/core/communication/rpc');
 
 
 /* New database rpc object */
@@ -37,6 +37,6 @@ rpc.connect((socket)=>{
 
 }, (socket)=>{
 
-  console.log('client disconnected!');
+  console.log('You disconnected! ' + socket.id);
 
 });

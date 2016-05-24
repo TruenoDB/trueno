@@ -9,12 +9,12 @@
 let RPC = require('../../lib/core/communication/rpc');
 
 /* Get new server instance */
-let rpc = new RPC(8000);
+let rpc = new RPC({port:8000, host: 'http://localhost'});
 
 /* Exposing methods */
 rpc.expose('my_method_1',(reply, args) => {
 
-  console.log("params: " + args);
+  console.log("params: " + JSON.stringify(args));
 
   /* returning */
   reply({answer:'hello from my_method_1!'});
@@ -23,7 +23,7 @@ rpc.expose('my_method_1',(reply, args) => {
 /* Exposing methods */
 rpc.expose('my_method_2',(reply, args) => {
 
-  console.log("params: " + args);
+  console.log("params: " + JSON.stringify(args));
 
   /* returning */
   reply({answer:'NO no no from my_method_2!'});
@@ -32,7 +32,7 @@ rpc.expose('my_method_2',(reply, args) => {
 /* Exposing methods */
 rpc.expose('my_method_3',(reply, args) => {
 
-  console.log("params: " + args);
+  console.log("params: " + JSON.stringify(args));
 
   /* returning */
   reply({answer:'Again? from my_method_3!'});
@@ -48,5 +48,9 @@ rpc.listen((socket)=>{
 }, (socket)=>{
 
   console.log(socket.id  + ' disconnected!');
+
+},(socket)=>{
+
+  console.log('client disconnected! ');
 
 });
