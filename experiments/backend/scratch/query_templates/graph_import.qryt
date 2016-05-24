@@ -1,0 +1,1 @@
+COPY graph FROM <%= filename %>;

@@ -1,0 +1,4 @@
+CREATE TABLE graph(
+	vid   int PRIMARY KEY,
+	edges list<int>
+);

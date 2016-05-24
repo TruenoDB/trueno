@@ -1,0 +1,8 @@
+CREATE TABLE vertices(
+	id int	PRIMARY KEY,
+	partition int,
+	computed map<text, frozen<map<text,frozen<tuple<text, text>>>>>,
+	attributes map<text, frozen<tuple<text, text>>>,
+	meta map<text, frozen<tuple<text, text>>>
+);
+
