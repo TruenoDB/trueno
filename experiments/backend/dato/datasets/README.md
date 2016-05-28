@@ -25,6 +25,17 @@ sort -u -k1 -n test > test-2
 Dump data to import to C* can be generated using the python parsers, and then import using the `COPY` command from cqlsh. 
 
 
+## Wikipedia Talk network
+|File | Source |
+| --- | --- |
+| [`p2p-Gnutella08.txt`](https://snap.stanford.edu/data/p2p-Gnutella08.txt.gz) | [Stanford Network Analysis Project](https://snap.stanford.edu/data/p2p-Gnutella08.html) |
+
+Stats:
+
+ * Nodes: 	6301
+ * Edges: 	20777
+
+
 ## Graph of Gods
 |File | Source |
 | --- | --- |
