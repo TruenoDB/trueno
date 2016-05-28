@@ -25,6 +25,25 @@ sort -u -k1 -n test > test-2
 Dump data to import to C* can be generated using the python parsers, and then import using the `COPY` command from cqlsh. 
 
 
+## Gnutella peer-to-peer network, August 8 2002
+|File | Source |
+| --- | --- |
+| [`p2p-Gnutella08.txt`](https://snap.stanford.edu/data/p2p-Gnutella08.txt.gz) | [Stanford Network Analysis Project](https://snap.stanford.edu/data/p2p-Gnutella08.html) |
+
+Stats:
+
+ * Nodes: 	6301
+ * Edges: 	20777
+
+Notes:
+
+To import data: (1) uncompress `p2p-Gnutella08.zip`; (2) create database structure using scripts on `dato/creo.cql`; (3) load data in cassandra using `COPY` command (from cqlsh):
+
+```
+COPY vertices from '/path/to/p2p-vertices.txt'
+COPY edges from '/path/to/p2p-edges.txt'
+```
+
 ## Graph of Gods
 |File | Source |
 | --- | --- |

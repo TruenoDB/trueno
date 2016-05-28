@@ -88,9 +88,9 @@ def main(argv):
 					    'comp_map'  : '',
 					    'metadata'  : gen_random('metadata', meta),
 					    'partition' : part}
+					    
 
 			print tup
-			#print node_from + ',' + node_to + ',\"{' + gen_random('attribute', attr) + '}\",\"{}\",\"{' + gen_random('metadata', meta) + '}\"'
 
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ def gen_random (t, n):
 		if not first:
 			line = line + ', '
 			
-		line = line + "'%(a)s%(b)d': ('text', '%(c)s')" % {'a': t, 'b': x, 'c': fake.sentence(2)}
+		line  = line + "'%(a)s%(b)d': ('text', '%(c)s')" % {'a': t, 'b': x, 'c': fake.sentence(2)}
 		first = False
 	
 	return line
@@ -70,8 +70,15 @@ def main(argv):
 
 			attr = randint(0,9)
 			meta = randint(0,9)
+			part = 1
 
-			print vertex + ',1,\"{' + gen_random('attribute', attr) + '}\",\"{}\",\"{' + gen_random('metadata', meta) + '}\"'
+			tup = "%(vertex)s,%(partition)s,\"{%(attr_map)s}\",\"{%(comp_map)s}\",\"{%(metadata)s}\"" % {'vertex' : vertex, 
+					    'partition' : part,
+					    'attr_map'  : gen_random('attribute', attr), 
+					    'comp_map'  : '',
+					    'metadata'  : gen_random('metadata', meta)}
+
+			print tup
 
 
 if __name__ == "__main__":
