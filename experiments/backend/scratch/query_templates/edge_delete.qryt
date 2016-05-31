@@ -1,0 +1,1 @@
+DELETE <%= keyspace %>.edges WHERE fromv = <%= fromid %> AND tov = <%= toid %>;

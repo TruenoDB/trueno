@@ -83,9 +83,9 @@ class QueryBuilder {
     this._vertex = {
       //clear:  _.template(fs.readFileSync(templateIndex.vertex.clear)),
       //select: _.template(fs.readFileSync(templateIndex.vertex.select)),
-      //insert: _.template(fs.readFileSync(templateIndex.vertex.insert)),
+      insert: _.template(fs.readFileSync(templateIndex.vertex.insert)),
       //update: _.template(fs.readFileSync(templateIndex.vertex.update)),
-      //delete: _.template(fs.readFileSync(templateIndex.vertex.delete)),
+      delete: _.template(fs.readFileSync(templateIndex.vertex.delete)),
 
       "list": _.template(fs.readFileSync(templateIndex.vertex.list)),
       "neighbors": _.template(fs.readFileSync(templateIndex.vertex.neighbors))
@@ -95,9 +95,9 @@ class QueryBuilder {
     this._edge = {
       //clear:  _.template(fs.readFileSync(templateIndex.edge.clear)),
       //select: _.template(fs.readFileSync(templateIndex.edge.select)),
-      //insert: _.template(fs.readFileSync(templateIndex.edge.insert)),
+      insert: _.template(fs.readFileSync(templateIndex.edge.insert)),
       //update: _.template(fs.readFileSync(templateIndex.edge.update)),
-      //delete: _.template(fs.readFileSync(templateIndex.edge.delete))
+      delete: _.template(fs.readFileSync(templateIndex.edge.delete))
     };
 
   };
