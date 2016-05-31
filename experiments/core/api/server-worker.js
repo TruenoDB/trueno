@@ -6,7 +6,7 @@
  * Description:
  *
  */
-let RPC = require('../../lib/core/communication/rpc');
+let RPC = require('../../../lib/core/communication/rpc');
 
 /* Get new server instance */
 let rpc = new RPC({port:8000, host: 'http://localhost'});
