@@ -1,4 +1,6 @@
 CREATE TABLE graph(
-	vid   int PRIMARY KEY,
-	edges list<int>
+	id         int PRIMARY KEY,
+  computed   map <text, frozen<map  <text, frozen <tuple<text, text>>>>>,
+  attributes map <text, frozen<tuple<text, text>>>,
+  meta       map <text, frozen<tuple<text, text>>>
 );

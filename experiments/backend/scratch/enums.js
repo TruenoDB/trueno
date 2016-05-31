@@ -2,10 +2,13 @@
 
 /**
  * @author ebarsallo
- * This module decription
+ * Basic enumerations
  * @module path/moduleFileName
  * @see module:path/referencedModuleName
  */
+
+// FIXME
+// Preliminary version
 
 /** Description of the class */
 function Enums()  {
@@ -14,7 +17,7 @@ function Enums()  {
     GENERAL: '_general',
     GRAPH:  '_graph',
     VERTEX: '_vertex',
-    sEDGE:   '_edge'
+    EDGE:   '_edge'
   };
 
   this.Operations = {
