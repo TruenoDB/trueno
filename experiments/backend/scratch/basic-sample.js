@@ -12,7 +12,7 @@ const Promise = require('bluebird');
 const fs = require('fs');
 const connection = require('./cassandraConnection');
 const queryBuilder = require('./queryBuilder');
-const Enums = require('./Enums');
+const Enums = require('./enums');
 
 /* command line arguments */
 var args = process.argv.slice(2);
@@ -130,6 +130,37 @@ conn.connect().then(function() {
       //  console.log(e);
       //});
 
+
+      break;
+
+    case 'add' :
+
+      /* change to specified keyspace, and return promise */
+      conn.execute(q.build(Components.GENERAL, Operations.USE, {name:graphParams.name})).then( result =>{
+
+        /* execute command to retrieve nodes and return promise */
+        return conn.execute(q.build(Components.VERTEX, Operations.LIST))
+
+      }).then( result => {
+
+        let vertices = result.rows;
+
+        console.log('First 10 vertices');
+        for (var i = 0; i < vertices.length; i++) {
+          if (i >= 10) break;
+          console.log(vertices[i]);
+        }
+
+        /* try to disconnect */
+        return conn.disconnect();
+
+      }).then( result => {
+
+
+      }).catch( e => {
+
+        console.log(e);
+      });
 
       break;
 

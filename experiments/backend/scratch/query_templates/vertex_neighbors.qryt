@@ -1,2 +1,2 @@
 SELECT edges FROM graph
- WHERE vid = <%= node %>;
+ WHERE fromv = <%= node %>;

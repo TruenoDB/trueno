@@ -1,1 +1,1 @@
-SELECT vid FROM graph;
+SELECT id FROM vertex;

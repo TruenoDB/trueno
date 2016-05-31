@@ -21,9 +21,9 @@
 	"vertex": {
     "clear": "",
 		"select": "",
-		"insert": "",
+		"insert": "./query_templates/vertex_add.qryt",
 		"update": "",
-		"delete": "",
+		"delete": "./query_templates/vertex_delete.qryt",
 
     "list":      "./query_templates/vertex_list_all.qryt",
     "neighbors": "./query_templates/vertex_neighbors.qryt"
@@ -32,9 +32,9 @@
 	"edge": {
     "clear": "",
     "select": "",
-    "insert": "",
+    "insert": "./query_templates/edge_add.qryt",
     "update": "",
-    "delete": ""
+    "delete": "./query_templates/edge_delete.qryt"
 	}
 
 }
