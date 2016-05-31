@@ -35,9 +35,11 @@ Stats:
  * Nodes: 	6301
  * Edges: 	20777
 
-Notes:
+Notes (importing data):
 
-To import data: (1) uncompress `p2p-Gnutella08.zip`; (2) create database structure using scripts on `dato/creo.cql`; (3) load data in cassandra using `COPY` command (from cqlsh):
+ * Uncompress `p2p-Gnutella08.zip`, which contain 2 files: `p2p-vertices.txt` and `p2p-edges.txt`
+ * Create database structure, on Cassandra, using scripts on `dato/creo.cql`.
+ * Load data in Cassandra using `COPY` command (from cqlsh):
 
 ```
 COPY vertices from '/path/to/p2p-vertices.txt'
