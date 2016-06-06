@@ -1,0 +1,46 @@
+<md-content class="md-padding" ng-controller="monitorCtrl">
+    <!-- Memory Card -->
+    <md-card class="meter-card">
+        <md-card-content>
+            <h2 class="md-title">Memory</h2>
+            <div id="memory">
+                <canvas class="chart-base" chart-type="memmory.type" data="memmory.data"
+                        labels="memmory.labels" legend="true"></canvas>
+                </canvas>
+                <span>Used: {{usedSize}}MB ({{used}}%)</span><br>
+                <span>Free: {{freeSize}}MB  ({{free}}%)</span><br>
+            </div>
+        </md-card-content>
+    </md-card>
+    <!-- CPU Card -->
+    <md-card class="meter-card cpu">
+        <md-card-content>
+            <h2 class="md-title">CPU</h2>
+
+            <div id="cpu">
+                <canvas class="chart chart-line" data="cpu.data" options="cpu.options"
+                        labels="cpu.labels" legend="true" series="cpu.series"
+                        click="onClick">
+                </canvas>
+            </div>
+        </md-card-content>
+    </md-card>
+    <!-- Metrics Card -->
+    <md-card class="meter-card left">
+        <md-card-content>
+            <h2 class="md-title">Metrics</h2>
+
+            <div id="metrics" class="left">
+                <span>CPU Model:      {{cpuModel}}</span><br>
+                <span>CPU Cores:      {{cpuModel}}</span><br>
+                <span>CPU Frequency:  {{cpuModel}}</span><br>
+                <span>Memory:         {{totalMemory}}</span><br>
+                <span>Uptime:         {{uptime}}</span><br>
+                <span>Storage:        {{freeStrg}}GB free of {{totalStrg}}GB</span><br>
+                <span>OS:             {{OS}}</span><br>
+                <span>Architecture:   {{arch}}bits</span><br>
+            </div>
+        </md-card-content>
+    </md-card>
+
+</md-content>

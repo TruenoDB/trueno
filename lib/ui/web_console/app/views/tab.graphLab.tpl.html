@@ -1,0 +1,17 @@
+<div layout="row" layout-wrap>
+    <div flex="70" style="min-height: 6vmin;">
+        <div ui-ace="{
+                useWrapMode : false,
+                showGutter: true,
+                theme:'xcode',
+                mode: 'javascript',
+                firstLineNumber: 1,
+                onLoad: aceLoaded,
+                onChange: aceChanged
+            }"
+        ></div>
+    </div>
+    <div flex="30" style="background: greenyellow">[flex=33]</div>
+    <div flex="70" style="background: palevioletred;min-height: 80vmin;">[flex=66]</div>
+    <div flex="30" style="background: mediumpurple">[flex=33]</div>
+</div>

@@ -5,7 +5,7 @@
     <title>Web Console</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="images/console_logo_small.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -28,93 +28,18 @@
 <!-- CONTENT BEGIN -->
 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true"
             style=" height:100%;float:left;margin-right: 1px;">
-    <md-toolbar class="md-theme-indigo">
-        <h3 class="md-toolbar-tools">Trueno Web Console</h3>
-    </md-toolbar>
-    <md-content class="md-padding status-card">
-        <!--Status Card-->
-        <h2 class="md-title">Status</h2>
-        <div id="status" class="left" ng-controller="statusCtrl">
-            <span>Cluster: <b>{{instanceCount}} Machines</b></span><br>
-            <span>Graphs:  <b>{{graphsCount}}</b></span><br>
-            <span>Vertices:  <b>{{vertexCount}}</b></span><br>
-            <span>Edges:  <b>{{edgeCount}}</b></span><br>
-            <span>Connections:   <b>{{connectionCount}}</b></span><br>
-            <span>CPU cores:      <b>{{coresCount}} cores</b></span><br>
-            <span>CPU Freq:      <b>{{freqCount/1000}} Ghz</b></span><br>
-            <span>Memory:      <b>{{memoryCount/1073741824}} GB</b></span><br>
-            <span>Storage:     <b>{{storageCount}} GB</b></span><br>
-            <span>Jobs:          <b>{{jobCount}}</b></span><br>
-        </div>
-    </md-content>
+    <ng-include src="'views/sidebar.left.tpl.html'"></ng-include>
 </md-sidenav>
 <md-content>
     <md-tabs md-dynamic-height flex md-selected="selectedIndex">
         <md-tab label="Monitor">
-            <md-content class="md-padding">
-
-                <!-- Memory Card -->
-                <md-card class="meter-card">
-                    <md-card-content>
-                        <h2 class="md-title">Memory</h2>
-                        <div id="memory" ng-controller="memoryCtrl">
-                            <canvas class="chart-base" chart-type="type" data="data"
-                                    labels="labels" legend="true"></canvas>
-                            </canvas>
-                            <span>Used: {{usedSize}}MB ({{used}}%)</span><br>
-                            <span>Free: {{freeSize}}MB  ({{free}}%)</span><br>
-                        </div>
-                    </md-card-content>
-                </md-card>
-                <!-- CPU Card -->
-                <md-card class="meter-card cpu">
-                    <md-card-content>
-                        <h2 class="md-title">CPU</h2>
-
-                        <div id="cpu" ng-controller="cpuCtrl">
-                            <canvas class="chart chart-line" data="data" options="options"
-                                    labels="labels" legend="true" series="series"
-                                    click="onClick">
-                            </canvas>
-                        </div>
-                    </md-card-content>
-                </md-card>
-                <!-- Metrics Card -->
-                <md-card class="meter-card left">
-                    <md-card-content>
-                        <h2 class="md-title">Metrics</h2>
-
-                        <div id="metrics" class="left" ng-controller="cpuCtrl">
-                            <span>CPU Model:      {{cpuModel}}</span><br>
-                            <span>CPU Cores:      {{cpuModel}}</span><br>
-                            <span>CPU Frequency:  {{cpuModel}}</span><br>
-                            <span>Memory:         {{totalMemory}}</span><br>
-                            <span>Uptime:         {{uptime}}</span><br>
-                            <span>Storage:        {{freeStrg}}GB free of {{totalStrg}}GB</span><br>
-                            <span>OS:             {{OS}}</span><br>
-                            <span>Architecture:   {{arch}}bits</span><br>
-                        </div>
-                    </md-card-content>
-                </md-card>
-
-            </md-content>
+            <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
         </md-tab>
         <md-tab label="Graph Lab">
-            <md-content>
-                <md-toolbar>
-
-                </md-toolbar>
-                <br>
-
-                <div id="graphVis"></div>
-            </md-content>
+            <ng-include src="'views/tab.graphLab.tpl.html'" ></ng-include>
         </md-tab>
         <md-tab label="Administration">
-            <md-content>
-                <md-toolbar>
-                </md-toolbar>
-                <br>
-            </md-content>
+            <ng-include src="'views/tab.admin.tpl.html'"></ng-include>
         </md-tab>
     </md-tabs>
 </md-content>
@@ -125,14 +50,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
-<!--<script src="bower_components/angular/angular.js"></script>-->
+<script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-ace/ui-ace.js"></script>
 <script src="bower_components/Chart.js/Chart.js"></script>
 <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
-<!--<script src="bower_components/angular-animate/angular-animate.min.js"></script>-->
-<!--<script src="bower_components/angular-aria/angular-aria.min.js"></script>-->
-<!--<script src="bower_components/angular-material/angular-material.min.js"></script>-->
 <script src="bower_components/vis/dist/vis.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
