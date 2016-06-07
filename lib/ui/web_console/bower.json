@@ -5,6 +5,9 @@
     "angular": "~1.4.0",
     "angular-chart.js": "~0.7.1",
     "angular-material": "~0.11.0",
-    "vis": "~4.8.2"
+    "angular-ui-ace": "^0.2.3"
+  },
+  "resolutions": {
+    "angular": "1.5.6"
   }
 }

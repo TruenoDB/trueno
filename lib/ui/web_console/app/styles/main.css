@@ -75,4 +75,11 @@ div.left {
   padding: 0;
   margin: 0; }
 
-.ace_editor { min-height: 5vmin; }
+.toolbar{
+    border: dotted 1px darkgray;
+    padding: 0.5vm;
+}
+
+/* Ace editor teaks */
+.ace_editor { min-height: 4vmin; }
+.ace_gutter-cell {background:#FFAB40}
