@@ -1,4 +1,4 @@
-<md-content ng-controller="grapLabCtrl as ctrl">
+<md-content class="md-padding tabContent" ng-controller="grapLabCtrl as ctrl">
 
     <div class="toolbar">
         <md-select placeholder="Select a Graph" ng-model="userGraph" ng-change="selectChanged()">
@@ -8,7 +8,7 @@
         </md-select>
     </div>
     <div layout="row" layout-wrap>
-        <div flex="70" style="min-height: 4.3vmin;">
+        <div flex="70" class="graphLabPanel" style="min-height: 4.3vmin;">
             <div ui-ace="{
                 useWrapMode : false,
                 showGutter: true,
@@ -26,8 +26,8 @@
             }"
             ></div>
         </div>
-        <div flex="30" style="border: darkgray 1px dashed"></div>
-        <div flex="70" style="border: darkgray 1px dashed;min-height: 80vmin;"></div>
-        <div flex="30" style="border: darkgray 1px dashed"></div>
+        <div flex="30" class="graphLabPanel">controls</div>
+        <div flex="70" class="graphLabPanel" style="background: white; min-height: 80vmin;">visualization</div>
+        <div flex="30" class="graphLabPanel">history</div>
     </div>
 </md-content>
