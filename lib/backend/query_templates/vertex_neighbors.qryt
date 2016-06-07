@@ -1,0 +1,2 @@
+SELECT edges FROM graph
+ WHERE fromv = <%= node %>;

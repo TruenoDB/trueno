@@ -1,0 +1,20 @@
+{
+  "development": true,
+  "debug": true,
+  "version": "0.0.10",
+
+  "sparkJobServer": {
+    "name": "sparkJobServer",
+    "defaultHost": "0.0.0.0",
+    "defaultSparkJobServer": "spark.maverick.com",
+    "defaultWorkers": 1,
+    "defaultBrokers": 1,
+    "defaultPort": 8090
+  },
+
+  "algorithmsPublishedJob": "algorithms",
+  "schema": "gnutella",
+  "pageRankClassPath": "spark.jobserver.PR",
+  "connectedComponentsClassPath": "spark.jobserver.ConnectedComponents",
+  "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents"
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Node.js Spark Job Client</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+
+    <body>
+
+    <!-- script references -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/browserClient2.js"></script>
+    <script src="js/main.js"></script>
+
+    <div class="container">
+    <h1>Node.js Spark Job Client</h1>
+    <p class="lead">We request spark-jobserver which provides a RESTful interface for submitting and managing Apache Spark jobs</p>
+
+
+    <!-- Options - Bootstrap 3 Buttons
+    ================================================== -->
+    <section id="buttons">
+      <!--<div class="page-header">
+        <!--<h1>Spark-GraphX Algorithms</h1>
+        <p class="lead">Implementation of most common Graph Algorithms</p>
+      </div>-->
+
+      <div class="page-header">
+        <h2>Spark-GraphX Algorithms</h2>
+          <p class="lead">Implementation of most common Graph Algorithms</p>
+      </div>
+      <ul class="the-buttons clearfix">
+          <li><a id='btn_pagerank' class="btn btn-primary" href="#">PageRank</a></li>
+          <li><a id='btn_connectedcomponents' class="btn btn-success" href="#">Connected Components</a></li>
+          <li><a id='btn_trianglecounting' class="btn btn-info" href="#">Triangle Counting</a></li>
+          <li><a id='btn_shortestpath' class="btn btn-warning" href="#">Shortest Path</a></li>
+          <li><a id='btn_wordcount' class="btn btn-danger" href="#">Word Count</a></li>
+      </ul>
+    </section>
+
+
+    <!-- Tables - Results
+    ================================================== -->
+    <section id="tables">
+      <div class="page-header">
+        <h1>Spark Jobs</h1>
+      </div>
+
+      <table id='tbl_jobs' class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+
+        <div class="container">
+            <h2>Spark Job Progress</h2>
+            <div class="progress">
+                <div id='div_pg' class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                    <!--1%-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Page Rank Results</h1>
+        </div>
+
+        <table id='tbl_pr' class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Vertex ID</th>
+                <th>Rank</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+    </section>
+
+    </div>
+	 
+
+	</body>
+</html>
