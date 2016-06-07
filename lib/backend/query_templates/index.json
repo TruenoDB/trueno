@@ -1,30 +1,41 @@
 {
+
 	"general": {
-		"use": "",
+		"use": "./query_templates/general_use.qryt"
 	},
 
 	"graph": {
-		"create": "",
-		"create_graph_table": "",
-		"create_vertex_table": "",
-		"create_edge_table": "",
-		"delete": "",
-		"select": "",
-		"update": "",
-		"clear": ""
+		"create": "./query_templates/graph_create.qryt",
+		"create_graph_table": "./query_templates/graph_create_graph_table.qryt",
+		"create_vertex_table": "./query_templates/graph_create_vertex_table.qryt",
+		"create_edge_table": "./query_templates/graph_create_edge_table.qryt",
+
+    "import": "./query_templates/graph_import.qryt",
+
+    "clear":  "",
+    "select": "",
+    "delete": "./query_templates/graph_delete.qryt",
+		"update": ""
 	},
+
 	"vertex": {
+    "clear": "",
 		"select": "",
-		"insert": "",
+		"insert": "./query_templates/vertex_add.qryt",
 		"update": "",
-		"delete": "",
-		"clear": ""
+		"delete": "./query_templates/vertex_delete.qryt",
+
+    "list":      "./query_templates/vertex_list_all.qryt",
+    "neighbors": "./query_templates/vertex_neighbors.qryt"
 	},
+
 	"edge": {
-		"select": "",
-		"insert": "",
-		"update": "",
-		"delete": "",
-		"clear": ""
+    "clear": "",
+    "select": "",
+    "insert": "./query_templates/edge_add.qryt",
+    "update": "",
+    "delete": "./query_templates/edge_delete.qryt"
 	}
+
 }
+
