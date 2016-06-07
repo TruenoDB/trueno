@@ -1,6 +1,8 @@
 #Node Spark Job Client
 
 
+![Node Spark Job client](./images/node_spark_job_client.png)
+
 
 ###References:
 
@@ -13,7 +15,6 @@
 * [07] https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-rdd.html
 * [08] [Bootstrap] https://getbootstrap.com/components/
 * [09] [Bootstrap] https://github.com/twbs/bootstrap
-* [10] [Bootstrap] http://www.bootply.com/65566
 * https://stackoverflow.com/questions/27171702/error-in-scala-compiler-java-lang-assertionerror-assertion-failed-even-when-p
 * http://note.yuhc.me/2015/03/graphx-triangle-count-label-propagation/
 * http://apache-spark-user-list.1001560.n3.nabble.com/GraphX-AssertionError-td13941.html
