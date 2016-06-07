@@ -1,18 +1,18 @@
-# thruster [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# trueno [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > The Dynamic/Static Graph Distributed Database
 
 ## Installation
 
 ```sh
-$ npm install --save thruster
+$ npm install --save trueno
 ```
 
 ## Usage
 
 ```js
-var thruster = require('thruster');
+var trueno = require('trueno');
 
-thruster('Rainbow');
+trueno('Rainbow');
 ```
 ## License
 
