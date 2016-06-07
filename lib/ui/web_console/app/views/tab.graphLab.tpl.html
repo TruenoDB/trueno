@@ -1,17 +1,33 @@
-<div layout="row" layout-wrap>
-    <div flex="70" style="min-height: 6vmin;">
-        <div ui-ace="{
+<md-content ng-controller="grapLabCtrl as ctrl">
+
+    <div class="toolbar">
+        <md-select placeholder="Select a Graph" ng-model="userGraph" ng-change="selectChanged()">
+            <md-option value="{{g}}" ng-repeat="g in graphs">
+                <strong>{{g}}</strong>
+            </md-option>
+        </md-select>
+    </div>
+    <div layout="row" layout-wrap>
+        <div flex="70" style="min-height: 4.3vmin;">
+            <div ui-ace="{
                 useWrapMode : false,
                 showGutter: true,
                 theme:'xcode',
                 mode: 'javascript',
                 firstLineNumber: 1,
                 onLoad: aceLoaded,
-                onChange: aceChanged
+                onChange: aceChanged,
+                require: ['ace/ext/language_tools'],
+                advanced: {
+                  enableSnippets: true,
+                  enableBasicAutocompletion: true,
+                  enableLiveAutocompletion: true
+                }
             }"
-        ></div>
+            ></div>
+        </div>
+        <div flex="30" style="border: darkgray 1px dashed"></div>
+        <div flex="70" style="border: darkgray 1px dashed;min-height: 80vmin;"></div>
+        <div flex="30" style="border: darkgray 1px dashed"></div>
     </div>
-    <div flex="30" style="background: greenyellow">[flex=33]</div>
-    <div flex="70" style="background: palevioletred;min-height: 80vmin;">[flex=66]</div>
-    <div flex="30" style="background: mediumpurple">[flex=33]</div>
-</div>
+</md-content>
