@@ -59,18 +59,21 @@ div.left {
 }
 
 .toolbar {
-    border: lightgrey solid 1px;
-    padding: 3vm !important;
-    background: white;
 }
 
 .tabContent {
     background-color: lightgrey !important;
+    height: 100%;
+    padding: 0;
 }
 
-.graphLabPanel{
+.graphLabPanel {
     background: white !important;
     border: lightgrey solid 1px;
+}
+
+.monitorButtonTittle {
+    float: right
 }
 
 /* Ace editor teaks */
@@ -79,5 +82,24 @@ div.left {
 }
 
 .ace_gutter-cell {
-    background: #FFAB40
+    background-image: url('../images/logo_small.png');
+    background-color: #FFAB40;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+md-tabs{
+    height:inherit;
+}
+md-tab-content div{
+    height: 100%;
+}
+
+.graphSelect{
+    margin: 0;
+    width: 12%;
+}
+.md-select-value *:first-child {
+    color: black;
 }

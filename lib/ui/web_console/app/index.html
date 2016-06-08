@@ -5,19 +5,11 @@
     <title>Web Console</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="images/console_logo_small.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
+    <link rel="shortcut icon" href="images/console_logo_small.png"/>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css"/>
-    <link rel="stylesheet" href="bower_components/vis/dist/vis.css"/>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
-    <link href="//fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300" type="text/css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body ng-controller="AppCtrl">
 <!--[if lt IE 10]>
@@ -25,20 +17,18 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- CONTENT BEGIN -->
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <md-button class="md-fab md-mini" style="padding-top: 5px" aria-label="Open Menu" ng-click="openLeftMenu()">
-            <ng-md-icon icon="menu" style="fill:white;"></ng-md-icon>
+        <md-button class="md-fab md-mini md-icon-button logo" aria-label="Open Menu" ng-click="openLeftMenu()">
         </md-button>
         <h5>Trueno Web Console</h5>
     </div>
 </md-toolbar>
 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-    <ng-include src="'views/sidebar.left.tpl.html'"></ng-include>
+    <ng-include src="'views/sidebar.left.tpl.html'" style="height: 12px;"></ng-include>
 </md-sidenav>
-<md-content>
-    <md-tabs md-dynamic-height flex md-selected="selectedIndex" md-swipe-content="false">
+<md-content style="height: 100%">
+    <md-tabs flex md-selected="selectedIndex" style="height: inherit;">
         <md-tab label="Monitor">
             <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
         </md-tab>
@@ -51,31 +41,23 @@
     </md-tabs>
 </md-content>
 
-<!-- CONTENT ENDS -->
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
 <script src="bower_components/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-ace/ui-ace.js"></script>
 <script src="bower_components/Chart.js/Chart.js"></script>
 <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
-<script src="bower_components/vis/dist/vis.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
 
-<!-- build:js(.) scripts/plugins.js -->
-<!-- endbuild -->
-
-<!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="controllers/app.js"></script>
+<script src="controllers/sidebar.js"></script>
+<script src="controllers/monitor.js"></script>
+<script src="controllers/graph-lab.js"></script>
+<script src="controllers/admin.js"></script>
 <script src="scripts/libs.js"></script>
 <script src="scripts/main.js"></script>
-<!-- endbuild -->
 </body>
 </html>
