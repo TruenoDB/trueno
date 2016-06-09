@@ -1,1 +1,1 @@
-DROP KEYSPACE <%= name %>;
+DROP KEYSPACE <%= keyspace %>;

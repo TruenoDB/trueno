@@ -5,6 +5,6 @@ CREATE TABLE vertices(
 	attributes map<text, frozen<tuple<text, text>>>,
 	meta       map<text, frozen<tuple<text, text>>>,
 
-	PRIMARY KEY (id, partition)
+	PRIMARY KEY (id)
 );
 
