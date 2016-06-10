@@ -71,6 +71,12 @@ div.left {
     background: white !important;
     border: lightgrey solid 1px;
 }
+#graphRendererContainer {
+    height: 95%;
+    border-width: 1px;
+    border-color: #FFAB40;
+    border-style: solid;
+}
 
 .monitorButtonTittle {
     float: right
