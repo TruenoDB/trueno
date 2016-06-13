@@ -1,4 +1,4 @@
-<md-content class="md-padding tabContent" ng-controller="grapLabCtrl as ctrl" >
+<md-content class="md-padding tabContent" ng-controller="grapLabCtrl as ctrl">
 
 
     <div layout="row" layout-wrap style="height: 89%">
@@ -6,8 +6,8 @@
         <div flex="70" style="max-height: 10vmin;">
             <md-card>
                 <md-card-content>
-
-                    <md-select class="graphSelect" placeholder="Select a Graph" ng-model="userGraph" ng-change="selectChanged()">
+                    <md-select class="graphSelect" placeholder="Select a Graph" ng-model="userGraph"
+                               ng-change="selectChanged()">
                         <md-option value="{{g}}" ng-repeat="g in graphs">
                             <strong>{{g}}</strong>
                         </md-option>
@@ -40,10 +40,9 @@
         </div>
         <!--Visualization Card-->
         <div flex="70" style="height: inherit">
-            <md-card style="height: 100%">
+            <md-card style="height: 100%" layout-align="right">
                 <md-card-content style="height: inherit">
-                    <!-- The graph container -->
-                    <div id="graphRendererContainer"></div>
+                    <ng-include src="'views/tab.graphLab.visualization.tpl.html'"></ng-include>
                 </md-card-content>
             </md-card>
         </div>
@@ -51,6 +50,25 @@
         <div flex="30" style="height: inherit">
             <md-card style="height: 100%">
                 <md-card-content style="height: inherit">
+                    <!--graph and table tabs-->
+                    <md-tabs id="graphLabComputeViewTabs" flex style="height: inherit;">
+                        <md-tab label="compute">
+                            <md-tab-label>
+                                <md-icon md-svg-icon="flash"></md-icon>Compute
+                            </md-tab-label>
+                            <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+                                <ng-include src="'views/tab.graphLab.compute.tpl.html'"></ng-include>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab label="Inspect">
+                            <md-tab-label>
+                                <md-icon md-svg-icon="eye"></md-icon>Inspect
+                            </md-tab-label>
+                            <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+
+                            </md-tab-body>
+                        </md-tab>
+                    </md-tabs>
                 </md-card-content>
             </md-card>
         </div>

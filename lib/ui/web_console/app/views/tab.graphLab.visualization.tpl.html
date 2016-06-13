@@ -1,0 +1,78 @@
+<!--Download button-->
+<div class="graphLabvizControls">
+    <md-button class="md-icon-button" aria-label="download">
+        <md-icon md-svg-icon="download"></md-icon>
+    </md-button>
+</div>
+<!--graph and table tabs-->
+<md-tabs id="graphLabVizTabs" flex style="height: 100%;">
+    <md-tab label="Graph">
+        <md-tab-label>
+            <md-icon md-svg-icon="chart-bubble"></md-icon>
+            Graph
+        </md-tab-label>
+        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+            <!-- The graph container -->
+            <div id="graphRendererContainer"></div>
+        </md-tab-body>
+    </md-tab>
+    <md-tab label="Vertex">
+        <md-tab-label>
+            <md-icon md-svg-icon="checkbox-blank-circle"></md-icon>
+            Vertex
+        </md-tab-label>
+        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+            <!--MD table toolbar-->
+            <md-toolbar class="md-table-toolbar md-default">
+                <div class="md-toolbar-tools">
+                    <span>Vertices</span>
+                </div>
+            </md-toolbar>
+            <!-- The Edges and Vertices table -->
+            <md-table-container>
+                <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+                    <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+                    <tr md-row>
+                        <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span>
+                        </th>
+                        <th md-column md-numeric md-order-by="calories.value"><span>Calories</span>
+                        </th>
+                        <th md-column md-numeric>Fat (g)</th>
+                        <th md-column md-numeric>Carbs (g)</th>
+                        <th md-column md-numeric>Protein (g)</th>
+                        <th md-column md-numeric>Sodium (mg)</th>
+                        <th md-column md-numeric>Calcium (%)</th>
+                        <th md-column md-numeric>Iron (%)</th>
+                    </tr>
+                    </thead>
+                    <tbody md-body>
+                    <tr md-row md-select="dessert" md-select-id="name" md-auto-select
+                        ng-repeat="dessert in desserts.data">
+                        <td md-cell>{{dessert.name}}</td>
+                        <td md-cell>{{dessert.calories.value}}</td>
+                        <td md-cell>{{dessert.fat.value | number: 1}}</td>
+                        <td md-cell>{{dessert.carbs.value}}</td>
+                        <td md-cell>{{dessert.protein.value | number: 1}}</td>
+                        <td md-cell>{{dessert.sodium.value}}</td>
+                        <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
+                        <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </md-table-container>
+
+            <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]"
+                                 md-page="query.page" md-total="{{desserts.count}}"
+                                 md-on-paginate="getDesserts" md-page-select></md-table-pagination>
+        </md-tab-body>
+    </md-tab>
+    <md-tab label="Table">
+        <md-tab-label>
+            <md-icon md-svg-icon="ray-start-arrow"></md-icon>
+            Edge
+        </md-tab-label>
+        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+
+        </md-tab-body>
+    </md-tab>
+</md-tabs>

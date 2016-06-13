@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/console_logo_small.png"/>
     <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300" type="text/css"/>
     <link rel="stylesheet" href="styles/main.css"/>
 </head>
@@ -19,7 +20,8 @@
 
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <md-button class="md-fab md-mini md-icon-button logo" aria-label="Open Menu" ng-click="openLeftMenu()">
+        <md-button class="md-fab" aria-label="Open Menu" ng-click="openLeftMenu()">
+            <md-icon md-svg-icon="menu"  style="color:white;font-weight:bold;" ></md-icon>
         </md-button>
         <h5>Trueno Web Console</h5>
     </div>
@@ -29,11 +31,11 @@
 </md-sidenav>
 <md-content style="height: 100%">
     <md-tabs flex md-selected="selectedIndex" style="height: inherit;">
-        <md-tab label="Monitor">
-            <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
-        </md-tab>
         <md-tab label="Graph Lab">
             <ng-include src="'views/tab.graphLab.tpl.html'"></ng-include>
+        </md-tab>
+        <md-tab label="Monitor">
+            <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
         </md-tab>
         <md-tab label="Administration">
             <ng-include src="'views/tab.admin.tpl.html'"></ng-include>
@@ -46,6 +48,8 @@
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
+<!--Angular material data table-->
+<script src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
 <!--Ace Scripts -->
 <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
 <script src="bower_components/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
@@ -67,6 +71,11 @@
 <script src="controllers/sidebar.js"></script>
 <script src="controllers/monitor.js"></script>
 <script src="controllers/graph-lab.js"></script>
+<script src="controllers/graph-lab-compute.js"></script>
+<script src="controllers/graph-lab-edges.js"></script>
+<script src="controllers/graph-lab-inspect.js"></script>
+<script src="controllers/graph-lab-vertices.js"></script>
+<script src="controllers/graph-lab-visualizer.js"></script>
 <script src="controllers/admin.js"></script>
 <script src="scripts/libs.js"></script>
 <script src="scripts/main.js"></script>

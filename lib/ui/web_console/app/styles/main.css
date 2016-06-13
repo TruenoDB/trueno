@@ -74,7 +74,7 @@ div.left {
 #graphRendererContainer {
     height: 95%;
     border-width: 1px;
-    border-color: #FFAB40;
+    border-color: #FFC954;
     border-style: solid;
 }
 
@@ -88,11 +88,11 @@ div.left {
 }
 
 .ace_gutter-cell {
-    background-image: url('../images/logo_small.png');
-    background-color: #FFAB40;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    /*background-image: url('../images/logo_small.png');*/
+    background-color: #FFC954;
+    /*background-repeat: no-repeat;*/
+    /*background-size: contain;*/
+    /*background-position: center;*/
 }
 
 md-tabs{
@@ -108,4 +108,26 @@ md-tab-content div{
 }
 .md-select-value *:first-child {
     color: black;
+}
+
+#graphLabVizTabs{
+    height: 100% !important;
+}
+
+#graphLabVizTabs [role="tabpanel"] {
+    transition: none;
+}
+
+#graphLabComputeViewTabs [role="tabpanel"] {
+    transition: none;
+}
+
+.graphLabvizControls{
+    height: 95.6%;
+    float: right;
+    border-left: orange solid 1px;
+}
+
+.md-subheader-inner{
+    color: #f44336;
 }
