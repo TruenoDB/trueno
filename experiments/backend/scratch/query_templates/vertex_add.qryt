@@ -1,8 +1,0 @@
-INSERT INTO <%= keyspace %>.vertices (id, partition, computed, attributes, meta)
-VALUES (
-  <%= id %>,
-  <%= partition %>,
-  <%= computed %>,
-  <%= attributes %>,
-  <%= metadata %>
-);

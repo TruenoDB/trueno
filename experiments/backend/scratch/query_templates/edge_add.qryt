@@ -1,8 +1,0 @@
-INSERT INTO <%= keyspace %>.edges (fromv, tov, computed, attributes, meta)
-VALUES (
-  <%= fromv %>,
-  <%= tov %>,
-  <%= computed %>,
-  <%= attributes %>,
-  <%= metadata %>
-);
