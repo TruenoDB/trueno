@@ -1,0 +1,1 @@
+SELECT fromv, tov, computed, attributes, meta FROM <%= keyspace %>.EDGES WHERE FROMV = <%= fromv %> AND TOV = <%= tov %> ;

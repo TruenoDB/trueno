@@ -5,12 +5,13 @@
 	},
 
 	"graph": {
+    "get":  "./query_templates/graph_get.qryt",
 		"create": "./query_templates/graph_create.qryt",
 		"create_graph_table": "./query_templates/graph_create_graph_table.qryt",
 		"create_vertex_table": "./query_templates/graph_create_vertex_table.qryt",
 		"create_edge_table": "./query_templates/graph_create_edge_table.qryt",
 
-    "import": "./query_templates/graph_import.qryt",
+    "import": "",
 
     "clear":  "",
     "select": "",
@@ -19,6 +20,7 @@
 	},
 
 	"vertex": {
+    "get":  "./query_templates/vertex_get.qryt",
     "clear": "",
 		"select": "",
 		"insert": "./query_templates/vertex_add.qryt",
@@ -30,6 +32,7 @@
 	},
 
 	"edge": {
+    "get": "./query_templates/edge_get.qryt",
     "clear": "",
     "select": "",
     "insert": "./query_templates/edge_add.qryt",

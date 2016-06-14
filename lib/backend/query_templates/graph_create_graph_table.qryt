@@ -1,6 +1,6 @@
 CREATE TABLE graph(
 	id         int PRIMARY KEY,
-  computed   map <text, frozen<map  <text, frozen <tuple<text, text>>>>>,
-  attributes map <text, frozen<tuple<text, text>>>,
-  meta       map <text, frozen<tuple<text, text>>>
+	computed   map<text, frozen<map  <text, frozen <trueno_tuple>>>>,
+	attributes map<text, frozen<trueno_tuple>>,
+	meta       map<text, frozen<trueno_tuple>>
 );
