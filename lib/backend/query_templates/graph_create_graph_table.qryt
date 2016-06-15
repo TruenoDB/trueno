@@ -1,6 +1,8 @@
-CREATE TABLE graph(
-	id         int PRIMARY KEY,
+CREATE TABLE <%= keyspace %>.graph(
+	id         text,
 	computed   map<text, frozen<map  <text, frozen <trueno_tuple>>>>,
 	attributes map<text, frozen<trueno_tuple>>,
-	meta       map<text, frozen<trueno_tuple>>
+	meta       map<text, frozen<trueno_tuple>>,
+
+	PRIMARY KEY ( id )
 );

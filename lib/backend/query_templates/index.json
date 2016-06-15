@@ -6,6 +6,8 @@
 
 	"graph": {
     "get":  "./query_templates/graph_get.qryt",
+    "getall":  "./query_templates/graph_getall.qryt",
+
 		"create": "./query_templates/graph_create.qryt",
 		"create_graph_table": "./query_templates/graph_create_graph_table.qryt",
 		"create_vertex_table": "./query_templates/graph_create_vertex_table.qryt",
