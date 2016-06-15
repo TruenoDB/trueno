@@ -53,6 +53,7 @@
   "private": true,
   "dependencies": {
     "bluebird": "^3.4.0",
+    "bufferutil": "^1.2.1",
     "cassandra-driver": "^3.0.2",
     "commander": "^2.9.0",
     "finalhandler": "^0.4.1",
@@ -63,9 +64,9 @@
     "shelljs": "^0.7.0",
     "socket.io": "1.4.6",
     "socket.io-client": "1.4.6",
+    "superagent": "^2.0.0",
+    "utf-8-validate": "^1.2.1",
     "vorpal": "^1.10.10",
-    "winston": "^2.2.0",
-    "bufferutil": "^1.2.1",
-    "utf-8-validate": "^1.2.1"
+    "winston": "^2.2.0"
   }
 }
