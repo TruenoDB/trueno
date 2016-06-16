@@ -8,8 +8,8 @@
     "angular-ui-ace": "^0.2.3",
     "sigma": "^1.1.0",
     "angular-material-icons": "^0.7.0",
-    "ng-material-floating-button": "ng-mfb#^0.6.2",
-    "angular-material-data-table": "^0.10.9"
+    "angular-material-data-table": "^0.10.9",
+    "json-formatter": "^0.6.0"
   },
   "resolutions": {
     "angular": "~1.x",

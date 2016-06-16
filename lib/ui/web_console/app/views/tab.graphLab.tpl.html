@@ -3,36 +3,11 @@
 
     <div layout="row" layout-wrap style="height: 89%">
         <!--Query Input Card-->
-        <div flex="70" style="max-height: 10vmin;">
-            <md-card>
-                <md-card-content>
-                    <md-select class="graphSelect" placeholder="Select a Graph" ng-model="userGraph"
-                               ng-change="selectChanged()">
-                        <md-option value="{{g}}" ng-repeat="g in graphs">
-                            <strong>{{g}}</strong>
-                        </md-option>
-                    </md-select>
-                    <div style="border: solid #FFAB40 1px" ui-ace="{
-                            useWrapMode : false,
-                            showGutter: true,
-                            theme:'xcode',
-                            mode: 'javascript',
-                            firstLineNumber: 1,
-                            onLoad: aceLoaded,
-                            onChange: aceChanged,
-                            require: ['ace/ext/language_tools'],
-                            advanced: {
-                              enableSnippets: true,
-                              enableBasicAutocompletion: true,
-                              enableLiveAutocompletion: true
-                            }
-                        }"
-                    ></div>
-                </md-card-content>
-            </md-card>
+        <div flex="70" class="GraphlayoutContainer">
+            <ng-include src="'views/tab.graphLab.query.tpl.html'"></ng-include>
         </div>
         <!--Controls Card-->
-        <div flex="30" style="max-height: 11vmin;">
+        <div flex="30" >
             <md-card>
                 <md-card-content>
                 </md-card-content>

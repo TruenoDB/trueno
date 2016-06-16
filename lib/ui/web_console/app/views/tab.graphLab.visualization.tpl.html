@@ -1,7 +1,11 @@
 <!--Download button-->
 <div class="graphLabvizControls">
-    <md-button class="md-icon-button" aria-label="download">
+    <md-button class="md-fab md-mini" aria-label="download">
         <md-icon md-svg-icon="download"></md-icon>
+    </md-button>
+    <br>
+    <md-button class="md-fab md-mini" aria-label="delete">
+        <md-icon md-svg-icon="delete"></md-icon>
     </md-button>
 </div>
 <!--graph and table tabs-->
@@ -66,10 +70,19 @@
                                  md-on-paginate="getDesserts" md-page-select></md-table-pagination>
         </md-tab-body>
     </md-tab>
-    <md-tab label="Table">
+    <md-tab label="Edge">
         <md-tab-label>
             <md-icon md-svg-icon="ray-start-arrow"></md-icon>
             Edge
+        </md-tab-label>
+        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+
+        </md-tab-body>
+    </md-tab>
+    <md-tab label="Console">
+        <md-tab-label>
+            <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
+            Console
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
 

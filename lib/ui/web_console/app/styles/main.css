@@ -73,9 +73,9 @@ div.left {
 }
 #graphRendererContainer {
     height: 95%;
-    border-width: 1px;
-    border-color: #FFC954;
-    border-style: solid;
+    /*border-width: 1px;*/
+    /*border-color: #FFC954;*/
+    /*border-style: solid;*/
 }
 
 .monitorButtonTittle {
@@ -84,7 +84,10 @@ div.left {
 
 /* Ace editor teaks */
 .ace_editor {
-    min-height: 4vmin;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    min-height: 1.8vmin;
+    float:left;
+    width: 93%;
 }
 
 .ace_gutter-cell {
@@ -98,7 +101,8 @@ div.left {
 md-tabs{
     height:inherit;
 }
-md-tab-content div{
+
+#tab-content-0 > div{
     height: 100%;
 }
 
@@ -126,6 +130,11 @@ md-tab-content div{
     height: 95.6%;
     float: right;
     border-left: orange solid 1px;
+}
+
+#btnExecuteQuery{
+    margin-top: -0.8vmin;
+    float:right;
 }
 
 .md-subheader-inner{

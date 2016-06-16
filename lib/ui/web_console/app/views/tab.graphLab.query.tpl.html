@@ -1,0 +1,29 @@
+<md-card>
+    <md-card-content>
+        <md-select class="graphSelect" placeholder="Select a Graph" ng-model="userGraph"
+                   ng-change="selectChanged()">
+            <md-option value="{{g}}" ng-repeat="g in graphs">
+                <strong>{{g}}</strong>
+            </md-option>
+        </md-select>
+        <div style="border: solid #FFAB40 1px" ui-ace="{
+                            useWrapMode : false,
+                            showGutter: true,
+                            theme:'xcode',
+                            mode: 'jade',
+                            firstLineNumber: 1,
+                            onLoad: aceLoaded,
+                            onChange: aceChanged,
+                            require: ['ace/ext/language_tools'],
+                            advanced: {
+                              enableSnippets: true,
+                              enableBasicAutocompletion: true,
+                              enableLiveAutocompletion: true
+                            }
+                        }"
+        ></div>
+        <md-button id="btnExecuteQuery" class="md-fab md-warn md-mini" aria-label="execute" ng-click="executeQuery()">
+            <md-icon md-svg-icon="play"></md-icon>
+        </md-button>
+    </md-card-content>
+</md-card>
