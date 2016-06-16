@@ -18,23 +18,23 @@ $$$$$$$$/______   __    __   ______   _______    ______  $$$$$$$  |$$$$$$$  |
   * Description: Spark Job Connector using REST API
   */
 
-
+/* Package related to the Job Server */
 package spark.jobserver
 
 import com.typesafe.config.{Config, ConfigFactory}
 import scala.util.Try
 
-//spark
+/* spark references */
 import org.apache.spark.{SparkConf, SparkContext}
 import com.datastax.spark.connector._
 
+/* GraphX references */
 import org.apache.spark.graphx._
 import org.apache.spark.graphx.VertexRDD
 import org.apache.spark.rdd.RDD
 
 
 object ConnectedComponents extends SparkJob {
-
 
   def main(args: Array[String]) {
     val conf = new SparkConf(true)
@@ -48,6 +48,8 @@ object ConnectedComponents extends SparkJob {
     println("Result is " + results)
   }
 
+  /* Validate incoming parameters */
+  /* In here I use schemas to determine in which Graph I will run the algorithms */
   override def validate(sc: SparkContext, config: Config): SparkJobValidation = {
     Try(config.getString("input.string"))
       .map(x => SparkJobValid)
@@ -55,29 +57,37 @@ object ConnectedComponents extends SparkJob {
   }
 
   override def runJob(sc: SparkContext, config: Config): Any = {
-    //get table from keyspace and stored as rdd
+
+    /* Get table from keyspace and stored as rdd */
     val vertexRDD1: RDD[(VertexId, String)] = sc.cassandraTable(config.getString("input.string"), "vertices")
 
+    /* Convert Cassandra Row into Spark's RDD */
     val rowsCassandra: RDD[CassandraRow] = sc.cassandraTable(config.getString("input.string"), "edges")
                                              .select("fromv", "tov")
+
+    /* Convert RDD into edgeRDD */
     val edgesRDD: RDD[Edge[Int]] = rowsCassandra.map(x =>
       Edge(
         x.getLong("fromv"),
         x.getLong("tov")
       ))
 
-    //TODO
+    /* Collect Vertices */
+    /* TODO test on Cluster */
     val vertex_collect = vertexRDD1.collect().take(100)
 
     val vertexSet = VertexRDD(vertexRDD1)
 
-    // Build the initial Graph
+    /* Build the initial Graph */
     val graph = Graph(vertexSet, edgesRDD)
 
-    // Find the connected components
+    /* Find the connected components */
     val cc = graph.connectedComponents().vertices
-    cc.collect()
-  }
 
-}
+    /* Collect result */
+    cc.collect()
+
+  }//runJob
+
+}//ConnectedComponents
 
