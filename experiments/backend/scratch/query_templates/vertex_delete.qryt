@@ -1,1 +1,0 @@
-DELETE <%= keyspace %>.vertices WHERE id = <%= node %>;

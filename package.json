@@ -65,7 +65,7 @@
     "shelljs": "^0.7.0",
     "socket.io": "1.4.6",
     "socket.io-client": "1.4.6",
-    "trueno-javascript-driver": "git+ssh://github.com/TruenoDB/trueno-javascript-driver.git",
+    "superagent": "^2.0.0",
     "utf-8-validate": "^1.2.1",
     "vorpal": "^1.10.10",
     "winston": "^2.2.0"
