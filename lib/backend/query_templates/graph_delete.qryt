@@ -1,1 +1,1 @@
-DROP KEYSPACE <%= keyspace %>;
+DELETE FROM <%= keyspace %>.GRAPH WHERE ID = '<%= id %>';

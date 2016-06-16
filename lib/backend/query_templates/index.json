@@ -18,6 +18,7 @@
     "clear":  "",
     "select": "",
     "delete": "./query_templates/graph_delete.qryt",
+    "drop": "./query_templates/graph_drop.qryt",
 		"update": ""
 	},
 
