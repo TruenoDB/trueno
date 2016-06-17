@@ -70,6 +70,14 @@ object PR extends SparkJob {
     Try(config.getString("input.string"))
       .map(x => SparkJobValid)
       .getOrElse(SparkJobInvalid("No input.string config param"))
+
+    Try(config.getString("alpha.string"))
+      .map(x => SparkJobValid)
+      .getOrElse(SparkJobInvalid("No alpha.string config param"))
+
+    Try(config.getString("TOL.string"))
+      .map(x => SparkJobValid)
+      .getOrElse(SparkJobInvalid("No TOL.string config param"))
   }
 
   override def runJob(sc: SparkContext, config: Config): Any = {
@@ -79,11 +87,14 @@ object PR extends SparkJob {
 
     /* Get Cassandra Row and Select id */
     val vertexCassandra: RDD[CassandraRow] = sc.cassandraTable(config.getString("input.string"), "vertices")
-                                          .select("id")
+                                               .select("id")
 
     /* Convert Cassandra Row into Spark's RDD */
     val rowsCassandra: RDD[CassandraRow] = sc.cassandraTable(config.getString("input.string"), "edges")
                                              .select("fromv", "tov")
+
+    val alpha = config.getDouble("alpha.string")
+    val TOL = config.getDouble("TOL.string")
 
     /* Convert RDD into edgeRDD */
     val edgesRDD: RDD[Edge[Int]] = rowsCassandra.map(x =>
@@ -102,9 +113,7 @@ object PR extends SparkJob {
     val graph = Graph(vertexSet, edgesRDD)
 
     /* Run PageRank */
-    /* alpha = 0.0001 */
-    /* TODO Receive alpha parameter */
-    val ranks = graph.pageRank(0.0001).vertices
+    val ranks = graph.pageRank(TOL).vertices
 
     ranks.collect()
 
