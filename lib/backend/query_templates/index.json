@@ -24,6 +24,7 @@
 
 	"vertex": {
     "get":  "./query_templates/vertex_get.qryt",
+    "getall": "./query_templates/vertex_getall.qryt",
     "clear": "",
 		"select": "",
 		"insert": "./query_templates/vertex_add.qryt",
@@ -36,6 +37,7 @@
 
 	"edge": {
     "get": "./query_templates/edge_get.qryt",
+    "getall": "./query_templates/edge_getall.qryt",
     "clear": "",
     "select": "",
     "insert": "./query_templates/edge_add.qryt",
