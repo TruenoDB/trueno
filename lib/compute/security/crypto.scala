@@ -5,7 +5,7 @@
  /*
    Edited by: Servio Palacios
    Using Encryption for some Spark-GraphX Procedures
-   Testing Unit
+   Testing Unit - Template
  */
 package play.api.libs
 
@@ -31,23 +31,39 @@ object Crypto {
 
   private[play] def secret: String = {
 
+    /* To set the application secret refer to this:
+       http://playframework.com/documentation/latest/ApplicationSecret
+       Includes:
+       Best Practices
+       Example:
+       [my-first-app] $ playGenerateSecret
+       [info] Generated new secret: QCYtAnfkaZiwrNwnxIlR6CTfG3gf90Latabg5241ABR5W1uDFNIkn
+       [success] Total time: 0 s, completed 2016.06.17 2:26:09 PM
+    */
+
     maybeApp.map(_.configuration).getOrElse(Configuration.empty).getString("application.secret") match {
-      case (Some("changeme") | Some(Blank()) | None) if maybeApp.exists(_.mode == Mode.Prod) =>
-        Play.logger.error("The application secret has not been set, and we are in prod mode. Your application is not secure.")
-        Play.logger.error("To set the application secret, please read http://playframework.com/documentation/latest/ApplicationSecret")
+
+      case (Some("Morgan") | Some(Blank()) | None) if maybeApp.exists(_.mode == Mode.Prod) =>
         throw new PlayException("Configuration error", "Application secret not set")
-      case Some("changeme") | Some(Blank()) | None =>
+
+      case Some("Morgan2") | Some(Blank()) | None =>
+
         val appConfLocation = maybeApp.flatMap(app => Option(app.classloader.getResource("application.conf")))
         // Try to generate a stable secret. Security is not the issue here, since this is just for tests and dev mode.
         val secret = appConfLocation map { confLoc =>
+
           confLoc.toString
+
         } getOrElse {
-          // No application.conf?  Oh well, just use something hard coded.
-          "she sells sea shells on the sea shore"
+
+          // No application.conf
+          "TODO"
         }
+
         val md5Secret = DigestUtils.md5Hex(secret)
         Play.logger.debug(s"Generated dev mode secret $md5Secret for app at ${appConfLocation.getOrElse("unknown location")}")
         md5Secret
+
       case Some(s) => s
     }
   }
@@ -66,9 +82,13 @@ object Crypto {
    * @return A hexadecimal encoded signature.
    */
   def sign(message: String, key: Array[Byte]): String = {
+
     val mac = provider.map(p => Mac.getInstance("HmacSHA1", p)).getOrElse(Mac.getInstance("HmacSHA1"))
+
     mac.init(new SecretKeySpec(key, "HmacSHA1"))
+
     Codecs.toHexString(mac.doFinal(message.getBytes("utf-8")))
+
   }
 
   /**
@@ -90,9 +110,13 @@ object Crypto {
    * @return The signed token
    */
   def signToken(token: String): String = {
+
     val nonce = System.currentTimeMillis()
+
     val joined = nonce + "-" + token
+
     sign(joined) + "-" + joined
+
   }
 
   /**
@@ -102,9 +126,13 @@ object Crypto {
    * @return The verified raw token, or None if the token isn't valid.
    */
   def extractSignedToken(token: String): Option[String] = {
+
     token.split("-", 3) match {
+
       case Array(signature, nonce, raw) if constantTimeEquals(signature, sign(nonce + "-" + raw)) => Some(raw)
+
       case _ => None
+
     }
   }
 
@@ -112,9 +140,13 @@ object Crypto {
    * Generate a cryptographically secure token
    */
   def generateToken = {
+
     val bytes = new Array[Byte](12)
+
     random.nextBytes(bytes)
+
     new String(Hex.encodeHex(bytes))
+
   }
 
   /**
@@ -169,7 +201,10 @@ object Crypto {
    * @return An hexadecimal encrypted string.
    */
   def encryptAES(value: String): String = {
+
+    /* Using AES 128 */
     encryptAES(value, secret.substring(0, 16))
+
   }
 
   /**
@@ -194,11 +229,17 @@ object Crypto {
    * @return An hexadecimal encrypted string.
    */
   def encryptAES(value: String, privateKey: String): String = {
+
     val raw = privateKey.getBytes("utf-8")
+
     val skeySpec = new SecretKeySpec(raw, "AES")
+
     val cipher = provider.map(p => Cipher.getInstance(transformation, p)).getOrElse(Cipher.getInstance(transformation))
+
     cipher.init(Cipher.ENCRYPT_MODE, skeySpec)
+
     Codecs.toHexString(cipher.doFinal(value.getBytes("utf-8")))
+
   }
 
   /**
@@ -215,7 +256,10 @@ object Crypto {
    * @return The decrypted String.
    */
   def decryptAES(value: String): String = {
+
+    /* TODO change hardcoded AES Key Size */
     decryptAES(value, secret.substring(0, 16))
+
   }
 
   /**
@@ -235,11 +279,17 @@ object Crypto {
    * @return The decrypted String.
    */
   def decryptAES(value: String, privateKey: String): String = {
+
     val raw = privateKey.getBytes("utf-8")
+
     val skeySpec = new SecretKeySpec(raw, "AES")
+
     val cipher = provider.map(p => Cipher.getInstance(transformation, p)).getOrElse(Cipher.getInstance(transformation))
+
     cipher.init(Cipher.DECRYPT_MODE, skeySpec)
+
     new String(cipher.doFinal(Codecs.hexStringToByte(value)))
+
   }
 
 }
