@@ -71,6 +71,7 @@ div.left {
     background: white !important;
     border: lightgrey solid 1px;
 }
+
 #graphRendererContainer {
     height: 95%;
     /*border-width: 1px;*/
@@ -86,35 +87,36 @@ div.left {
 .ace_editor {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
     min-height: 1.8vmin;
-    float:left;
+    float: left;
     width: 93%;
 }
 
 .ace_gutter-cell {
     /*background-image: url('../images/logo_small.png');*/
-    background-color: #FFC954;
+    background-color: orange;
     /*background-repeat: no-repeat;*/
     /*background-size: contain;*/
     /*background-position: center;*/
 }
 
-md-tabs{
-    height:inherit;
+md-tabs {
+    height: inherit;
 }
 
-#tab-content-0 > div{
+#tab-content-0 > div {
     height: 100%;
 }
 
-.graphSelect{
+.graphSelect {
     margin: 0;
     width: 12%;
 }
+
 .md-select-value *:first-child {
     color: black;
 }
 
-#graphLabVizTabs{
+#graphLabVizTabs {
     height: 100% !important;
 }
 
@@ -126,17 +128,66 @@ md-tabs{
     transition: none;
 }
 
-.graphLabvizControls{
+.graphLabvizControls {
     height: 95.6%;
     float: right;
     border-left: orange solid 1px;
 }
 
-#btnExecuteQuery{
-    margin-top: -0.8vmin;
-    float:right;
+#visualizationFilterAccordion{
+    position: absolute;
+    top: 0.6vmin;
+    width: 90%;
 }
 
-.md-subheader-inner{
+.vAccordion--default v-pane.is-expanded>v-pane-header {
+    border-bottom-color: orange;
+}
+
+.vAccordion--default v-pane-header:focus, .vAccordion--default v-pane-header:hover {
+    color: red;
+}
+
+#filterQueryBox{
+    height: 3vmin;
+    width: 50vmin;
+}
+
+#visualizationFab{
+    position: absolute;
+    top: 0.6vmin;
+    right: 0;
+}
+
+#btnExecuteQuery {
+    margin-top: -0.8vmin;
+    float: right;
+}
+
+.md-subheader-inner {
     color: #f44336;
+}
+
+#tab-content-12 > div {
+    height: 100%;
+}
+
+/* blinking animation */
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    color: orange;
+    margin: 2px;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }

@@ -1,6 +1,6 @@
 <!--Download button-->
 <div class="graphLabvizControls">
-    <md-button class="md-fab md-mini" aria-label="download">
+    <md-button class="md-fab md-mini" aria-label="download" ng-click="onDownload()">
         <md-icon md-svg-icon="download"></md-icon>
     </md-button>
     <br>
@@ -10,20 +10,55 @@
 </div>
 <!--graph and table tabs-->
 <md-tabs id="graphLabVizTabs" flex style="height: 100%;">
-    <md-tab label="Graph">
+    <md-tab label="Graph" md-on-select="onTabChanges('graph')">
         <md-tab-label>
             <md-icon md-svg-icon="chart-bubble"></md-icon>
-            Graph
+            Graph<span ng-show="blinkers.graph" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
             <!-- The graph container -->
             <div id="graphRendererContainer"></div>
+            <div id="visualizationFilterAccordion">
+                <div ui-ace id="filterQueryBox" style="border: solid #FFAB40 1px"></div>
+            </div>
+            <!--<v-accordion id="visualizationFilterAccordion" class="vAccordion&#45;&#45;default" multiple>-->
+
+                <!--&lt;!&ndash; add expanded attribute to open the section &ndash;&gt;-->
+                <!--<v-pane >-->
+                    <!--<v-pane-header>-->
+                        <!--filters-->
+                    <!--</v-pane-header>-->
+                    <!--<v-pane-content>-->
+                        <!--<div ui-ace id="filterQueryBox" style="border: solid #FFAB40 1px"></div>-->
+                    <!--</v-pane-content>-->
+                <!--</v-pane>-->
+            <!--</v-accordion>-->
+            <md-fab-speed-dial id="visualizationFab" md-open="visTweakFabStatus.isOpen" md-direction="down"
+                               class="md-fling"  ng-class="{ 'md-hover-full': false }"
+                               ng-mouseenter="visTweakFabStatus.isOpen=true" ng-mouseleave="visTweakFabStatus.isOpen=false"">
+                <md-fab-trigger>
+                    <md-button aria-label="tweak" class="md-fab md-raised md-mini md-warn">
+                        <md-icon md-svg-icon="wrench"></md-icon>
+                        <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                            Tweaks
+                        </md-tooltip>
+                    </md-button>
+                </md-fab-trigger>
+                <md-fab-actions>
+                    <md-button aria-label="layout" class="md-fab md-raised md-mini" ng-click="onTweakLayoutToggle()">
+                        <md-icon md-svg-icon="google-circles-extended"></md-icon>
+                        <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                            Run/Stop Layout
+                        </md-tooltip>
+                    </md-button>
+                </md-fab-actions>
+            </md-fab-speed-dial>
         </md-tab-body>
     </md-tab>
-    <md-tab label="Vertex">
+    <md-tab label="Vertex" md-on-select="onTabChanges('vertex')">
         <md-tab-label>
             <md-icon md-svg-icon="checkbox-blank-circle"></md-icon>
-            Vertex
+            Vertex<span ng-show="blinkers.vertex" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
             <!--MD table toolbar-->
@@ -70,19 +105,19 @@
                                  md-on-paginate="getDesserts" md-page-select></md-table-pagination>
         </md-tab-body>
     </md-tab>
-    <md-tab label="Edge">
+    <md-tab label="Edge" md-on-select="onTabChanges('edge')">
         <md-tab-label>
             <md-icon md-svg-icon="ray-start-arrow"></md-icon>
-            Edge
+            Edge<span ng-show="blinkers.edge" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
 
         </md-tab-body>
     </md-tab>
-    <md-tab label="Console">
+    <md-tab label="Console" md-on-select="onTabChanges('console')">
         <md-tab-label>
             <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
-            Console
+            Console<span ng-show="blinkers.console" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
 

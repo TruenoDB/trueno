@@ -1,10 +1,12 @@
 <md-card>
     <md-card-content>
-        <md-select class="graphSelect" placeholder="Select a Graph" ng-model="userGraph"
-                   ng-change="selectChanged()">
-            <md-option value="{{g}}" ng-repeat="g in graphs">
-                <strong>{{g}}</strong>
-            </md-option>
+        <md-select class="graphSelect" placeholder="Select a Graph" ng-model="select.selectedGraph"
+                   ng-change="graphSelectChanged()">
+            <md-optgroup label="Static Graphs">
+                <md-option ng-repeat="g in graphs" ng-value="g">
+                    <strong>{{g}}</strong>
+                </md-option>
+            </md-optgroup>
         </md-select>
         <div style="border: solid #FFAB40 1px" ui-ace="{
                             useWrapMode : false,

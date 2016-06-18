@@ -19,14 +19,14 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<md-toolbar>
-    <div class="md-toolbar-tools">
-        <md-button class="md-fab" aria-label="Open Menu" ng-click="openLeftMenu()">
-            <md-icon md-svg-icon="menu"  style="color:white;font-weight:bold;" ></md-icon>
-        </md-button>
-        <h5>Trueno Web Console</h5>
-    </div>
-</md-toolbar>
+<!--<md-toolbar>-->
+    <!--<div class="md-toolbar-tools">-->
+        <!--<md-button class="md-fab" aria-label="Open Menu" ng-click="openLeftMenu()">-->
+            <!--<md-icon md-svg-icon="menu"  style="color:white;font-weight:bold;" ></md-icon>-->
+        <!--</md-button>-->
+        <!--<h5>Trueno Web Console</h5>-->
+    <!--</div>-->
+<!--</md-toolbar>-->
 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
     <ng-include src="'views/sidebar.left.tpl.html'" style="height: 12px;"></ng-include>
 </md-sidenav>
@@ -43,7 +43,6 @@
         </md-tab>
     </md-tabs>
 </md-content>
-
 <!--Angular and Angular material Scripts -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -68,7 +67,8 @@
 <script src="bower_components/sigma/plugins/sigma.layout.forceAtlas2/worker.js"></script>
 <script src="bower_components/sigma/plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
 <script src="bower_components/sigma/plugins/sigma.plugins.filter/sigma.plugins.filter.js"></script>
-
+<!-- Momment.js -->
+<script src="bower_components/moment/min/moment.min.js"></script>
 
 <script src="controllers/app.js"></script>
 <script src="controllers/sidebar.js"></script>
@@ -81,6 +81,7 @@
 <script src="controllers/graph-lab-visualizer.js"></script>
 <script src="controllers/graph-lab-query.js"></script>
 <script src="controllers/admin.js"></script>
+<script src="scripts/queryPack.js"></script>
 <script src="scripts/libs.js"></script>
 <script src="scripts/main.js"></script>
 </body>
