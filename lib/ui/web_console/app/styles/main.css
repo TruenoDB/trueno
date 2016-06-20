@@ -92,11 +92,7 @@ div.left {
 }
 
 .ace_gutter-cell {
-    /*background-image: url('../images/logo_small.png');*/
     background-color: orange;
-    /*background-repeat: no-repeat;*/
-    /*background-size: contain;*/
-    /*background-position: center;*/
 }
 
 md-tabs {
@@ -134,26 +130,18 @@ md-tabs {
     border-left: orange solid 1px;
 }
 
-#visualizationFilterAccordion{
+#filterDivision{
     position: absolute;
     top: 0.6vmin;
     width: 90%;
 }
 
-.vAccordion--default v-pane.is-expanded>v-pane-header {
-    border-bottom-color: orange;
-}
-
-.vAccordion--default v-pane-header:focus, .vAccordion--default v-pane-header:hover {
-    color: red;
-}
-
 #filterQueryBox{
-    height: 3vmin;
-    width: 50vmin;
+    width: 95%;
 }
 
-#visualizationFab{
+
+#visualizationControls{
     position: absolute;
     top: 0.6vmin;
     right: 0;
@@ -162,6 +150,10 @@ md-tabs {
 #btnExecuteQuery {
     margin-top: -0.8vmin;
     float: right;
+}
+
+#queryEnterExecuteSwitch{
+    display: inline;
 }
 
 .md-subheader-inner {

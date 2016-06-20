@@ -18,44 +18,90 @@
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
             <!-- The graph container -->
             <div id="graphRendererContainer"></div>
-            <div id="visualizationFilterAccordion">
-                <div ui-ace id="filterQueryBox" style="border: solid #FFAB40 1px"></div>
-            </div>
-            <!--<v-accordion id="visualizationFilterAccordion" class="vAccordion&#45;&#45;default" multiple>-->
+            <div id="filterDivision">
 
-                <!--&lt;!&ndash; add expanded attribute to open the section &ndash;&gt;-->
-                <!--<v-pane >-->
-                    <!--<v-pane-header>-->
-                        <!--filters-->
-                    <!--</v-pane-header>-->
-                    <!--<v-pane-content>-->
-                        <!--<div ui-ace id="filterQueryBox" style="border: solid #FFAB40 1px"></div>-->
-                    <!--</v-pane-content>-->
-                <!--</v-pane>-->
-            <!--</v-accordion>-->
-            <md-fab-speed-dial id="visualizationFab" md-open="visTweakFabStatus.isOpen" md-direction="down"
-                               class="md-fling"  ng-class="{ 'md-hover-full': false }"
-                               ng-mouseenter="visTweakFabStatus.isOpen=true" ng-mouseleave="visTweakFabStatus.isOpen=false"">
-                <md-fab-trigger>
-                    <md-button aria-label="tweak" class="md-fab md-raised md-mini md-warn">
-                        <md-icon md-svg-icon="wrench"></md-icon>
-                        <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                            Tweaks
+                <div id="filterQueryBox" style="border-bottom: solid #FFAB40 1px" ui-ace="{
+                  useWrapMode : true,
+                  showGutter: false,
+                  theme:'xcode',
+                  mode: 'xquery',
+                  firstLineNumber: 1,
+                  onLoad: aceFilterLoaded,
+                  onChange: aceFilterChanged
+                }"></div>
+                <br>
+                <br>
+                <md-radio-group ng-model="filterRadio" layout="row">
+                    <md-radio-button value="view">
+                        <md-icon md-svg-icon="eye"></md-icon>
+                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                            Show on filter
                         </md-tooltip>
-                    </md-button>
-                </md-fab-trigger>
-                <md-fab-actions>
-                    <md-button aria-label="layout" class="md-fab md-raised md-mini" ng-click="onTweakLayoutToggle()">
-                        <md-icon md-svg-icon="google-circles-extended"></md-icon>
-                        <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                            Run/Stop Layout
+                    </md-radio-button>
+                    <md-radio-button value="hide">
+                        <md-icon md-svg-icon="eye-off"></md-icon>
+                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                            Hide on filter
                         </md-tooltip>
-                    </md-button>
-                </md-fab-actions>
-            </md-fab-speed-dial>
+                    </md-radio-button>
+                    <md-radio-button value="highlight">
+                        <md-icon md-svg-icon="marker"></md-icon>
+                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                            Highlight on filter
+                        </md-tooltip>
+                    </md-radio-button>
+                </md-radio-group>
+            </div>
+            <div id="visualizationControls">
+                <md-button aria-label="zoom in" class="md-fab md-raised md-mini" ng-click="zoomIn()">
+                    <md-icon md-svg-icon="magnify-plus"></md-icon>
+                    <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                        Zoom In
+                    </md-tooltip>
+                </md-button>
+                <br>
+                <md-button aria-label="zoom out" class="md-fab md-raised md-mini" ng-click="zoomOut()">
+                    <md-icon md-svg-icon="magnify-minus"></md-icon>
+                    <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                        Zoom Out
+                    </md-tooltip>
+                </md-button>
+                <br>
+                <md-button aria-label="center" class="md-fab md-raised md-mini" ng-click="zoomCenter()">
+                    <md-icon md-svg-icon="image-filter-center-focus-weak"></md-icon>
+                    <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                        Center
+                    </md-tooltip>
+                </md-button>
+                <br>
+                <!--<md-fab-speed-dial id="visualizationFab" md-open="visTweakIsOpen" md-direction="down"-->
+                <md-fab-speed-dial md-open="visTweakIsOpen" md-direction="down"
+                                   class="md-scale" ng-class="{ 'md-hover-full': false }"
+                                   ng-mouseenter="visTweakIsOpen=true"
+                                   ng-mouseleave="visTweakIsOpen=false">
+                    <md-fab-trigger>
+                        <md-button aria-label="tweak" class="md-fab md-raised md-mini md-warn">
+                            <md-icon md-svg-icon="wrench"></md-icon>
+                            <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                                Tweaks
+                            </md-tooltip>
+                        </md-button>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="layout" class="md-fab md-raised md-mini"
+                                   ng-click="onTweakLayoutToggle()">
+                            <md-icon md-svg-icon="google-circles-extended"></md-icon>
+                            <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
+                                Run/Stop Layout
+                            </md-tooltip>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+            </div>
+
         </md-tab-body>
     </md-tab>
-    <md-tab label="Vertex" md-on-select="onTabChanges('vertex')">
+    <md-tab label="Vertex" md-on-select="onTabChanges('vertex')" ng-disabled="true">
         <md-tab-label>
             <md-icon md-svg-icon="checkbox-blank-circle"></md-icon>
             Vertex<span ng-show="blinkers.vertex" class="blink">&diams;</span>
@@ -105,7 +151,7 @@
                                  md-on-paginate="getDesserts" md-page-select></md-table-pagination>
         </md-tab-body>
     </md-tab>
-    <md-tab label="Edge" md-on-select="onTabChanges('edge')">
+    <md-tab label="Edge" md-on-select="onTabChanges('edge')" ng-disabled="true">
         <md-tab-label>
             <md-icon md-svg-icon="ray-start-arrow"></md-icon>
             Edge<span ng-show="blinkers.edge" class="blink">&diams;</span>
@@ -114,7 +160,7 @@
 
         </md-tab-body>
     </md-tab>
-    <md-tab label="Console" md-on-select="onTabChanges('console')">
+    <md-tab label="Console" md-on-select="onTabChanges('console')" ng-disabled="true">
         <md-tab-label>
             <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
             Console<span ng-show="blinkers.console" class="blink">&diams;</span>

@@ -8,6 +8,24 @@
                 </md-option>
             </md-optgroup>
         </md-select>
+
+        <!--<md-menu>-->
+            <!--<md-button aria-label="Open Graph Select" class="md-fab md-mini" ng-click="openMenu($mdOpenMenu, $event)">-->
+                <!--<md-icon md-svg-icon="google-circles-extended"></md-icon>-->
+            <!--</md-button>-->
+            <!--<md-menu-content width="4">-->
+                <!--<md-optgroup label="Static Graphs">-->
+                    <!--<md-menu-item ng-repeat="g in graphs" ng-value="g">-->
+                        <!--<md-button>-->
+                            <!--<strong>{{g}}</strong>-->
+                        <!--</md-button>-->
+                    <!--</md-menu-item>-->
+                <!--</md-optgroup>-->
+            <!--</md-menu-content>-->
+        <!--</md-menu>-->
+        <md-button id="btnExecuteQuery" class="md-fab md-warn md-mini" aria-label="execute" ng-click="executeQuery()">
+            <md-icon md-svg-icon="play"></md-icon>
+        </md-button>
         <div style="border: solid #FFAB40 1px" ui-ace="{
                             useWrapMode : false,
                             showGutter: true,
@@ -24,8 +42,10 @@
                             }
                         }"
         ></div>
-        <md-button id="btnExecuteQuery" class="md-fab md-warn md-mini" aria-label="execute" ng-click="executeQuery()">
-            <md-icon md-svg-icon="play"></md-icon>
-        </md-button>
+        <br>
+        <br>
+        <md-switch id="queryEnterExecuteSwitch" ng-model="settings.enterExecutes" aria-label="Enter executes">
+            Enter Executes
+        </md-switch>
     </md-card-content>
 </md-card>

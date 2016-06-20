@@ -1,6 +1,4 @@
 <md-content class="md-padding tabContent" ng-controller="grapLabCtrl as ctrl">
-
-
     <div layout="row" layout-wrap style="height: 93%">
         <!--Query Input Card-->
         <div flex="70" class="GraphlayoutContainer">
@@ -8,10 +6,7 @@
         </div>
         <!--Controls Card-->
         <div flex="30">
-            <md-card>
-                <md-card-content>
-                </md-card-content>
-            </md-card>
+            <ng-include src="'views/tab.graphLab.settings.tpl.html'"></ng-include>
         </div>
         <!--Visualization Card-->
         <div flex="70" style="height: inherit">
