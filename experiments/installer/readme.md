@@ -1,5 +1,19 @@
 ##Spark-Cassandra
 
+###Installing SBT on linux
+Ubuntu and other Debian-based distributions DEB package is officially supported by sbt.
+
+You can download .tgz here: https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz
+
+Ubuntu and other Debian-based distributions use the DEB format, but usually you don’t install your software from a local DEB file. Instead they come with package managers both for the command line (e.g. apt-get, aptitude) or with a graphical user interface (e.g. Synaptic). Run the following from the terminal to install sbt (You’ll need superuser privileges to do so, hence the sudo).
+
+```
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+sudo apt-get update
+sudo apt-get install sbt
+```
+
 
 ###Spark-Cassandra-Connector Installation
 
