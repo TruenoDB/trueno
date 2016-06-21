@@ -2,10 +2,16 @@
 <div class="graphLabvizControls">
     <md-button class="md-fab md-mini" aria-label="download" ng-click="onDownload()">
         <md-icon md-svg-icon="download"></md-icon>
+        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+            download current tab
+        </md-tooltip>
     </md-button>
     <br>
     <md-button class="md-fab md-mini" aria-label="delete">
         <md-icon md-svg-icon="delete"></md-icon>
+        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+            clear all query data
+        </md-tooltip>
     </md-button>
 </div>
 <!--graph and table tabs-->
@@ -35,19 +41,19 @@
                     <md-radio-button value="view">
                         <md-icon md-svg-icon="eye"></md-icon>
                         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            Show on filter
+                            show on filter
                         </md-tooltip>
                     </md-radio-button>
                     <md-radio-button value="hide">
                         <md-icon md-svg-icon="eye-off"></md-icon>
                         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            Hide on filter
+                            hide on filter
                         </md-tooltip>
                     </md-radio-button>
                     <md-radio-button value="highlight">
                         <md-icon md-svg-icon="marker"></md-icon>
                         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            Highlight on filter
+                            highlight on filter
                         </md-tooltip>
                     </md-radio-button>
                 </md-radio-group>
@@ -56,21 +62,21 @@
                 <md-button aria-label="zoom in" class="md-fab md-raised md-mini" ng-click="zoomIn()">
                     <md-icon md-svg-icon="magnify-plus"></md-icon>
                     <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                        Zoom In
+                        zoom in
                     </md-tooltip>
                 </md-button>
                 <br>
                 <md-button aria-label="zoom out" class="md-fab md-raised md-mini" ng-click="zoomOut()">
                     <md-icon md-svg-icon="magnify-minus"></md-icon>
                     <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                        Zoom Out
+                        zoom out
                     </md-tooltip>
                 </md-button>
                 <br>
                 <md-button aria-label="center" class="md-fab md-raised md-mini" ng-click="zoomCenter()">
                     <md-icon md-svg-icon="image-filter-center-focus-weak"></md-icon>
                     <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                        Center
+                        center
                     </md-tooltip>
                 </md-button>
                 <br>
@@ -83,7 +89,7 @@
                         <md-button aria-label="tweak" class="md-fab md-raised md-mini md-warn">
                             <md-icon md-svg-icon="wrench"></md-icon>
                             <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                                Tweaks
+                                tweaks
                             </md-tooltip>
                         </md-button>
                     </md-fab-trigger>
@@ -92,7 +98,7 @@
                                    ng-click="onTweakLayoutToggle()">
                             <md-icon md-svg-icon="google-circles-extended"></md-icon>
                             <md-tooltip md-direction="left" md-visible="tooltipVisible" md-autohide="false">
-                                Run/Stop Layout
+                                run/stop layout
                             </md-tooltip>
                         </md-button>
                     </md-fab-actions>
