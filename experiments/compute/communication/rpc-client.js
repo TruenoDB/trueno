@@ -25,7 +25,7 @@ var Enums = require("../../../lib/compute/enum/enums");
 var config = require("../../../lib/compute/config/config.json");
 let RPC = require('../../../lib/core/communication/rpc');
 
-
+console.log('flag');
 /* New database rpc object */
 var rpc = new RPC({host: 'http://localhost', port: 8000});
 
@@ -56,7 +56,6 @@ rpc.connect((socket)=> {
       }
     };
 
-
     rpc.call('ex_compute', job).then((response)=> {
 
       console.log(response);
@@ -64,7 +63,7 @@ rpc.connect((socket)=> {
     });
 
 
-  }, 1);
+  }, 10000);
 
 }, (socket)=> {
 
