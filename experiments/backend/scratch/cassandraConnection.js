@@ -17,14 +17,14 @@ let instance = null;
 /** Wrapper Class for the Cassandra backend connection */
 class CassandraConnection {
 
-    /**
-     * Create a connection object.
-     * @param {object} [opts= {}] - The options object.
-     * @return {CassandraConnection} A singleton CassandraConnection object.
-     */
+  /**
+   * Create a connection object.
+   * @param {object} [opts= {}] - The options object.
+   * @return {CassandraConnection} A singleton CassandraConnection object.
+   */
 	constructor(opts = {}){
 
-		/* check if already instantiated */
+    /* check if already instantiated */
 		if(!instance){
       instance = this;
     };
@@ -113,6 +113,10 @@ class CassandraConnection {
 			});
 		});
 	}
+
+  // TODO: implement prepare statement function.
+  // Note. There are some benefits of using prepare statement over regular sql satement, but this
+  // also will require some modifications to other classes (eg. query-builder).
 
 }
 

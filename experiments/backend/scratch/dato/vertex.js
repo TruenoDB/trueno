@@ -45,6 +45,20 @@ class Vertex {
     this._attributes = new Map();
     this._metadata   = new Map();
 
+    this._metadata.toString = function () {
+
+    };
+
+    this.updateblecols = {
+      _id         : {name: 'id',         code: 0b00001 },
+      _partition  : {name: 'partition',  code: 0b00010 },
+      _attributes : {name: 'attributes', code: 0b00100 },
+      _computed   : {name: 'computed',   code: 0b01000 },
+      _metadata   : {name: 'metadata',   code: 0b10000 }
+    };
+
+
+
   }
 
 

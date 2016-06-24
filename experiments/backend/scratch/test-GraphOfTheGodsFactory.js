@@ -9,7 +9,7 @@
 
 /** Import modules */
 const fs = require('fs');
-const gods = require('./example/GraphOfTheGodsFactory');
+const gods = require('../../../lib/backend/example/graph-of-the-gods');
 
 let titanGraph = new gods();
 

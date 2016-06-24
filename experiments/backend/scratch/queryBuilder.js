@@ -3,7 +3,7 @@
 /**
  * @author Victor O. Santos Uceta
  * Query Builder module with template engine.
- * @module backend/queryBuilder
+ * @module lib/backend/queryBuilder
  * @see module:backend/query
  * @since
  */
@@ -11,7 +11,7 @@
 /** Import modules */
 const fs = require('fs');
 const _ = require('lodash');
-const templateIndex = require('./query_templates/index');
+const templateIndex = require('./query_templates--temp/index');
 
 /** block level variable for singleton class */
 let instance = null;

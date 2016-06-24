@@ -12,7 +12,7 @@ const fs = require('fs');
 const config = require('./conf/config.json'),
   hostnames = config['hostnames'];
 
-const connection = require('./cassandraConnection');
+const connection = require('./cassandra-connection');
 const queryBuilder = require('./queryBuilder');
 const Enums = require('./enums');
 

@@ -87,8 +87,8 @@ class GraphOfTheGodsFactory {
 
     console.log('add edges ...');
 
-    // edges
 
+    // edges
     /* jupiter */
     let edge1 = jupiter.addEdge(saturn);
     edge1.setAttribute('label', 'father');
