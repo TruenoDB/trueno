@@ -25,12 +25,14 @@ var Enums = require("../../../lib/compute/enum/enums");
 var config = require("../../../lib/compute/config/config.json");
 let RPC = require('../../../lib/core/communication/rpc');
 
-console.log('flag');
 /* New database rpc object */
 var rpc = new RPC({host: 'http://localhost', port: 8000});
 
 /* Connect the client library */
 rpc.connect((socket)=> {
+
+  var jobId = null;
+  var result = null;
 
   console.log('client connected!');
 
@@ -56,12 +58,26 @@ rpc.connect((socket)=> {
       }
     };
 
-    rpc.call('ex_compute', job).then((response)=> {
+    if (jobId === null) {
 
-      console.log(response);
+      rpc.call('ex_compute', job).then((response)=> {
 
-    });
+        jobId = response;
+        console.log(response);
 
+      });
+
+    }//if
+    else {
+
+      rpc.call('ex_computeJobStatus', jobId).then((response)=> {
+
+        result = response;
+        console.log(result);
+
+      });
+
+    }//else
 
   }, 10000);
 
