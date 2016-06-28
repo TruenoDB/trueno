@@ -5,27 +5,20 @@
  * Description:
  *
  */
-var Download = require('download');
-var ProgressBar = require('progress');
+var shell = require('shelljs');
 
-var strm = Download('http://apache.claz.org/incubator/tinkerpop/3.2.0-incubating/apache-gremlin-server-3.2.0-incubating-bin.zip','.',{extract: true});
+let unCompressDir = shell.ls(__dirname+'/../binaries/gremlin_server')[0];
+shell.mv(__dirname+'/../binaries/gremlin_server/*/*', __dirname+'/../binaries/gremlin_server/');
+shell.rm('-rf', __dirname+'/../binaries/gremlin_server/'+unCompressDir);
 
-strm.on('response', function(res){
-  var len = parseInt(res.headers['content-length'], 10);
+unCompressDir = ls(__dirname+'/../binaries/cassandra')[0];
+shell.mv(__dirname+'/../binaries/cassandra/*/*', __dirname+'/../binaries/cassandra/');
+shell.rm('-rf', __dirname+'/../binaries/cassandra/'+unCompressDir);
 
-  console.log();
-  var bar = new ProgressBar('  downloading [:bar] :percent :etas', {
-    complete: '=',
-    incomplete: ' ',
-    width: 20,
-    total: len
-  });
+unCompressDir = ls(__dirname+'/../binaries/solr')[0];
+shell.mv(__dirname+'/../binaries/solr/*/*', __dirname+'/../binaries/solr/');
+shell.rm('-rf', __dirname+'/../binaries/solr/'+unCompressDir);
 
-  res.on('data', function (chunk) {
-    bar.tick(chunk.length);
-  });
-
-  res.on('end', function () {
-    console.log('\n');
-  });
-});
+unCompressDir = ls(__dirname+'/../binaries/spark')[0];
+shell.mv(__dirname+'/../binaries/spark/*/*', __dirname+'/../binaries/spark/');
+shell.rm('-rf', __dirname+'/../binaries/spark/'+unCompressDir);

@@ -4,3 +4,7 @@ dist
 .idea
 logs
 *.DS_Store
+cassandra
+solr
+spark
+gremlin_server
