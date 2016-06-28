@@ -71,6 +71,7 @@
     "superagent": "^2.0.0",
     "utf-8-validate": "^1.2.1",
     "vorpal": "^1.10.10",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "yamljs": "^0.2.8"
   }
 }

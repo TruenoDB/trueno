@@ -1,0 +1,43 @@
+---
+  local:
+    host: "localhost"
+    externalPort: 8000
+    internalPort: 8001
+  components:
+    cassandra:
+      name: "Cassandra"
+      dir: "cassandra"
+      config: "conf/cassandra.yaml"
+      cmdUnix: "bin/cassandra"
+      cmdFlags:
+        - "-f"
+      configFlags:
+        listen_address: "localhost"
+        native_transport_port: 8003
+      readyString: "Starting listening for CQL clients on"
+    gremlinServer:
+      name: "Gremlin Server"
+      dir: "gremlin_server"
+      config: "conf/gremlin-server-BioGridDB.yaml"
+      cmdUnix: "bin/gremlin-server.sh"
+      cmdFlags:
+        - 'conf/gremlin-server-BioGridDB.yaml'
+      configFlags:
+        host: "localhost"
+        port: 8002
+      readyString: "Channel started at port"
+    solr:
+      name: "Solr"
+      dir: "solr"
+      cmdUnix: "bin/solr"
+      cmdFlags:
+        - "start"
+        - "-f"
+        - "-h"
+        - "localhost"
+        - "-p"
+        - 8004
+      readyString: "Server Started"
+    spark:
+      name: "Spark"
+      dir: "spark"
