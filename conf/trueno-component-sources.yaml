@@ -155,3 +155,11 @@
       - "http://www.motorlogy.com/apache/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz"
       - "http://www.trieuvan.com/apache/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz"
       - "http://www.webhostingjams.com/mirror/apache/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz"
+  trueno_compute_server:
+      name: "Trueno Compute Server"
+      description: "The Apache Spark Job Server."
+      version: "1.0.0 with hadoop 2.6"
+      dir: "trueno_compute_server"
+      links:
+        - "https://github.com/TruenoDB/trueno-compute-server/blob/master/release/trueno-compute-server-release.tar.gz"
+
