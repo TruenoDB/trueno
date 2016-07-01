@@ -46,3 +46,5 @@
     trueno_compute_Server:
       name: "Trueno Compute Server"
       dir: "trueno_compute_server"
+      cmdUnix: "server_start.sh"
+      readyString: "OK -> Algorithms Uploaded - Job Server Started!"
