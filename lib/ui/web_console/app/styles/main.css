@@ -122,6 +122,7 @@ md-tabs {
 
 #graphLabComputeViewTabs [role="tabpanel"] {
     transition: none;
+    height: 95%;
 }
 
 .graphLabvizControls {

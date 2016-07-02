@@ -1,35 +1,24 @@
-<md-content >
+<md-content>
     <md-list class="md-dense" flex>
-        <md-subheader class="md-no-sticky">Link Analysis</md-subheader>
-        <md-list-item class="md-2-line" ng-click="null">
-            <div class="md-list-item-text" layout="column">
-                <h3>PageRank</h3>
-                <p>PageRank analysis of the graph</p>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-subheader class="md-no-sticky">Components</md-subheader>
-        <md-list-item class="md-2-line" ng-click="null">
-            <div class="md-list-item-text" layout="column">
-                <h3>Connectivity</h3>
-                <p>The connected components of the graph</p>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-list-item class="md-2-line" ng-click="null">
-            <div class="md-list-item-text" layout="column">
-                <h3>Strong connectivity</h3>
-                <p>The strongly connected components of the graph</p>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-subheader class="md-no-sticky">Shortest Path</md-subheader>
-        <md-list-item class="md-2-line" ng-click="null">
-            <div class="md-list-item-text" layout="column">
-                <h3>Shortest Path</h3>
-                <p>Compute the shortest paths and path lengths between two nodes in the graph</p>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
+        <md-content ng-repeat="(key,val) in algorithms">
+            <md-subheader class="md-no-sticky"><h2>{{key}}</h2></md-subheader>
+            <md-content ng-repeat="algo in val">
+                <md-list-item  ng-click="null">
+                    <div class="md-list-item-text" layout="column">
+                        <h4 style="margin: 0px">{{algo.label}}</h4>
+                        <md-chips style="box-shadow:none">
+                            <md-chip ng-show="algo.rules.localComputation" style="font-size: 10px; background: #EFAE2E;color:white">L</md-chip>
+                            <md-chip ng-show="algo.rules.remoteComputation" style="font-size: 10px; background: #DF5A49;color:white">R</md-chip>
+                            <md-chip ng-show="algo.rules.directed" style="font-size: 10px; background: #45B29D;color:white">D</md-chip>
+                            <md-chip ng-show="!algo.rules.directed" style="font-size: 10px; background: #334D5C;color:white">UD</md-chip>
+                            <md-chip ng-show="algo.rules.weighted" style="font-size: 10px; background: #E27A3F;color:white">W</md-chip>
+                            <md-chip ng-show="!algo.rules.weighted" style="font-size: 10px; background: #46B23C;color:white">UW</md-chip>
+                        </md-chips>
+                        <p style="margin: 0px">{{algo.desc}}</p>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+            </md-content>
+        </md-content>
     </md-list>
 </md-content>
