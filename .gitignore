@@ -8,3 +8,4 @@ cassandra
 solr
 spark
 gremlin_server
+trueno_compute_server
