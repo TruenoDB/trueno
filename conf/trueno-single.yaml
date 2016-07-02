@@ -18,12 +18,12 @@
     gremlinServer:
       name: "Gremlin Server"
       dir: "gremlin_server"
-      config: "conf/gremlin-server-BioGridDB.yaml"
-      #config: "conf/gremlin-server-modern.yaml"
+      #config: "conf/gremlin-server-BioGridDB.yaml"
+      config: "conf/gremlin-server-modern.yaml"
       cmdUnix: "bin/gremlin-server.sh"
       cmdFlags:
-        #- 'conf/gremlin-server-modern.yaml'
-        - 'conf/gremlin-server-BioGridDB.yaml'
+        - 'conf/gremlin-server-modern.yaml'
+        #- 'conf/gremlin-server-BioGridDB.yaml'
       configFlags:
         host: "localhost"
         port: 8002
@@ -46,5 +46,7 @@
     trueno_compute_Server:
       name: "Trueno Compute Server"
       dir: "trueno_compute_server"
-      cmdUnix: "./server_start.sh"
+      cmdUnix: "server_start.sh"
+      cmdFlags:
+        - ''
       readyString: "OK -> Algorithms Uploaded - Job Server Started!"
