@@ -1,7 +1,7 @@
 ##
 #  author: ebarsallo                         
-#  Generate dump data for vertices to import on cassandra. 
-#  Suggested input: wiki-Talk.txt (list of vertices -- one vertice per line).
+#  Generate dump data for edges to import on cassandra. 
+#  Suggested input: A file with a list of vertex (a vertex per line).
 #  module: experiments/backend
 #
 #  Note:
@@ -11,30 +11,10 @@ import sys, getopt
 import csv
 import os.path
 
+from dummy import gen_random_data, gen_random_tuple
 from random import randint
-from faker  import Faker
 
 PRG_NAME = 'gen-dummy-vertices.py'
-
-
-fake = Faker()
-
-# generate random data
-def gen_random (t, n):
-
-	if n == 0: return ''
-
-	# start
-	first = True
-	line  = ''
-	for x in range(n):
-		if not first:
-			line = line + ', '
-			
-		line  = line + "'%(a)s%(b)d': ('text', '%(c)s')" % {'a': t, 'b': x, 'c': fake.sentence(2)}
-		first = False
-	
-	return line
 
 
 # main
@@ -66,17 +46,19 @@ def main(argv):
 
 		for row in reader:
 
-			vertex = row[0]
-
+			node = row[0]
+		
 			attr = randint(0,9)
 			meta = randint(0,9)
-			part = 1
+			part = 1;
 
-			tup = "%(vertex)s,%(partition)s,\"{%(attr_map)s}\",\"{%(comp_map)s}\",\"{%(metadata)s}\"" % {'vertex' : vertex, 
-					    'partition' : part,
-					    'attr_map'  : gen_random('attribute', attr), 
+			tup = "%(vertex)s,\"{%(attr_map)s}\",\"{%(comp_map)s}\",\"{%(metadata)s}\",%(partition)s" % { 
+						'vertex'    : node, 
+					    'attr_map'  : gen_random_tuple('attribute', attr), 
 					    'comp_map'  : '',
-					    'metadata'  : gen_random('metadata', meta)}
+					    'metadata'  : gen_random_tuple('metadata', meta),
+					    'partition' : part}
+					    
 
 			print tup
 
