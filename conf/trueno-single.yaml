@@ -43,10 +43,10 @@
     spark:
       name: "Spark"
       dir: "spark"
-    trueno_compute_Server:
-      name: "Trueno Compute Server"
-      dir: "trueno_compute_server"
-      cmdUnix: "./server_start.sh"
-      cmdFlags:
-        - ''
-      readyString: "OK -> Algorithms Uploaded - Job Server Started!"
+    #trueno_compute_Server:
+      #name: "Trueno Compute Server"
+      #dir: "trueno_compute_server"
+      #cmdUnix: "./server_start.sh"
+      #cmdFlags:
+      #  - ''
+      #readyString: "OK -> Algorithms Uploaded - Job Server Started!"
