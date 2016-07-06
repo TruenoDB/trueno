@@ -3,16 +3,46 @@
         <md-content ng-repeat="(key,val) in algorithms">
             <md-subheader class="md-no-sticky"><h2>{{key}}</h2></md-subheader>
             <md-content ng-repeat="algo in val">
-                <md-list-item  ng-click="null">
+                <md-list-item ng-click="null">
                     <div class="md-list-item-text" layout="column">
                         <h4 style="margin: 0px">{{algo.label}}</h4>
                         <md-chips style="box-shadow:none">
-                            <md-chip ng-show="algo.rules.localComputation" style="font-size: 10px; background: #EFAE2E;color:white">L</md-chip>
-                            <md-chip ng-show="algo.rules.remoteComputation" style="font-size: 10px; background: #DF5A49;color:white">R</md-chip>
-                            <md-chip ng-show="algo.rules.directed" style="font-size: 10px; background: #45B29D;color:white">D</md-chip>
-                            <md-chip ng-show="!algo.rules.directed" style="font-size: 10px; background: #334D5C;color:white">UD</md-chip>
-                            <md-chip ng-show="algo.rules.weighted" style="font-size: 10px; background: #E27A3F;color:white">W</md-chip>
-                            <md-chip ng-show="!algo.rules.weighted" style="font-size: 10px; background: #46B23C;color:white">UW</md-chip>
+                            <md-chip ng-show="algo.rules.localComputation"
+                                     style="font-size: 10px; background: #EFAE2E;color:white">L
+                                <md-tooltip md-direction="right">
+                                    Local Computation Available
+                                </md-tooltip>
+                            </md-chip>
+                            <md-chip ng-show="algo.rules.remoteComputation"
+                                     style="font-size: 10px; background: #DF5A49;color:white">R
+                                <md-tooltip md-direction="right">
+                                    Remote Computation Available
+                                </md-tooltip>
+                            </md-chip>
+                            <md-chip ng-show="algo.rules.directed"
+                                     style="font-size: 10px; background: #45B29D;color:white">D
+                                <md-tooltip md-direction="right">
+                                    Directed Graph Supported
+                                </md-tooltip>
+                            </md-chip>
+                            <md-chip ng-show="!algo.rules.directed"
+                                     style="font-size: 10px; background: #334D5C;color:white">UD
+                                <md-tooltip md-direction="right">
+                                    Undirected Graph Supported
+                                </md-tooltip>
+                            </md-chip>
+                            <md-chip ng-show="algo.rules.weighted"
+                                     style="font-size: 10px; background: #E27A3F;color:white">W
+                                <md-tooltip md-direction="right">
+                                    Weighted Graph Supported
+                                </md-tooltip>
+                            </md-chip>
+                            <md-chip ng-show="!algo.rules.weighted"
+                                     style="font-size: 10px; background: #46B23C;color:white">UW
+                                <md-tooltip md-direction="right">
+                                    Unweighted Graph Supported
+                                </md-tooltip>
+                            </md-chip>
                         </md-chips>
                         <p style="margin: 0px">{{algo.desc}}</p>
                     </div>
