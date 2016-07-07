@@ -1,7 +1,7 @@
 ##
 #  author: ebarsallo                         
 #  Generate dump data for edges to import on cassandra. 
-#  Suggested input: wiki-Talk.txt 
+#  Suggested input: A csv file which represent the edge list (eg. wiki-Talk.txt) 
 #  module: experiments/backend
 #
 #  Note:
@@ -11,30 +11,10 @@ import sys, getopt
 import csv
 import os.path
 
+from dummy import gen_random_data, gen_random_tuple
 from random import randint
-from faker  import Faker
 
-PRG_NAME = 'gen-dummy-vertices.py'
-
-
-fake = Faker()
-
-# generate random data
-def gen_random (t, n):
-
-	if n == 0: return ''
-
-	# start
-	first = True
-	line  = ''
-	for x in range(n):
-		if not first:
-			line = line + ', '
-			
-		line = line + "'%(a)s%(b)d': ('text', %(c)s)" % {'a': t, 'b': x, 'c': fake.sentence(2)}
-		first = False
-	
-	return line
+PRG_NAME = 'gen-dummy-edges.py'
 
 
 # main
@@ -82,11 +62,12 @@ def main(argv):
 			meta = randint(0,9)
 			part = 1;
 
-			tup = "%(out_v)s,%(in_v)s,\"{%(attr_map)s}\",\"{%(comp_map)s}\",\"{%(metadata)s}\",%(partition)s" % {'out_v' : node_from, 
-					    'in_v'  : node_to, 
-					    'attr_map'  : gen_random('attribute', attr), 
+			tup = "%(out_v)s,%(in_v)s,\"{%(attr_map)s}\",\"{%(comp_map)s}\",\"{%(metadata)s}\",%(partition)s" % {
+						'out_v'     : node_from, 
+					    'in_v'      : node_to, 
+					    'attr_map'  : gen_random_tuple('attribute', attr), 
 					    'comp_map'  : '',
-					    'metadata'  : gen_random('metadata', meta),
+					    'metadata'  : gen_random_tuple('metadata', meta),
 					    'partition' : part}
 					    
 
