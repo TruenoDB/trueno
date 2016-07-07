@@ -23,4 +23,4 @@ persist in the browser cache.
 
 7- Add modal to the settings window.
 
-8 - Add overall persistence layer to the client side.
+8- Add overall persistence layer to the client side.
