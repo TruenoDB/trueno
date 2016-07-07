@@ -1,5 +1,6 @@
 PENDING:
 
+0- Change Graph Lab for Trueno Lab.
 
 1- Add the delete button functionality.
 
@@ -22,3 +23,4 @@ persist in the browser cache.
 
 7- Add modal to the settings window.
 
+8 - Add overall persistence layer to the client side.
