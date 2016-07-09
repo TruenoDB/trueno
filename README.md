@@ -47,13 +47,13 @@
 
 > **Components:**
 
-> - **Gremlin (Apache Tinkerpop)**: A graph traversal language for intuitive and easy graph analysis.
-> - **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
-> - **TensorFlow**: Open Source Software Library for Machine Intelligence
-> - **Trueno Core**: Database/Computational Engine Core.
-> - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
-> - **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
-> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra[^1] at 10x the throughput and low latency. Stores all graph structures.
+> 1. **Gremlin (Apache Tinkerpop)**: A graph traversal language for intuitive and easy graph analysis.
+> 2. **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
+> 3. **TensorFlow**: Open Source Software Library for Machine Intelligence
+> 4. **Trueno Core**: Database/Computational Engine Core.
+> 5. **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
+> 6. **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
+> 7. **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra at 10x the throughput and low latency. Stores all graph structures.
 
 
 ##Roadmap to alpha version:
@@ -68,7 +68,7 @@
 | Indexing                        |      10%      |
 | Gremlin Tinkerpop Integration   |      20%      |
 | Dynamic Graphs                  |      10%      |
-| GTensorflow Integration         |      05%      |
+| Tensorflow Integration          |      05%      |
 
 ----------
 
@@ -76,7 +76,7 @@
   <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
 </p>
 
-
+----------
 
 
 ## Install
@@ -87,7 +87,7 @@ $ npm install -g trueno
 
 
 ###References:
- [^1]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
+ 
 
 
 
