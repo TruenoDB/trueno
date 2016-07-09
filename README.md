@@ -31,19 +31,19 @@
 ----------
 
 <p align="left">
-  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
+  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
 </p>
 
 ## Workflow with **TruenoDB**
 
 <p align="left">
-  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/workflow.png">
+  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/workflow.png">
 </p>
 
 ## Architecture
 
 <p align="left">
-  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
+  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
 </p>
 
 > **Components:**
