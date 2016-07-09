@@ -28,10 +28,9 @@
 [![NPM](https://nodei.co/npm/trueno.io.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/trueno.io/)
 
 ## Building blocks:
-----------
 
 <p align="left">
-  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
+  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
 </p>
 
 ## Workflow with **TruenoDB**
@@ -54,7 +53,7 @@
 > - **Trueno Core**: Database/Computational Engine Core.
 > - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
 > - **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
-> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra at 10x the throughput and low latency. Stores all graph structures.
+> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra[^cassandra] at 10x the throughput and low latency. Stores all graph structures.
 
 
 
@@ -65,6 +64,11 @@
 ```sh
 $ npm install -g trueno
 ```
+
+
+###References:
+ [^cassandra]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
+
 
 
  © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
