@@ -56,11 +56,13 @@
 > 3. **TensorFlow**: Open Source Software Library for Machine Intelligence
 > 4. **Trueno Core**: Database/Computational Engine Core.
 > 5. **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
-> 6. **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
-> 7. **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra at 10x the throughput and low latency. Stores all graph structures.
+> 6. **Apache Spark** [3]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [4]).
+> 7. **Scylla DB** [2]: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra [1] at 10x the throughput and low latency. Stores all graph structures.
 
 
 ##Roadmap to alpha version:
+
+<p align="center">
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
@@ -73,6 +75,8 @@
 | Gremlin Tinkerpop Integration   |      20%      |
 | Dynamic Graphs                  |      10%      |
 | Tensorflow Integration          |      05%      |
+
+</p>
 
 ----------
 
@@ -91,7 +95,10 @@ $ npm install -g trueno
 
 
 ###References:
- 
+ * [1] https://cassandra.apache.org/
+ * [2] http://www.scylladb.com/
+ * [3] https://spark.apache.org/
+ * [4] https://spark.apache.org/graphx/
 
 
 
