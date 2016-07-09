@@ -21,7 +21,6 @@
 
 <p align="center">
   <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png">
-</p>
 
 [![Build Status](https://travis-ci.org/mastayoda/trueno.io.svg?branch=master)](https://travis-ci.org/mastayoda/trueno.io)[![npm version](https://badge.fury.io/js/trueno.io.svg)](http://badge.fury.io/js/trueno.io) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mastayoda/trueno.io) [![GitHub Stars](https://img.shields.io/github/stars/mastayoda/trueno.io.svg)](https://github.com/mastayoda/trueno.io) [![Supported Platforms](https://img.shields.io/badge/platforms-Chrome|Firefox|Opera|Node.js-orange.svg)](https://github.com/mastayoda/trueno.io)
 
@@ -53,7 +52,7 @@
 > - **Trueno Core**: Database/Computational Engine Core.
 > - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
 > - **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
-> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra[^cassandra] at 10x the throughput and low latency. Stores all graph structures.
+> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra[^1] at 10x the throughput and low latency. Stores all graph structures.
 
 
 ##Roadmap to alpha version:
@@ -61,20 +60,20 @@
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
 | Core                            |      30%      |
-| Web Console                     |      30%           |
-| Connectors                      |      20%           |
-| Graph Compute Engine            |      20%           |
-| Backend Storage                 |      20%           |
-| Indexing                        |      10%           |
-| Gremlin Tinkerpop Integration   |      20%           |
+| Web Console                     |      30%      |
+| Connectors                      |      20%      |
+| Graph Compute Engine            |      20%      |
+| Backend Storage                 |      20%      |
+| Indexing                        |      10%      |
+| Gremlin Tinkerpop Integration   |      20%      |
+| Dynamic Graphs                  |      10%      |
+| GTensorflow Integration         |      05%      |
 
 ##TruenoDB Interface:
 
 <p align="center">
-  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
+  <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
 </p>
-
-
 
 
 
@@ -87,7 +86,7 @@ $ npm install -g trueno
 
 
 ###References:
- [^footn]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
+ [^1]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
 
 
 
