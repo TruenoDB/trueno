@@ -1,5 +1,10 @@
-<p align="left">
-  <img height="75" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/truenoDB.png">
+<p align="center">
+ <table border="0">
+  <tr>
+  <td><img height="75" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/truenoDB.png"></td>
+  <td><img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png"></td>
+  </tr>
+ </table>
 </p>
 
 ----------
@@ -9,23 +14,23 @@
 
 >The Dynamic/Static Graph Distributed Database
 
-> **Features:**
+## Features
 
-> - Distributed, resilient, and fast dynamic and static **graph database**.
-> - Support distributed computation.
-> - Online queries and traversal.
-> - Scalable to billions of nodes and edges.
-> - Easy setup for both cluster and single instance installations.
-> - User friendly and intuitive interface for graph analysis, fast algorithm processing and visualization.
-> - Designed for Data Mining and Machine Learning.
+- Distributed, resilient, and fast dynamic and static **graph database**.
+- Support distributed computation.
+- Online queries and traversal.
+- Scalable to billions of nodes and edges.
+- Easy setup for both cluster and single instance installations.
+- User friendly and intuitive interface for graph analysis, fast algorithm processing and visualization.
+- Designed for Data Mining and Machine Learning.
 
-<p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png">
-</p>
+[![Build Status](https://travis-ci.org/mastayoda/trueno.io.svg?branch=master)](https://travis-ci.org/mastayoda/trueno.io)
+[![npm version](https://badge.fury.io/js/trueno.io.svg)](http://badge.fury.io/js/trueno.io)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/TruenoDB/trueno) 
+[![GitHub Stars](https://img.shields.io/github/stars/TruenoDB/trueno.svg)](https://github.com/TruenoDB/trueno)
+[![Supported Platforms](https://img.shields.io/badge/platforms-Chrome|Firefox|Opera|Node.js-orange.svg)](https://github.com/mastayoda/trueno.io)
 
-[![Build Status](https://travis-ci.org/mastayoda/trueno.io.svg?branch=master)](https://travis-ci.org/mastayoda/trueno.io)[![npm version](https://badge.fury.io/js/trueno.io.svg)](http://badge.fury.io/js/trueno.io) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mastayoda/trueno.io) [![GitHub Stars](https://img.shields.io/github/stars/mastayoda/trueno.io.svg)](https://github.com/mastayoda/trueno.io) [![Supported Platforms](https://img.shields.io/badge/platforms-Chrome|Firefox|Opera|Node.js-orange.svg)](https://github.com/mastayoda/trueno.io)
-
-[![NPM](https://nodei.co/npm/trueno.io.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/trueno.io/)
+[//]: [![NPM](https://nodei.co/npm/trueno.io.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/trueno.io/)
 
 ## Building blocks:
 
