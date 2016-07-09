@@ -29,19 +29,19 @@
 
 ## Building blocks:
 
-<p align="left">
+<p align="center">
   <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
 </p>
 
 ## Workflow with **TruenoDB**
 
-<p align="left">
+<p align="center">
   <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/workflow.png">
 </p>
 
 ## Architecture
 
-<p align="left">
+<p align="center">
   <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
 </p>
 
@@ -56,6 +56,21 @@
 > - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra[^cassandra] at 10x the throughput and low latency. Stores all graph structures.
 
 
+##Roadmap to alpha version:
+
+| Component                       | Percentage    |
+| ------------------------------- | ------------- |
+| Core                            | 30%           |
+| Web Console                     | 30%           |
+| Connectors                      | 20%           |
+| Graph Compute Engine            | 20%           |
+| Backend Storage                 | 20%           |
+| Indexing                        | 10%           |
+| Gremlin Tinkerpop Integration   | 30%           |
+
+
+
+
 
 
 
@@ -67,7 +82,7 @@ $ npm install -g trueno
 
 
 ###References:
- [^cassandra]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
+ [^footn]: The **Apache Cassandra** database is the right choice when you need scalability and high availability without compromising performance.
 
 
 
