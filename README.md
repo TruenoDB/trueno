@@ -62,7 +62,6 @@
 
 ##Roadmap to alpha version:
 
-<p align="center">
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
@@ -76,7 +75,6 @@
 | Dynamic Graphs                  |      10%      |
 | Tensorflow Integration          |      05%      |
 
-</p>
 
 ----------
 
