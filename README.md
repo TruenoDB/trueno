@@ -43,7 +43,7 @@
 ## Architecture
 
 <p align="left">
-  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
+  <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
 </p>
 
 > **Components:**
@@ -52,7 +52,7 @@
 > - **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
 > - **TensorFlow**: Open Source Software Library for Machine Intelligence
 > - **Trueno Core**: Database/Computational Engine Core.
-> - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™used for vertices and edges properties indexing.
+> - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
 > - **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
 > - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra at 10x the throughput and low latency. Stores all graph structures.
 
