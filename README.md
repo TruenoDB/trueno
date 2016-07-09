@@ -22,9 +22,43 @@
 <p align="center">
   <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png">
 </p>
+
 [![Build Status](https://travis-ci.org/mastayoda/trueno.io.svg?branch=master)](https://travis-ci.org/mastayoda/trueno.io)[![npm version](https://badge.fury.io/js/trueno.io.svg)](http://badge.fury.io/js/trueno.io) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mastayoda/trueno.io) [![GitHub Stars](https://img.shields.io/github/stars/mastayoda/trueno.io.svg)](https://github.com/mastayoda/trueno.io) [![Supported Platforms](https://img.shields.io/badge/platforms-Chrome|Firefox|Opera|Node.js-orange.svg)](https://github.com/mastayoda/trueno.io)
 
 [![NPM](https://nodei.co/npm/trueno.io.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/trueno.io/)
+
+## Building blocks:
+----------
+
+<p align="left">
+  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
+</p>
+
+## Workflow with **TruenoDB**
+
+<p align="left">
+  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/workflow.png">
+</p>
+
+## Architecture
+
+<p align="left">
+  <img height="50" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
+</p>
+
+> **Components:**
+
+> - **Gremlin (Apache Tinkerpop)**: A graph traversal language for intuitive and easy graph analysis.
+> - **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
+> - **TensorFlow**: Open Source Software Library for Machine Intelligence
+> - **Trueno Core**: Database/Computational Engine Core.
+> - **Apache Solr**: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™used for vertices and edges properties indexing.
+> - **Apache Spark**: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX).
+> - **Scylla DB**: World's fastest NoSQL column store database. Fully compatible with Apache Cassandra at 10x the throughput and low latency. Stores all graph structures.
+
+
+
+
 
 ## Install
 
