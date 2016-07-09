@@ -70,7 +70,7 @@
 | Dynamic Graphs                  |      10%      |
 | GTensorflow Integration         |      05%      |
 
-##TruenoDB Interface:
+----------
 
 <p align="center">
   <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
