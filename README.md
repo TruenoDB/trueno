@@ -60,14 +60,19 @@
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
-| Core                            | 30%           |
-| Web Console                     | 30%           |
-| Connectors                      | 20%           |
-| Graph Compute Engine            | 20%           |
-| Backend Storage                 | 20%           |
-| Indexing                        | 10%           |
-| Gremlin Tinkerpop Integration   | 30%           |
+| Core                            |      30%      |
+| Web Console                     |      30%           |
+| Connectors                      |      20%           |
+| Graph Compute Engine            |      20%           |
+| Backend Storage                 |      20%           |
+| Indexing                        |      10%           |
+| Gremlin Tinkerpop Integration   |      20%           |
 
+##TruenoDB Interface:
+
+<p align="center">
+  <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
+</p>
 
 
 
