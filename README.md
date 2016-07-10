@@ -1,10 +1,6 @@
 
-<table border-style="none" cellspacing="6" cellpading="6">
-  <tr>
-    <td><img height="75" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/truenoDB.png"></td>
-    <td><img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png"></td>
-  </tr>
-</table>
+<img height="75" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/truenoDB.png" align="middle">
+<img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png" align="middle">
 
 ----------
 
