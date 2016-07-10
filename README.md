@@ -37,13 +37,13 @@
   <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
 </p>
 
-## Workflow with **TruenoDB**
+## Workflow with **TruenoDB**:
 
 <p align="center">
   <img height="200" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/workflow.png">
 </p>
 
-## Architecture
+## Architecture:
 
 <p align="center">
   <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
@@ -58,6 +58,15 @@
 > 5. **Apache Solr** [3]: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
 > 6. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
 > 7. **Scylla DB** [6]: World's fastest NoSQL column store database. Fully compatible with Apache **Cassandra** [7] at 10x the throughput and low latency. Stores all graph structures.
+
+
+##Storage Schema:
+* Each **Keyspace** is a graph.
+* **Distributed** workload and storage.
+* **Data replication** to increase availability.
+* **Data sharding** support for horizontal scaling.
+* Support **multiple properties** for edges and vertices.
+* **Analytic results** (built-in collection of algorithms) stored in graph structure for easier post-analysis.
 
 
 ##Roadmap to alpha version:
