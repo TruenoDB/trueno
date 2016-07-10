@@ -62,7 +62,6 @@
 
 ##Roadmap to alpha version:
 
-
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
 | Core                            |      30%      |
@@ -81,6 +80,17 @@
 <p align="center">
   <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
 </p>
+
+> **TruenoDB Interface Features:**
+> Trueno relies on a fast graph analytic/visualization UI.
+
+> 1. Angular Material Based.
+> 2. Pure **WebSockets**, no slow HTTP requests.
+> 3. **Sigma.js WebGL** rendering for high scalability.
+> 4. **Gremlin** Language Traversal for graph retrieval.
+> 5. XPath for graph component filtering.
+> 6. Point, drag, click based functionality. No complex coding or preparation.
+> 7. Export, Save, Import graphs.
 
 ----------
 
