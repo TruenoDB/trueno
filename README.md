@@ -89,10 +89,10 @@
 > **TruenoDB Interface Features:**
 > Trueno relies on a fast graph analytic/visualization UI.
 
-> 1. Angular Material Based.
-> 2. Pure **WebSockets**, no slow HTTP requests.
-> 3. **Sigma.js WebGL** rendering for high scalability.
-> 4. **Gremlin** Language Traversal for graph retrieval.
+> 1. Angular Material [8] Based.
+> 2. Pure **WebSockets** [9], no slow HTTP requests.
+> 3. **Sigma.js WebGL** [10] rendering for high scalability.
+> 4. **Gremlin** [11] Language Traversal for graph retrieval.
 > 5. XPath for graph component filtering.
 > 6. Point, drag, click based functionality. No complex coding or preparation.
 > 7. Export, Save, Import graphs.
@@ -115,7 +115,10 @@ $ npm install -g trueno
  * [5] https://spark.apache.org/graphx/
  * [6] http://www.scylladb.com/
  * [7] https://cassandra.apache.org/
-
+ * [8] https://material.angularjs.org/latest/
+ * [9] https://www.websocket.org/aboutwebsocket.html
+ * [10] http://sigmajs.org/
+ * [11] https://github.com/tinkerpop/gremlin/wiki
 
 
  © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
