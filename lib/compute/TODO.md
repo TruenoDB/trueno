@@ -1,5 +1,9 @@
 #Compute TODO
 
+**Please refer to https://github.com/TruenoDB/trueno-compute-server**
+
+(There is a Spark Compute Server Algorithm's Generator.)
+
 ###Spark job Server
  * Distributed configuration
  * Installer
