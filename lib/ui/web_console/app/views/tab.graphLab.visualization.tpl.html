@@ -38,18 +38,18 @@
                 <br>
                 <br>
                 <md-radio-group ng-model="filterRadio" layout="row">
-                    <md-radio-button value="view">
+                    <md-radio-button value="show">
                         <md-icon md-svg-icon="eye"></md-icon>
                         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
                             show on filter
                         </md-tooltip>
                     </md-radio-button>
-                    <md-radio-button value="hide">
-                        <md-icon md-svg-icon="eye-off"></md-icon>
-                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            hide on filter
-                        </md-tooltip>
-                    </md-radio-button>
+                    <!--<md-radio-button value="hide">-->
+                        <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
+                        <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
+                            <!--hide on filter-->
+                        <!--</md-tooltip>-->
+                    <!--</md-radio-button>-->
                     <md-radio-button value="highlight">
                         <md-icon md-svg-icon="marker"></md-icon>
                         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
@@ -57,6 +57,16 @@
                         </md-tooltip>
                     </md-radio-button>
                 </md-radio-group>
+                <md-chips class="custom-chips" ng-model="filterChips" style="float:left" md-on-remove="removeFilter($chip, $index)">
+                    <md-chip-template>
+                    <span>
+                        <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">
+                            {{$chip.q}}
+                        </md-tooltip>
+                      <strong>[{{$index}}]</strong>
+                    </span>
+                    </md-chip-template>
+                </md-chips>
             </div>
             <div id="visualizationControls">
                 <md-button aria-label="zoom in" class="md-fab md-raised md-mini" ng-click="zoomIn()">
