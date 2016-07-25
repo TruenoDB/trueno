@@ -5,7 +5,7 @@ dist
 logs
 *.DS_Store
 cassandra
-solr
+elasticsearch
 spark
 gremlin_server
 trueno_compute_server

@@ -58,6 +58,7 @@
     "commander": "^2.9.0",
     "download": "^5.0.2",
     "download-status": "^2.2.1",
+    "elasticsearch": "^11.0.1",
     "finalhandler": "^0.4.1",
     "gremlin": "^2.3.2",
     "joi": "^8.4.0",
