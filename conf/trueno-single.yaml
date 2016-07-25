@@ -28,18 +28,13 @@
         host: "localhost"
         port: 8002
       readyString: "Channel started at port"
-    solr:
-      name: "Solr"
-      dir: "solr"
-      cmdUnix: "bin/solr"
+    elasticsearch:
+      name: "Elasticsearch"
+      dir: "elasticsearch"
+      cmdUnix: "bin/elasticsearch"
       cmdFlags:
-        - "start"
-        - "-f"
-        - "-h"
-        - "localhost"
-        - "-p"
-        - 8004
-      readyString: "Server Started"
+        - ''
+      readyString: "indices into cluster_state"
     spark:
       name: "Spark"
       dir: "spark"
