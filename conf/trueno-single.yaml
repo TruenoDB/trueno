@@ -4,17 +4,6 @@
     externalPort: 8000
     internalPort: 8001
   components:
-    cassandra:
-      name: "Cassandra"
-      dir: "cassandra"
-      config: "conf/cassandra.yaml"
-      cmdUnix: "bin/cassandra"
-      cmdFlags:
-        - "-f"
-      configFlags:
-        listen_address: "localhost"
-        native_transport_port: 8003
-      readyString: "Starting listening for CQL clients on"
     gremlinServer:
       name: "Gremlin Server"
       dir: "gremlin_server"
@@ -28,12 +17,26 @@
         host: "localhost"
         port: 8002
       readyString: "Channel started at port"
+    cassandra:
+      name: "Cassandra"
+      dir: "cassandra"
+      config: "conf/cassandra.yaml"
+      cmdUnix: "bin/cassandra"
+      cmdFlags:
+        - "-f"
+      configFlags:
+        listen_address: "localhost"
+        native_transport_port: 8003
+      readyString: "Starting listening for CQL clients on"
     elasticsearch:
       name: "Elasticsearch"
       dir: "elasticsearch"
       cmdUnix: "bin/elasticsearch"
       cmdFlags:
-        - ''
+        - '--http.port'
+        - 8004
+        - '--network.host'
+        - 'localhost'
       readyString: "indices into cluster_state"
     spark:
       name: "Spark"
