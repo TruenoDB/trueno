@@ -32,11 +32,14 @@
 </md-sidenav>
 <md-content style="height: 100%">
     <md-tabs flex md-selected="selectedIndex" style="height: inherit;">
-        <md-tab label="Graph Lab">
+        <md-tab label="Cluster">
+            <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
+        </md-tab>
+        <md-tab label="Trueno Lab">
             <ng-include src="'views/tab.graphLab.tpl.html'"></ng-include>
         </md-tab>
-        <md-tab label="Monitor">
-            <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
+        <md-tab label="Indexes">
+            <ng-include src="'views/tab.kpof.tpl.html'"></ng-include>
         </md-tab>
         <md-tab label="Administration">
             <ng-include src="'views/tab.admin.tpl.html'"></ng-include>
@@ -99,6 +102,7 @@
 <script src="controllers/graph-lab-query.js"></script>
 <script src="controllers/graph-lab-settings.js"></script>
 <script src="controllers/admin.js"></script>
+<script src="controllers/kpof.js"></script>
 <!--Main Script-->
 <script src="scripts/main.js"></script>
 </body>

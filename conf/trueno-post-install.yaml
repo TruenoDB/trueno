@@ -1,0 +1,9 @@
+---
+  elasticKopf:
+    name: "Kopf"
+    dir: "elasticsearch"
+    cmdUnix: "bin/plugin"
+    cmdFlags:
+      - 'install'
+      - 'lmenezes/elasticsearch-kopf/v2.1.1'
+    readyString: "Installed kopf into"

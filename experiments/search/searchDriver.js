@@ -9,11 +9,19 @@ var s = new Search();
 /* init the search */
 s.init().then((host)=> {
 
-  return Promise.all([s.deleteIndex('mygraph'), s.initIndex('mygraph')]);
+  return s.indexExists('mygraph');
 
 }, (error)=> {
 
   console.log(error);
+
+}).then((exist)=> {
+
+  if (exist) {
+    return Promise.all([s.deleteIndex('mygraph'), s.initIndex('mygraph')]);
+  } else {
+    return s.initIndex('mygraph');
+  }
 
 }).then((results)=> {
   console.log(results);
@@ -24,8 +32,10 @@ s.init().then((host)=> {
     body: {
       age: 30,
       name: 'Juan',
+      lastName: 'Perez',
       birthdate: new Date()
-    }
+    },
+    refresh: true
   }), s.put({
     index: 'mygraph',
     type: 'vertex',
@@ -34,7 +44,8 @@ s.init().then((host)=> {
       age: 20,
       name: 'Pedro',
       birthdate: new Date()
-    }
+    },
+    refresh: true
   }), s.put({
     index: 'mygraph',
     type: 'edge',
@@ -43,7 +54,8 @@ s.init().then((host)=> {
       relation: 'knows',
       source: 1,
       target: 2
-    }
+    },
+    refresh: true
   }), s.put({
     index: 'mygraph',
     type: 'edge',
@@ -51,16 +63,19 @@ s.init().then((host)=> {
     body: {
       relation: 'meets',
       source: 2,
-      target: 1
-    }
+      target: 1,
+      computed: {
+        rank: 1
+      }
+    },
+    refresh: true
   })]);
 }).then((results)=> {
   console.log(results);
   return s.search({
     index: 'mygraph',
     type: 'edge',
-    //q: "relation:knows"
-
+    q: "relation:knows"
   });
 }).then((results)=> {
   console.log(results);

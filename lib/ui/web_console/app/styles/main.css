@@ -99,9 +99,22 @@ md-tabs {
     height: inherit;
 }
 
-#tab-content-0 > div {
+#tab-content-0  > div {
     height: 100%;
 }
+
+#tab-content-1 > div {
+    height: 100%;
+}
+
+#tab-content-2 > div {
+    height: 100%;
+}
+
+#tab-content-3 > div {
+    height: 100%;
+}
+
 
 .graphSelect {
     margin: 0;
