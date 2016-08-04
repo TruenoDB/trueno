@@ -7,3 +7,11 @@
       - 'install'
       - 'lmenezes/elasticsearch-kopf/v2.1.1'
     readyString: "Installed kopf into"
+  elasticSql:
+    name: "sql"
+    dir: "elasticsearch"
+    cmdUnix: "bin/plugin"
+    cmdFlags:
+      - 'install'
+      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
+    readyString: "Installed sql into"
