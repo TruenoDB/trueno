@@ -18,18 +18,9 @@ s.init().then((host)=> {
 
 }).then((exist)=> {
 
-  /* Example term filter, NOTE: Must be lowercase */
-  var termFilter = s.filterFactory()
-  .filter('term', 'last_name', 'diaz')
-  .filter('term', 'height', 7);
-  return s.search(termFilter, 'mygraph', 'vertex');
+  return s.sql("SELECT * FROM mygraph WHERE last_name = 'Snyder' AND _type = 'vertex'");
 
 }).then((results)=> {
 
-  console.log("Done with term filter", results.splice(0, 3));
-
-  /* Example term filter, NOTE: Must be lowercase */
-  var termFilter = s.filterFactory().filter('terms', 'last_name', ['snyder', 'diaz'])
-  return s.search(termFilter, 'mygraph', 'vertex');
-
+  console.log(results);
 })
