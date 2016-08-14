@@ -1,6 +1,7 @@
 "use strict";
 const Search = require('../../lib/search/search-client');
 const Logger = require("../../lib/core/logging/logger");
+const faker = require("faker");
 var vertices = require("./vertices.json");
 var edges = require("./edges.json");
 
@@ -26,8 +27,15 @@ s.init().then((host)=> {
 
     /* Inserting all vertices */
     vertices.forEach((v)=> {
-      v.gender = (Math.random() > 0.5) ? 'unknown' : 'asexual';
-      v.height = (Math.random()) * 100;
+      v.gender = faker.random.arrayElement(["male","female"]);
+      v.height = faker.random.number({min:4, max:7});
+      v.jobArea = faker.name.jobArea();
+      v.salary = faker.random.number({min:2000, max:10000});
+      v.birthdate = new Date(faker.date.between('1988-01-01', '2015-12-31'));
+      if(faker.random.number({min:1, max:2}) == 2){
+        v.optionalField = true;
+      }
+
       promises.push(s.update(v, 'mygraph', 'vertex'));
     });
 
