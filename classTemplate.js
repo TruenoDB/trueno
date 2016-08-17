@@ -1,10 +1,11 @@
 "use strict";
 
 /**
- * @author Your Name Goes Here
+ * @author Edgardo A. Barsallo Yi (ebarsallo)
  * This module decription
  * @module path/moduleFileName
  * @see module:path/referencedModuleName
+ *
  */
 
 /** Import modules */
