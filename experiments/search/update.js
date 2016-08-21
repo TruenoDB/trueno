@@ -27,13 +27,15 @@ s.init().then((host)=> {
 
     /* Inserting all vertices */
     vertices.forEach((v)=> {
-      v.gender = faker.random.arrayElement(["male","female"]);
-      v.height = faker.random.number({min:4, max:7});
-      v.jobArea = faker.name.jobArea();
-      v.salary = faker.random.number({min:2000, max:10000});
-      v.birthdate = new Date(faker.date.between('1988-01-01', '2015-12-31'));
+      v = {prop:v};
+      v.id = v.prop.id;
+      v.prop.gender = faker.random.arrayElement(["male","female"]);
+      v.prop.height = faker.random.number({min:4, max:7});
+      v.prop.jobArea = faker.name.jobArea();
+      v.prop.salary = faker.random.number({min:2000, max:10000});
+      v.prop.birthdate = new Date(faker.date.between('1988-01-01', '2015-12-31'));
       if(faker.random.number({min:1, max:2}) == 2){
-        v.optionalField = true;
+        v.prop.optionalField = true;
       }
 
       promises.push(s.update(v, 'mygraph', 'vertex'));

@@ -32,11 +32,11 @@ s.init().then((host)=> {
 
   /* Inserting all vertices */
   vertices.forEach((v)=> {
-    promises.push(s.insert(v, 'mygraph', 'vertex'));
+    promises.push(s.insert({id: v.id,prop:v,meta:{},computed: {}}, 'mygraph', 'vertex'));
   });
   /* Inserting all edges */
   edges.forEach((e)=> {
-    promises.push(s.insert(e, 'mygraph', 'edge'));
+    promises.push(s.insert({ prop:e, meta:{},computed: {}}, 'mygraph', 'edge'));
   });
 
   return Promise.all(promises);
