@@ -12,7 +12,7 @@ var s = new Search();
 /* init the search */
 s.init().then((host)=> {
 
-  return s.indexExists('mygraph');
+  return s.indexExists('graphi');
 
 }, (error)=> {
 
@@ -20,10 +20,12 @@ s.init().then((host)=> {
 
 }).then((exist)=> {
 
+  console.log('exists response is:', exist);
+
   if (exist) {
-    return Promise.all([s.deleteIndex('mygraph'), s.initIndex('mygraph')]);
+    return Promise.all([s.deleteIndex('graphi'), s.initIndex('graphi')]);
   } else {
-    return s.initIndex('mygraph');
+    return s.initIndex('graphi');
   }
 
 }).then((results)=> {
@@ -32,11 +34,11 @@ s.init().then((host)=> {
 
   /* Inserting all vertices */
   vertices.forEach((v)=> {
-    promises.push(s.insert({id: v.id,prop:v,meta:{},computed: {}}, 'mygraph', 'vertex'));
+    promises.push(s.insert({id: v.id,prop:v,meta:{},computed: {}}, 'graphi', 'vertex'));
   });
   /* Inserting all edges */
   edges.forEach((e)=> {
-    promises.push(s.insert({ prop:e, meta:{},computed: {}}, 'mygraph', 'edge'));
+    promises.push(s.insert({ prop:e, meta:{},computed: {}}, 'graphi', 'edge'));
   });
 
   return Promise.all(promises);
