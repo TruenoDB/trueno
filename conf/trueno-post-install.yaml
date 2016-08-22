@@ -5,7 +5,7 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'https://github.com/lmenezes/elasticsearch-kopf/archive/v2.1.1.zip'
+      - 'lmenezes/elasticsearch-kopf/v2.1.1'
     readyString: "Installed kopf into"
   elasticSql:
     name: "sql"
