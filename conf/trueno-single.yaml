@@ -37,6 +37,7 @@
         - 8004
         - '--network.host'
         - 'localhost'
+        - '--action.auto_create_index=false'
       readyString: "indices into cluster_state"
     spark:
       name: "Spark"
