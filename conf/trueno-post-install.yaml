@@ -15,3 +15,11 @@
       - 'install'
       - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
     readyString: "Installed sql into"
+  elasticDeleteByQuery:
+    name: "delete-by-query"
+    dir: "elasticsearch"
+    cmdUnix: "bin/plugin"
+    cmdFlags:
+      - 'install'
+      - 'delete-by-query'
+    readyString: "Installed delete-by-query into"
