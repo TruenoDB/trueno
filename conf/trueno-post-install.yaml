@@ -23,3 +23,11 @@
       - 'install'
       - 'delete-by-query'
     readyString: "Installed delete-by-query into"
+  elasticSiren-join:
+    name: "siren-join"
+    dir: "elasticsearch"
+    cmdUnix: "bin/plugin"
+    cmdFlags:
+      - 'install'
+      - 'solutions.siren/siren-join/2.3.4'
+    readyString: "Installed siren-join into"
