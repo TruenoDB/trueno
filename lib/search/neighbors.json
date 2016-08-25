@@ -1,0 +1,130 @@
+{
+  "e": {
+    "out": {
+      "query": {
+        "filtered": {
+          "query": {
+            "filtered": {
+              "filter": {
+                "term": {
+                  "source": 1
+                }
+              }
+            }
+          },
+          "filter": {
+            "filterjoin": {
+              "source": {
+                "indices": [
+                  "graphi"
+                ],
+                "types": [
+                  "v"
+                ],
+                "path": "id",
+                "query": {
+                  "match_all": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "in": {
+      "query": {
+        "filtered": {
+          "query": {
+            "filtered": {
+              "filter": {
+                "term": {
+                  "target": 1
+                }
+              }
+            }
+          },
+          "filter": {
+            "filterjoin": {
+              "source": {
+                "indices": [
+                  "graphi"
+                ],
+                "types": [
+                  "v"
+                ],
+                "path": "id",
+                "query": {
+                  "match_all": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "v": {
+    "out": {
+      "query": {
+        "filtered": {
+          "query": {
+            "filtered": {
+              "filter": {
+                "term": {
+                  "source": 1
+                }
+              }
+            }
+          },
+          "filter": {
+            "filterjoin": {
+              "source": {
+                "indices": [
+                  "graphi"
+                ],
+                "types": [
+                  "v"
+                ],
+                "path": "id",
+                "query": {
+                  "match_all": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "in": {
+      "query": {
+        "filtered": {
+          "query": {
+            "filtered": {
+              "filter": {
+                "term": {
+                  "target": 1
+                }
+              }
+            }
+          },
+          "filter": {
+            "filterjoin": {
+              "source": {
+                "indices": [
+                  "graphi"
+                ],
+                "types": [
+                  "v"
+                ],
+                "path": "id",
+                "query": {
+                  "match_all": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
