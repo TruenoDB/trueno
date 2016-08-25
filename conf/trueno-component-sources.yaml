@@ -73,15 +73,15 @@
         - "http://www.interior-dsgn.com/apache/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
         - "http://www.motorlogy.com/apache/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
         - "http://www.trieuvan.com/apache/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
-        - "http://www.webhostingjams.com/mirror/apache/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
+        - "http://www.sebhostingjams.com/mirror/apache/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
   elasticsearch:
     name: "Elasticsearch"
     description: "Elasticsearch search engine."
-    version: "2.3.4"
+    version: "2.3.5"
     dir: "elasticsearch"
     links:
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip"
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz"
+      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.5/elasticsearch-2.3.5.zip"
+      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.5/elasticsearch-2.3.5.tar.gz"
   spark:
     name: "Spark"
     description: "The Apache Spark distributed computational engine."

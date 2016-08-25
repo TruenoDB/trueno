@@ -1,0 +1,35 @@
+{
+  "edge": {
+    "query": {
+      "filtered": {
+        "filter": {
+          "term": {
+            "id": null
+          }
+        }
+      }
+    }
+  },
+  "edgeVertices": {
+    "query": {
+      "filtered": {
+        "filter": {
+          "bool": {
+            "should": [
+              {
+                "term": {
+                  "id": null
+                }
+              },
+              {
+                "term": {
+                  "id": null
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

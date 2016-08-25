@@ -1,0 +1,71 @@
+{
+  "e": {
+    "properties": {
+      "source": {
+        "type": "long"
+      },
+      "target": {
+        "type": "long"
+      },
+      "prop": {
+        "type": "object"
+      },
+      "computed": {
+        "type": "object"
+      },
+      "meta": {
+        "type": "object"
+      },
+      "label": {
+        "type": "string"
+      },
+      "partition": {
+        "type": "long"
+      }
+    }
+  },
+  "v": {
+    "properties": {
+      "prop": {
+        "type": "object"
+      },
+      "computed": {
+        "type": "object"
+      },
+      "meta": {
+        "type": "object"
+      },
+      "label": {
+        "type": "string"
+      },
+      "partition": {
+        "type": "long"
+      }
+    }
+  },
+  "g": {
+    "properties": {
+      "prop": {
+        "type": "object"
+      },
+      "computed": {
+        "type": "object"
+      },
+      "meta": {
+        "type": "object"
+      },
+      "label": {
+        "type": "string"
+      },
+      "directed": {
+        "type": "boolean"
+      },
+      "dynamic": {
+        "type": "boolean"
+      },
+      "multi": {
+        "type": "boolean"
+      }
+    }
+  }
+}
