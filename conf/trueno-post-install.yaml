@@ -5,7 +5,7 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'lmenezes/elasticsearch-kopf/v2.1.1'
+      - 'lmenezes/elasticsearch-kopf/2.0'
     readyString: "Installed kopf into"
   elasticSql:
     name: "sql"
@@ -13,7 +13,7 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
+      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.5.0/elasticsearch-sql-2.3.5.0.zip'
     readyString: "Installed sql into"
   elasticDeleteByQuery:
     name: "delete-by-query"
@@ -29,5 +29,5 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'solutions.siren/siren-join/2.3.4'
+      - 'solutions.siren/siren-join/2.3.5'
     readyString: "Installed siren-join into"
