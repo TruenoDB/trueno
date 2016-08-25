@@ -1,0 +1,42 @@
+Get me all Out vertices(neighbors) from this vertex.
+
+(me) (source = me)->(target = neighbor) (neighbor)
+ vertex(1)   source(1), target(?)    vertex(?)
+
+ graphi/v/_coordinate_search
+{
+  "query": {
+    "filtered": {
+      "filter": {
+
+      ---------------------------------- neighbors
+        "filterjoin": {
+          "id": {
+            "indices": [
+              "graphi"
+            ],
+            "types": [
+              "e"
+            ],
+            "path": "target",
+            "query": {
+              "filtered": {
+                "filter": {
+                  "term": {
+                    "source": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+        ---------------------------------- Edges
+      }
+    }
+  }
+}
+
+select * from v inner join e on e.target = v.id
+where e.source = 1(me)
+
+
