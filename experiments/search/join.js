@@ -19,29 +19,27 @@ s.init().then((host)=> {
 
 }).then((exist)=> {
 
-  let neighbor = Joins.neighbors;
+  let neighbor = Joins;//Joins.neighbors;
 
   /* Setting the source */
-  neighbor.query.filtered.filter.filterjoin.source = {
-    "indices": [
-      "graphi"
-    ],
-    "types": [
-      "v"
-    ],
-    "path": "id",
-    "query": {
-      "match_all": {}
-    }
-  };
-
+  // neighbor.query.filtered.filter.filterjoin.source = {
+  //   "indices": [
+  //     "graphi"
+  //   ],
+  //   "types": [
+  //     "v"
+  //   ],
+  //   "path": "id",
+  //   "query": {
+  //     "match_all": {}
+  //   }
+  // };
 
   let outEdgesPromise = s.join(neighbor, 'graphi', 'e');
-
 
   return outEdgesPromise;
 
 }).then((results)=> {
 
   console.log(results);
-})
+});

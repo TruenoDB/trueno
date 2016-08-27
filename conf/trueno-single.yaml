@@ -48,5 +48,4 @@
       cmdUnix: "./server_start.sh"
       cmdFlags:
         - ''
-      #readyString: "OK -> Algorithms Uploaded - Job Server Started!"
       readyString: "Job Server Started!"
