@@ -1,7 +1,7 @@
 "use strict";
 const Search = require('../../lib/search/search-client');
 const Logger = require("../../lib/core/logging/logger");
-const Joins = require("../../lib/search/neighbors.json");
+const Joins = require("../../lib/search/templates/neighbors.json");
 
 /* Init logger */
 global.logger = new Logger({'debug': false});
@@ -19,29 +19,27 @@ s.init().then((host)=> {
 
 }).then((exist)=> {
 
-  let neighbor = Joins.neighbors;
+  let neighbor = Joins;//Joins.neighbors;
 
   /* Setting the source */
-  neighbor.query.filtered.filter.filterjoin.source = {
-    "indices": [
-      "graphi"
-    ],
-    "types": [
-      "v"
-    ],
-    "path": "id",
-    "query": {
-      "match_all": {}
-    }
-  };
-
+  // neighbor.query.filtered.filter.filterjoin.source = {
+  //   "indices": [
+  //     "graphi"
+  //   ],
+  //   "types": [
+  //     "v"
+  //   ],
+  //   "path": "id",
+  //   "query": {
+  //     "match_all": {}
+  //   }
+  // };
 
   let outEdgesPromise = s.join(neighbor, 'graphi', 'e');
-
 
   return outEdgesPromise;
 
 }).then((results)=> {
 
   console.log(results);
-})
+});

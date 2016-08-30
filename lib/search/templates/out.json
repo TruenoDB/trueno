@@ -1,0 +1,27 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match_all": {}
+      },
+      "filter": {
+        "filterjoin": {
+          "id": {
+            "indices": [
+              "index"
+            ],
+            "types": [
+              "e"
+            ],
+            "path": "target",
+            "query": {
+              "term": {
+                "source": 4
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

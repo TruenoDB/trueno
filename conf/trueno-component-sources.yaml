@@ -124,7 +124,7 @@
   trueno_compute_server:
       name: "Trueno Compute Server"
       description: "The Apache Spark Job Server."
-      version: "0.1.0 with Job Server master"
+      version: "0.1.0"
       dir: "trueno_compute_server"
       links:
         - "https://github.com/TruenoDB/trueno-compute-server/raw/master/release/trueno-compute-server-release.tar.gz"
