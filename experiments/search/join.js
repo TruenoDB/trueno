@@ -1,7 +1,7 @@
 "use strict";
 const Search = require('../../lib/search/search-client');
 const Logger = require("../../lib/core/logging/logger");
-const Joins = require("../../lib/search/neighbors.json");
+const Joins = require("../../lib/search/templates/neighbors.json");
 
 /* Init logger */
 global.logger = new Logger({'debug': false});
