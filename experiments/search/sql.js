@@ -18,9 +18,13 @@ s.init().then((host)=> {
 
 }).then((exist)=> {
 
-  return s.sql("SELECT * FROM mygraph WHERE last_name = 'Snyder' AND _type = 'vertex'");
+  return s.sql("SELECT * FROM citations where target = 9412200 or id = 9207078");
 
 }).then((results)=> {
 
   console.log(results);
-})
+},(err)=>{
+
+  console.log('error ocurred' ,err);
+
+});
