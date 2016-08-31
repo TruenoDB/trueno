@@ -72,6 +72,10 @@ div.left {
     border: lightgrey solid 1px;
 }
 
+div[md-tabs-template$="::tab.template"] {
+    height: 100%;
+}
+
 #graphRendererContainer {
     height: 95%;
     /*border-width: 1px;*/
