@@ -4,6 +4,19 @@
     externalPort: 8000
     internalPort: 8001
   components:
+    gremlinServer:
+      name: "Gremlin Server"
+      dir: "gremlin_server"
+      #config: "conf/gremlin-server-BioGridDB.yaml"
+      config: "conf/gremlin-server-modern.yaml"
+      cmdUnix: "bin/gremlin-server.sh"
+      cmdFlags:
+        - 'conf/gremlin-server-modern.yaml'
+        #- 'conf/gremlin-server-BioGridDB.yaml'
+      configFlags:
+        host: "localhost"
+        port: 8002
+      readyString: "Channel started at port"
     cassandra:
       name: "Cassandra"
       dir: "cassandra"

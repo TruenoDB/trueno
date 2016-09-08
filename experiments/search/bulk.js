@@ -30,20 +30,22 @@ s.init().then((host)=> {
 
 }).then((results)=> {
 
-  var promises = [];
+  var operations = [];
 
   /* Inserting all vertices */
   vertices.forEach((v)=> {
-    promises.push(s.index({id: v.id,prop:v,meta:{},computed: {}}, 'graphi', 'v'));
+    operations.push({ "index" : {"_type" : "v"} });
+    operations.push({id: v.id, prop: v, meta: {}, computed: {}});
   });
   /* Inserting all edges */
   edges.forEach((e)=> {
-    promises.push(s.index({ prop:e, meta:{},computed: {}}, 'graphi', 'e'));
+    operations.push({ "index" : {"_type" : "e"} });
+    operations.push({prop: e, meta: {}, computed: {}});
   });
 
-  return Promise.all(promises);
+  return s.bulk(operations, 'graphi');
 
 }).then((results)=> {
-  //console.log(results);
+  console.log(results);
   console.log("done with creation");
 });
