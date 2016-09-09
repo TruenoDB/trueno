@@ -1,0 +1,14 @@
+{
+  "sourcePort": 8000,
+  "balancerCount": 4,
+  "targets": [
+    {
+      "host": "localhost",
+      "port": 8000
+    },
+    {
+      "host": "localhost",
+      "port": 8001
+    }
+  ]
+}
