@@ -1,4 +1,5 @@
 CREATE TABLE edges(
+  id         bigint,
 	fromv      bigint,
 	tov        bigint,
 	partition  int,
@@ -6,5 +7,5 @@ CREATE TABLE edges(
 	attributes map<text, frozen<trueno_tuple>>,
 	meta       map<text, frozen<trueno_tuple>>,
 
-	PRIMARY KEY (fromv, tov)
+	PRIMARY KEY (id)
 );
