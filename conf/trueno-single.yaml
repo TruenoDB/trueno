@@ -16,6 +16,10 @@
       configFlags:
         host: "localhost"
         port: 8002
+      hostMappings:
+        -
+          - 'configFlags'
+          - 'host'
       readyString: "Channel started at port"
     cassandra:
       name: "Cassandra"
@@ -25,8 +29,27 @@
       cmdFlags:
         - "-f"
       configFlags:
+        rpc_address: "localhost"
         listen_address: "localhost"
         native_transport_port: 8003
+        seed_provider:
+          - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+            parameters:
+              - seeds: "localhost"
+      hostMappings:
+        -
+          - 'configFlags'
+          - 'rpc_address'
+        -
+          - 'configFlags'
+          - 'listen_address'
+        -
+          - 'configFlags'
+          - 'seed_provider'
+          - 0
+          - 'parameters'
+          - 0
+          - 'seeds'
       readyString: "Starting listening for CQL clients on"
     elasticsearch:
       name: "Elasticsearch"
@@ -38,6 +61,10 @@
         - '--network.host'
         - 'localhost'
         - '--action.auto_create_index=false'
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 3
       readyString: "indices into cluster_state"
     spark:
       name: "Spark"

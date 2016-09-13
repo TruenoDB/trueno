@@ -105,5 +105,5 @@ $ npm install -g trueno
     -v, --verbose                   Start the Server in verbose mode, i.e. all debbuging outputs will be printed to console
 ```
 
- © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
+ © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
 
