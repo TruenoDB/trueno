@@ -29,9 +29,12 @@
       cmdFlags:
         - "-f"
       configFlags:
+        cluster_name: "trueno"
         rpc_address: "localhost"
         listen_address: "localhost"
         native_transport_port: 8003
+        auto_bootstrap: false
+        endpoint_snitch: GossipingPropertyFileSnitch
         seed_provider:
           - class_name: org.apache.cassandra.locator.SimpleSeedProvider
             parameters:
@@ -50,22 +53,42 @@
           - 'parameters'
           - 0
           - 'seeds'
+      clusterMappings:
+        -
+          - 'configFlags'
+          - 'seed_provider'
+          - 0
+          - 'parameters'
+          - 0
+          - 'seeds'
       readyString: "Starting listening for CQL clients on"
     elasticsearch:
       name: "Elasticsearch"
       dir: "elasticsearch"
+      config: "config/elasticsearch.yml"
       cmdUnix: "bin/elasticsearch"
       cmdFlags:
-        - '--http.port'
-        - 8004
-        - '--network.host'
-        - 'localhost'
-        - '--action.auto_create_index=false'
+        - ''
+      configFlags:
+        cluster.name: "trueno"
+        http.port: 8004
+        network.host: 'localhost'
+        action.auto_create_index: false
+        node.name: ${HOSTNAME}
+        discovery.zen.ping.unicast.hosts: ["localhost"]
       hostMappings:
         -
-          - 'cmdFlags'
-          - 3
-      readyString: "indices into cluster_state"
+          - 'configFlags'
+          - 'network.host'
+        -
+          - 'configFlags'
+          - 'discovery.zen.ping.unicast.hosts'
+          - 0
+      clusterMappings:
+        -
+          - 'configFlags'
+          - 'discovery.zen.ping.unicast.hosts'
+      readyString: "started"
     spark:
       name: "Spark"
       dir: "spark"
