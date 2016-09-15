@@ -2,7 +2,7 @@
   gremlinServer:
     name: "Gremlin Server"
     description: "Apache TinkerPop's Gremlin Traversal Server."
-    version: "3.2.0 incubating"
+    version: "3.2.2"
     dir: "gremlin_server"
     links:
       - "http://apache.claz.org/tinkerpop/3.2.2/apache-tinkerpop-gremlin-server-3.2.2-bin.zip"

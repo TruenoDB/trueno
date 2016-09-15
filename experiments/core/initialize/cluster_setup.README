@@ -1,65 +1,11 @@
 
-1- start each database instance at each machine using the cluster mode:
+1- Provide the connection file in the format off: 
 	
-	-----------------machine01-------------------
-	$ trueno cluster -h machine01 -p 9000
-	$ info: waiting for setup at machine01:9000
+{
+	"192.168.1.46": {"compute": true, "index": true, "backend": true },
+	"192.168.1.31": {"compute": true, "index": true, "backend": true }
+}
 
-	-----------------machine02-------------------
-	$ trueno cluster -h machine02 -p 9000
-	$ info: waiting for setup at machine02:9000
+Using the --cluster flag, for example: 
 
-2- In another machine, start the cluster setup wizard:
- 	
- 	-----------------machine03-------------------
-	$ trueno cluster -s /path/to/hostfile.txt
-
-	Where /path/to/hostfile.txt is a plaintext file with the host:port at each line.
-	For example: hostfile.txt content can be:
-
-	machine01:9000
-	machine02:9000
-
-3 (Express Setup)- When the setup wizard starts it will discover all instances to setup the cluster:
-
-	$ Discovering Cluster Machies(2/10) [=====             ] 20% 3.7s
-	$ Discovering Cluster Machies(10/10) [==================] 100% 10.2s
-
-	$ [?] What will be your setup?
-		>	Express (All machines will run the same components)
-			Custom	(Separate components: backend stores, index stores, compute servers)
-
-	$ Express Setup:
-		machine01: backend-store, index-store, compute-server
-		machine02: backend-store, index-store, compute-server
-
-	$ [?] Proceed with this setup? (y/N) y
-
-	$ Setting Up Machines (10/10) [==================] 100% 10.2s
-	$ Cluster Successfully configured:
-		machine01: external port: 8000, internal port: 8001
-		machine02: external port: 8000, internal port: 8001
-
-	$ Congratulations! Your Trueno cluster is up and running!
-
-3 (Custom Setup)- When the setup wizard starts it will discover all instances to setup the cluster:
-
-	$ Discovering Cluster Machies(2/10) [=====             ] 20% 3.7s
-	$ Discovering Cluster Machies(10/10) [==================] 100% 10.2s
-
-	$ [?] What will be your setup?
-		>	Express (All machines will run the same components)
-			Custom	(Separate components: backend stores, index stores, compute servers)
-
-	$ Express Setup:
-		machine01: backend-store, index-store, compute-server
-		machine02: backend-store, index-store, compute-server
-
-	$ [?] Proceed with this setup? (y/N) y
-
-	$ Setting Up Machines (10/10) [==================] 100% 10.2s
-	$ Cluster Successfully configured:
-		machine01: external port: 8000, internal port: 8001
-		machine02: external port: 8000, internal port: 8001
-		
-	$ Congratulations! Your Trueno cluster is up and running!
+node lib/trueno.js start -h 192.168.1.46 --cluster ~/Desktop/cluster.json 
