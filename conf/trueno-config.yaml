@@ -1,0 +1,144 @@
+---
+  local:
+    host: "localhost"
+    externalPort: 8000
+    internalPort: 8001
+  components:
+    gremlinServer:
+      name: "Gremlin Server"
+      dir: "gremlin_server"
+      #config: "conf/gremlin-server-BioGridDB.yaml"
+      config: "conf/gremlin-server-modern.yaml"
+      cmdUnix: "bin/gremlin-server.sh"
+      deploy: true
+      cmdFlags:
+        - 'conf/gremlin-server-modern.yaml'
+        #- 'conf/gremlin-server-BioGridDB.yaml'
+      configFlags:
+        host: "localhost"
+        port: 8002
+      hostMappings:
+        -
+          - 'configFlags'
+          - 'host'
+      readyString: "Channel started at port"
+    cassandra:
+      name: "Cassandra"
+      dir: "cassandra"
+      config: "conf/cassandra.yaml"
+      cmdUnix: "bin/cassandra"
+      deploy: true
+      cmdFlags:
+        - "-f"
+      configFlags:
+        cluster_name: "trueno"
+        rpc_address: "localhost"
+        listen_address: "localhost"
+        native_transport_port: 8003
+        auto_bootstrap: false
+        endpoint_snitch: GossipingPropertyFileSnitch
+        seed_provider:
+          - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+            parameters:
+              - seeds: "localhost"
+        data_file_directories:
+          - "cassandra/data"
+        commitlog_directory: "cassandra/commitlog"
+        saved_caches_directory: "cassandra/saved_caches"
+      hostMappings:
+        -
+          - 'configFlags'
+          - 'rpc_address'
+        -
+          - 'configFlags'
+          - 'listen_address'
+        -
+          - 'configFlags'
+          - 'seed_provider'
+          - 0
+          - 'parameters'
+          - 0
+          - 'seeds'
+      clusterMappings:
+        -
+          - 'configFlags'
+          - 'seed_provider'
+          - 0
+          - 'parameters'
+          - 0
+          - 'seeds'
+      readyString: "Starting listening for CQL clients on"
+    elasticsearch:
+      name: "Elasticsearch"
+      dir: "elasticsearch"
+      config: "config/elasticsearch.yml"
+      cmdUnix: "bin/elasticsearch"
+      deploy: true
+      cmdFlags:
+        - ''
+      configFlags:
+        cluster.name: "trueno"
+        http.port: 8004
+        network.host: 'localhost'
+        action.auto_create_index: false
+        node.name: ${HOSTNAME}
+        discovery.zen.ping.unicast.hosts: ["localhost"]
+        path.data: "elasticsearch"
+      hostMappings:
+        -
+          - 'configFlags'
+          - 'network.host'
+        -
+          - 'configFlags'
+          - 'discovery.zen.ping.unicast.hosts'
+          - 0
+      clusterMappings:
+        -
+          - 'configFlags'
+          - 'discovery.zen.ping.unicast.hosts'
+      readyString: "] started"
+    sparkMaster:
+      name: "Spark Master"
+      dir: "spark"
+      cmdUnix: "bin/spark-class org.apache.spark.deploy.master.Master"
+      deploy: true
+      suppressErrors: true
+      cmdFlags:
+        - "-h"
+        - "localhost"
+        - "-p"
+        - 8005
+        - "--webui-port"
+        - 8006
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 1
+      readyString: "Started REST server for submitting applications on port"
+    sparkWorker:
+      name: "Spark Worker"
+      dir: "spark"
+      cmdUnix: "bin/spark-class org.apache.spark.deploy.worker.Worker"
+      deploy: true
+      suppressErrors: true
+      joinCmdFlags: ""
+      cmdFlags:
+        - "spark://"
+        - "localhost"
+        - ":"
+        - 8005
+        - " -d "
+        - "spark"
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 1
+      readyString: "Successfully registered with master"
+    truenoComputeServer:
+      name: "Trueno Compute Server"
+      dir: "trueno_compute_server"
+      cmdUnix: "./server_start.sh"
+      deploy: true
+      cmdFlags:
+        - ''
+      readyString: "Job Server Started!"
