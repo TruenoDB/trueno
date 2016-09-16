@@ -10,6 +10,7 @@
       #config: "conf/gremlin-server-BioGridDB.yaml"
       config: "conf/gremlin-server-modern.yaml"
       cmdUnix: "bin/gremlin-server.sh"
+      deploy: true
       cmdFlags:
         - 'conf/gremlin-server-modern.yaml'
         #- 'conf/gremlin-server-BioGridDB.yaml'
@@ -26,6 +27,7 @@
       dir: "cassandra"
       config: "conf/cassandra.yaml"
       cmdUnix: "bin/cassandra"
+      deploy: true
       cmdFlags:
         - "-f"
       configFlags:
@@ -39,6 +41,9 @@
           - class_name: org.apache.cassandra.locator.SimpleSeedProvider
             parameters:
               - seeds: "localhost"
+        #data_file_directories:
+        #commitlog_directory:
+        #saved_caches_directory:
       hostMappings:
         -
           - 'configFlags'
@@ -67,6 +72,7 @@
       dir: "elasticsearch"
       config: "config/elasticsearch.yml"
       cmdUnix: "bin/elasticsearch"
+      deploy: true
       cmdFlags:
         - ''
       configFlags:
@@ -76,6 +82,7 @@
         action.auto_create_index: false
         node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
+        path.data: ${path.home}/../../data/elasticsearch
       hostMappings:
         -
           - 'configFlags'
@@ -88,14 +95,47 @@
         -
           - 'configFlags'
           - 'discovery.zen.ping.unicast.hosts'
-      readyString: "started"
-    spark:
-      name: "Spark"
+      readyString: "] started"
+    sparkMaster:
+      name: "Spark Master"
       dir: "spark"
-    trueno_compute_Server:
+      cmdUnix: "bin/spark-class org.apache.spark.deploy.master.Master"
+      deploy: true
+      suppressErrors: true
+      cmdFlags:
+        - "-h"
+        - "localhost"
+        - "-p"
+        - 8005
+        - "--webui-port"
+        - 8006
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 1
+      readyString: "Started REST server for submitting applications on port"
+    sparkWorker:
+      name: "Spark Worker"
+      dir: "spark"
+      cmdUnix: "bin/spark-class org.apache.spark.deploy.worker.Worker"
+      deploy: true
+      suppressErrors: true
+      joinCmdFlags: ""
+      cmdFlags:
+        - "spark://"
+        - "localhost"
+        - ":"
+        - 8005
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 1
+      readyString: "Successfully registered with master"
+    truenoComputeServer:
       name: "Trueno Compute Server"
       dir: "trueno_compute_server"
       cmdUnix: "./server_start.sh"
+      deploy: true
       cmdFlags:
         - ''
       readyString: "Job Server Started!"
