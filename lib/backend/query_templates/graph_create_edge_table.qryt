@@ -7,5 +7,5 @@ CREATE TABLE edges(
 	attributes map<text, frozen<trueno_tuple>>,
 	meta       map<text, frozen<trueno_tuple>>,
 
-	PRIMARY KEY (id)
+	PRIMARY KEY (fromv, tov)
 );
