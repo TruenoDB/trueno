@@ -1,1 +1,1 @@
-SELECT id, partition, computed, attributes, meta FROM <%= keyspace %>.VERTICES WHERE ID=<%= id%>;
+SELECT id, partition, comp, prop, meta FROM <%= keyspace %>.VERTICES WHERE ID=<%= id%>;

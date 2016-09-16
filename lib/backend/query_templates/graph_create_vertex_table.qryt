@@ -1,8 +1,8 @@
 CREATE TABLE vertices(
 	id         bigint,
 	partition  int,
-	computed   map<text, frozen<map  <text, frozen <trueno_tuple>>>>,
-	attributes map<text, frozen<trueno_tuple>>,
+	comp       map<text, frozen<map  <text, frozen <trueno_tuple>>>>,
+	prop       map<text, frozen<trueno_tuple>>,
 	meta       map<text, frozen<trueno_tuple>>,
 
 	PRIMARY KEY (id)

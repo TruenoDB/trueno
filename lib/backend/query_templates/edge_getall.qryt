@@ -1,1 +1,1 @@
-SELECT fromv, tov, computed, attributes, meta FROM <%= keyspace %>.EDGES;
+SELECT source, target, comp, prop, meta FROM <%= keyspace %>.EDGES;
