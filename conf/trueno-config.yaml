@@ -41,9 +41,10 @@
           - class_name: org.apache.cassandra.locator.SimpleSeedProvider
             parameters:
               - seeds: "localhost"
-        #data_file_directories:
-        #commitlog_directory:
-        #saved_caches_directory:
+        data_file_directories:
+          - "cassandra/data"
+        commitlog_directory: "cassandra/commitlog"
+        saved_caches_directory: "cassandra/saved_caches"
       hostMappings:
         -
           - 'configFlags'
@@ -82,7 +83,7 @@
         action.auto_create_index: false
         node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
-        path.data: ${path.home}/../../data/elasticsearch
+        path.data: "elasticsearch"
       hostMappings:
         -
           - 'configFlags'
@@ -126,6 +127,8 @@
         - "localhost"
         - ":"
         - 8005
+        - " -d "
+        - "spark"
       hostMappings:
         -
           - 'cmdFlags'
