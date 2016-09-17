@@ -1,1 +1,1 @@
-SELECT id, attributes, computed, meta FROM <%= keyspace %>.GRAPH WHERE ID = '<%= id %>';
+SELECT id, prop, comp, meta FROM <%= keyspace %>.GRAPH WHERE ID = '<%= id %>';
