@@ -1,1 +1,1 @@
-DELETE FROM <%= keyspace %>.edges WHERE fromv = <%= source %>  AND tov = <% target %>;
+DELETE FROM <%= keyspace %>.edges WHERE source = <%= source %>  AND target = <% target %>;
