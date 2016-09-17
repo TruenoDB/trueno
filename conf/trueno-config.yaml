@@ -10,6 +10,7 @@
       #config: "conf/gremlin-server-BioGridDB.yaml"
       config: "conf/gremlin-server-modern.yaml"
       cmdUnix: "bin/gremlin-server.sh"
+      interpreter: "bash"
       deploy: true
       cmdFlags:
         - 'conf/gremlin-server-modern.yaml'
@@ -27,6 +28,7 @@
       dir: "cassandra"
       config: "conf/cassandra.yaml"
       cmdUnix: "bin/cassandra"
+      interpreter: "bash"
       deploy: true
       cmdFlags:
         - "-f"
@@ -73,9 +75,8 @@
       dir: "elasticsearch"
       config: "config/elasticsearch.yml"
       cmdUnix: "bin/elasticsearch"
+      interpreter: "bash"
       deploy: true
-      cmdFlags:
-        - ''
       configFlags:
         cluster.name: "trueno"
         http.port: 8004
@@ -100,10 +101,12 @@
     sparkMaster:
       name: "Spark Master"
       dir: "spark"
-      cmdUnix: "bin/spark-class org.apache.spark.deploy.master.Master"
+      cmdUnix: "bin/spark-class"
+      interpreter: "bash"
       deploy: true
       suppressErrors: true
       cmdFlags:
+        - "org.apache.spark.deploy.master.Master"
         - "-h"
         - "localhost"
         - "-p"
@@ -113,16 +116,18 @@
       hostMappings:
         -
           - 'cmdFlags'
-          - 1
+          - 2
       readyString: "Started REST server for submitting applications on port"
     sparkWorker:
       name: "Spark Worker"
       dir: "spark"
-      cmdUnix: "bin/spark-class org.apache.spark.deploy.worker.Worker"
+      cmdUnix: "bin/spark-class"
+      interpreter: "bash"
       deploy: true
       suppressErrors: true
       joinCmdFlags: ""
       cmdFlags:
+        - "org.apache.spark.deploy.worker.Worker "
         - "spark://"
         - "localhost"
         - ":"
@@ -132,13 +137,11 @@
       hostMappings:
         -
           - 'cmdFlags'
-          - 1
+          - 2
       readyString: "Successfully registered with master"
     truenoComputeServer:
       name: "Trueno Compute Server"
       dir: "trueno_compute_server"
-      cmdUnix: "./server_start.sh"
-      deploy: true
-      cmdFlags:
-        - ''
+      cmdUnix: "server_start.sh"
+      deploy: false
       readyString: "Job Server Started!"
