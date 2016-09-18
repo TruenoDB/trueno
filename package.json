@@ -1,20 +1,21 @@
 {
   "name": "trueno",
   "version": "0.0.0",
-  "description": "The Dynamic/Static Graph Distributed Database",
+  "description": "The Hybrid Graph Datastore/Computational Engine",
   "homepage": "http://www.trueno.io",
   "author": {
-    "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama",
+    "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Peng Hao, Chih-Hao Fang, Ananth Grama",
     "email": "victor.uceta@gmail.com",
     "url": "https://github.com/TruenoDB"
   },
   "files": [
-    "dist"
+    "conf",
+    "lib"
   ],
   "bin": {
     "trueno": "lib/trueno.js"
   },
-  "main": "dist/trueno.js",
+  "main": "lib/trueno.js",
   "keywords": [
     "database",
     "graph",
@@ -50,10 +51,6 @@
     }
   },
   "repository": "git@github.com:TruenoDB/trueno.git",
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
   "private": true,
   "dependencies": {
     "bluebird": "^3.4.0",
