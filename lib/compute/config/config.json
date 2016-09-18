@@ -6,7 +6,7 @@
   "sparkJobServer": {
     "name": "sparkJobServer",
     "defaultHost": "0.0.0.0",
-    "defaultSparkJobServer": "spark.maverick.com",
+    "defaultSparkJobServer": "localhost",
     "defaultWorkers": 1,
     "defaultBrokers": 1,
     "defaultPort": 8090
@@ -14,7 +14,7 @@
 
   "algorithmsPublishedJob": "algorithms",
   "schema": "gnutella",
-  "Dependencies": "spark.jobserver.Dependencies",
+  "DependenciesClassPath": "spark.jobserver.Dependencies",
   "pageRankClassPath": "spark.jobserver.PR",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponents",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
