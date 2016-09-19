@@ -1,49 +1,5 @@
 <md-content class="md-padding tabContent" ng-controller="monitorCtrl" >
-    <!-- Metrics Card -->
-    <md-card class="meter-card left">
-        <md-card-content>
-            <md-button md-no-ink class="md-raised md-warn monitorButtonTittle">Cluster Metrics</md-button>
-            <br>
-            <div id="metrics" class="left">
-                <span>Cluster: <b>{{metrics.instanceCount}} Machines</b></span><br>
-                <span>Graphs:  <b>{{metrics.graphsCount}}</b></span><br>
-                <span>Vertices:  <b>{{metrics.vertexCount}}</b></span><br>
-                <span>Edges:  <b>{{metrics.edgeCount}}</b></span><br>
-                <span>Connections:   <b>{{metrics.connectionCount}}</b></span><br>
-                <span>CPU cores:      <b>{{metrics.coresCount}} cores</b></span><br>
-                <span>CPU Freq:      <b>{{metrics.freqCount/1000}} Ghz</b></span><br>
-                <span>Memory:      <b>{{metrics.memoryCount/1073741824}} GB</b></span><br>
-                <span>Storage:     <b>{{metrics.storageCount}} GB</b></span><br>
-                <span>Jobs:          <b>{{metrics.jobCount}}</b></span><br>
-            </div>
-        </md-card-content>
-    </md-card>
-    <!-- Memory Card -->
-    <md-card class="meter-card">
-        <md-card-content>
-            <md-button md-no-ink class="md-raised md-warn monitorButtonTittle">Memory</md-button>
-            <br>
-            <div id="memory">
-                <canvas class="chart-base" chart-type="memmory.type" data="memmory.data"
-                        labels="memmory.labels" legend="true"></canvas>
-                </canvas>
-                <span>Used: {{usedSize}}MB ({{used}}%)</span><br>
-                <span>Free: {{freeSize}}MB  ({{free}}%)</span><br>
-            </div>
-        </md-card-content>
-    </md-card>
-    <!-- CPU Card -->
-    <md-card class="meter-card cpu">
-        <md-card-content>
-            <md-button md-no-ink class="md-raised md-warn monitorButtonTittle">CPU</md-button>
-            <br>
-            <div id="cpu">
-                <canvas class="chart chart-line" data="cpu.data" options="cpu.options"
-                        labels="cpu.labels" legend="true" series="cpu.series"
-                        click="onClick">
-                </canvas>
-            </div>
-        </md-card-content>
-    </md-card>
-
+    <div layout="row" layout-wrap style="height: 93%">
+        <iframe src="{{pm2guiAddress}}" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+    </div>
 </md-content>

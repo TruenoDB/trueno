@@ -9,3 +9,4 @@ elasticsearch
 spark
 gremlin_server
 trueno_compute_server
+pm2-gui-custom.ini

@@ -4,7 +4,7 @@
   "description": "The Hybrid Graph Datastore/Computational Engine",
   "homepage": "http://www.trueno.io",
   "author": {
-    "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Peng Hao, Chih-Hao Fang, Ananth Grama",
+    "name": "Victor O. Santos, Servio Palacios, Edgardo Barsallo, Peng Hao, Chih-Hao Fang, Miguel Rivera, Ananth Grama",
     "email": "victor.uceta@gmail.com",
     "url": "https://github.com/TruenoDB"
   },
@@ -12,6 +12,9 @@
     "conf",
     "lib"
   ],
+  "scripts": {
+    "postinstall": "cd lib/ui/web_console && node ./../../../node_modules/bower/bin/bower install"
+  },
   "bin": {
     "trueno": "lib/trueno.js"
   },
@@ -55,6 +58,7 @@
   "dependencies": {
     "bluebird": "^3.4.0",
     "bodybuilder": "^1.14.0",
+    "bower": "^1.7.9",
     "bufferutil": "^1.2.1",
     "cassandra-driver": "^3.0.2",
     "commander": "^2.9.0",
@@ -63,6 +67,7 @@
     "elasticsearch": "^11.0.1",
     "finalhandler": "^0.4.1",
     "gremlin": "^2.3.2",
+    "ini": "^1.3.4",
     "joi": "^8.4.0",
     "loadbalancer": "^0.9.26",
     "lodash": "^4.12.0",
