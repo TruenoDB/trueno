@@ -145,3 +145,13 @@
       cmdUnix: "server_start.sh"
       deploy: false
       readyString: "Job Server Started!"
+    ui:
+      name: "Trueno UI"
+      deploy: false
+      host: "localhost"
+      ports:
+        pm2Gui: 8088
+        elasticSearch: 8004
+      hostMappings:
+        -
+          - 'host'
