@@ -15,7 +15,7 @@
   "algorithmsPublishedJob": "algorithms",
   "schema": "gnutella",
   "DependenciesClassPath": "spark.jobserver.Dependencies",
-  "pageRankClassPath": "spark.jobserver.PR",
+  "pageRankClassPath": "spark.jobserver.TruenoPR",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponents",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
   "triangleCountingClassPath": "spark.jobserver.TriangleCounting",
