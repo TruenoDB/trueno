@@ -1,3 +1,7 @@
+##Trueno from Dev branch as global
+
+npm install -g git://github.com/TruenoDB/trueno.git#dev
+
 ##Spark-Cassandra
 
 ###Installing SBT on linux
