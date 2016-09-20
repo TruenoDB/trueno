@@ -59,7 +59,6 @@
     "bluebird": "^3.4.0",
     "bodybuilder": "^1.14.0",
     "bower": "^1.7.9",
-    "bufferutil": "^1.2.1",
     "cassandra-driver": "^3.0.2",
     "commander": "^2.9.0",
     "download": "^5.0.2",
@@ -80,7 +79,6 @@
     "socket.io": "1.4.6",
     "socket.io-client": "1.4.6",
     "superagent": "^2.0.0",
-    "utf-8-validate": "^1.2.1",
     "vorpal": "^1.10.10",
     "winston": "^2.2.0",
     "yamljs": "^0.2.8"
