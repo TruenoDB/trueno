@@ -121,4 +121,4 @@ $ npm install -g trueno
  * [11] https://github.com/tinkerpop/gremlin/wiki
 
 
- © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Aswin Siva, Venkata Subramanya, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
+ © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Peng Hao, Chih-Hao Fang, Miguel Rivera, Ananth Grama](https://github.com/TruenoDB)
