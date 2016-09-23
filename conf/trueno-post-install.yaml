@@ -1,6 +1,6 @@
 ---
   elasticKopf:
-    name: "Kopf"
+    name: "kopf"
     dir: "elasticsearch"
     cmdUnix: "bin/plugin"
     cmdFlags:

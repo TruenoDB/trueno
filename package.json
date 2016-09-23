@@ -20,7 +20,7 @@
   },
   "main": "lib/trueno.js",
   "keywords": [
-    "database",
+    "datastore",
     "graph",
     "distributed",
     "dynamic",
