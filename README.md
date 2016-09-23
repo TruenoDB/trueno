@@ -104,6 +104,7 @@
 
 ```sh
 $ npm install -g trueno
+
 ```
 
 
