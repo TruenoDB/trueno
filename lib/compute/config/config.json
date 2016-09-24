@@ -13,7 +13,7 @@
   },
 
   "algorithmsPublishedJob": "algorithms",
-  "schema": "gnutella",
+  "schema": "citations",
   "DependenciesClassPath": "spark.jobserver.Dependencies",
   "pageRankClassPath": "spark.jobserver.TruenoPR",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponents",

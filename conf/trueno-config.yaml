@@ -36,7 +36,7 @@
         cluster_name: "trueno"
         rpc_address: "localhost"
         listen_address: "localhost"
-        native_transport_port: 8003
+        native_transport_port: 9042
         auto_bootstrap: false
         endpoint_snitch: GossipingPropertyFileSnitch
         seed_provider:
