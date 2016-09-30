@@ -1,4 +1,4 @@
-CREATE TABLE edges(
+CREATE TABLE <%= keyspace %>.edges(
   id         bigint,
 	source     bigint,
 	target     bigint,
