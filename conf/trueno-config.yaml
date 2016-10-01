@@ -47,9 +47,9 @@
           - "cassandra/data"
         commitlog_directory: "cassandra/commitlog"
         saved_caches_directory: "cassandra/saved_caches"
-        batch_size_warn_threshold_in_kb: 400
-        batch_size_fail_threshold_in_kb: 400
-        unlogged_batch_across_partitions_warn_threshold: 400
+        batch_size_warn_threshold_in_kb: 25000
+        batch_size_fail_threshold_in_kb: 25000
+        unlogged_batch_across_partitions_warn_threshold: 25000
       hostMappings:
         -
           - 'configFlags'
