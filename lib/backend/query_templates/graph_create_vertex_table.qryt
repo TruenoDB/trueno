@@ -1,4 +1,4 @@
-CREATE TABLE vertices(
+CREATE TABLE <%= keyspace %>.vertices(
 	id         bigint,
 	partition  int,
 	comp       map<text, frozen<map  <text, frozen <trueno_tuple>>>>,
