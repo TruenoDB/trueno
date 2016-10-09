@@ -16,9 +16,9 @@
   "schema": "citations",
   "DependenciesClassPath": "spark.jobserver.Dependencies",
   "pageRankClassPath": "spark.jobserver.TruenoPRPersisted",
-  "connectedComponentsClassPath": "spark.jobserver.ConnectedComponents",
+  "connectedComponentsClassPath": "spark.jobserver.ConnectedComponentsPersisted",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
-  "triangleCountingClassPath": "spark.jobserver.TriangleCounting",
+  "triangleCountingClassPath": "spark.jobserver.TriangleCountingPersisted",
   "shortestPathsClassPath": "spark.jobserver.ShortestPath",
   "wordCountClassPath": "spark.jobserver.WordCount"
 }
