@@ -15,7 +15,8 @@
     "jsnetworkx": "0.3.4",
     "operative": "0.4.4",
     "trueno-javascript-driver": "https://github.com/TruenoDB/trueno-javascript-driver.git",
-    "defiant": "defiantjs#^1.4.0"
+    "defiant": "defiantjs#^1.4.0",
+    "angular-block-ui": "^0.2.2"
   },
   "resolutions": {
     "angular": "1.5.8"
