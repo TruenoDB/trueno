@@ -1,5 +1,8 @@
 {
   "e": {
+    "settings" : {
+      "number_of_shards" : 1
+    },
     "dynamic_templates": [
       {
         "notanalyzed": {
@@ -37,6 +40,9 @@
     }
   },
   "v": {
+    "settings" : {
+      "number_of_shards" : 1
+    },
     "dynamic_templates": [
       {
         "notanalyzed": {
@@ -68,6 +74,9 @@
     }
   },
   "g": {
+    "settings" : {
+      "number_of_shards" : 1
+    },
     "dynamic_templates": [
       {
         "notanalyzed": {
