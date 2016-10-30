@@ -16,9 +16,14 @@
     "operative": "0.4.4",
     "trueno-javascript-driver": "https://github.com/TruenoDB/trueno-javascript-driver.git",
     "defiant": "defiantjs#^1.4.0",
-    "angular-block-ui": "^0.2.2"
+    "angular-block-ui": "^0.2.2",
+    "angular-schema-form": "^0.8.13",
+    "tv4": "^1.2.7",
+    "objectpath": "^1.2.1"
   },
   "resolutions": {
-    "angular": "1.5.8"
+    "angular": "1.5.8",
+    "tv4": "~1.0.15",
+    "objectpath": "~1.1.0"
   }
 }

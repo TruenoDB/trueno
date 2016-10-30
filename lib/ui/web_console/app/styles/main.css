@@ -16,7 +16,7 @@ body {
 
 .centered-logo {
     height:25%;
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 50%;
     /* bring your own prefixes */
