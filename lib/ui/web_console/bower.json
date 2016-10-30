@@ -19,11 +19,15 @@
     "angular-block-ui": "^0.2.2",
     "angular-schema-form": "^0.8.13",
     "tv4": "^1.2.7",
-    "objectpath": "^1.2.1"
+    "objectpath": "^1.2.1",
+    "angular-sanitize": "^1.5.8",
+    "bootstrap-material-design": "^4.0.2",
+    "jquery": "^3.1.1"
   },
   "resolutions": {
     "angular": "1.5.8",
     "tv4": "~1.0.15",
-    "objectpath": "~1.1.0"
+    "objectpath": "~1.1.0",
+    "jquery": "^2.2"
   }
 }

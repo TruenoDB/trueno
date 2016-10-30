@@ -11,7 +11,18 @@
 
     <md-dialog-content>
         <div class="md-dialog-content">
-            <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="local">
+                    <md-content class="md-padding">
+                        <form sf-schema="localSchema" sf-form="form" sf-model="model"></form>
+                    </md-content>
+                </md-tab>
+                <md-tab label="remote">
+                    <md-content class="md-padding">
+                        <form sf-schema="remoteSchema" sf-form="form" sf-model="model"></form>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
         </div>
     </md-dialog-content>
 
