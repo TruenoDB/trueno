@@ -3,7 +3,7 @@
         <md-content ng-repeat="(key,val) in algorithms">
             <md-subheader class="md-no-sticky"><h2>{{key}}</h2></md-subheader>
             <md-content ng-repeat="algo in val">
-                <md-list-item ng-click="openDialog(this, algo)">
+                <md-list-item ng-click="openDialog(algo)">
                     <div class="md-list-item-text" layout="column">
                         <h4 style="margin: 0px">{{algo.label}}</h4>
                         <md-chips style="box-shadow:none">
