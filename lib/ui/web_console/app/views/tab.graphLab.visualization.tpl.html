@@ -7,10 +7,10 @@
         </md-tooltip>
     </md-button>
     <br>
-    <md-button class="md-fab md-mini" aria-label="delete">
+    <md-button class="md-fab md-mini" aria-label="delete" ng-click="onClear()">
         <md-icon md-svg-icon="delete"></md-icon>
         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-            clear all query data
+            clear all query data and visualization
         </md-tooltip>
     </md-button>
 </div>
@@ -121,7 +121,7 @@
     <md-tab label="Results" md-on-select="onTabChanges('results')" ng-disabled="false">
         <md-tab-label>
             <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
-            Results<span ng-show="blinkers.console" class="blink">&diams;</span>
+            Results<span ng-show="blinkers.results" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
             <md-list class="md-dense" flex>
