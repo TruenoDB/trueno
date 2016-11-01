@@ -11,13 +11,21 @@
 
     <md-dialog-content>
         <div class="md-dialog-content">
-            <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="local">
+
+            <md-card>
+                <md-card-content>
+                    <h2>{{algo.label}}</h2>
+                    <p>{{algo.desc}}</p>
+                </md-card-content>
+            </md-card>
+
+            <md-tabs md-dynamic-height md-border-bottom md-selected="selectedIndex">
+                <md-tab label="local" ng-disabled="!localPresent">
                     <md-content class="md-padding">
                         <form sf-schema="localSchema" sf-form="form" sf-model="model"></form>
                     </md-content>
                 </md-tab>
-                <md-tab label="remote">
+                <md-tab label="remote" ng-disabled="!remotePresent">
                     <md-content class="md-padding">
                         <form sf-schema="remoteSchema" sf-form="form" sf-model="model"></form>
                     </md-content>

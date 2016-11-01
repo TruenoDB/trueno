@@ -45,10 +45,10 @@
                         </md-tooltip>
                     </md-radio-button>
                     <!--<md-radio-button value="hide">-->
-                        <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
-                        <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
-                            <!--hide on filter-->
-                        <!--</md-tooltip>-->
+                    <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
+                    <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
+                    <!--hide on filter-->
+                    <!--</md-tooltip>-->
                     <!--</md-radio-button>-->
                     <md-radio-button value="highlight">
                         <md-icon md-svg-icon="marker"></md-icon>
@@ -57,7 +57,8 @@
                         </md-tooltip>
                     </md-radio-button>
                 </md-radio-group>
-                <md-chips class="custom-chips" ng-model="filterChips" style="float:left" md-on-remove="removeFilter($chip, $index)">
+                <md-chips class="custom-chips" ng-model="filterChips" style="float:left"
+                          md-on-remove="removeFilter($chip, $index)">
                     <md-chip-template>
                     <span>
                         <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">
@@ -117,6 +118,52 @@
 
         </md-tab-body>
     </md-tab>
+    <md-tab label="Results" md-on-select="onTabChanges('results')" ng-disabled="false">
+        <md-tab-label>
+            <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
+            Results<span ng-show="blinkers.console" class="blink">&diams;</span>
+        </md-tab-label>
+        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
+            <md-list class="md-dense" flex>
+                <md-content ng-repeat="(key,val) in results">
+                    <md-content>
+                        <md-list-item>
+                            <md-card flex style="font-weight: normal;">
+                                <md-card-content>
+                                    <span><h5 style="margin: 0px">{{val.label}}</h5></span>
+                                    <table style="width: 100%">
+                                        <tr>
+                                            <td valign="top">
+                                                <table>
+                                                    <tr>
+                                                        <td>Start Time:</td>
+                                                        <td><strong>{{val.startTime}}</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>End Time:</td>
+                                                        <td><strong>{{val.endTime}}</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total Time:</td>
+                                                        <td><strong>{{val.elapsed}}sec</strong></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <strong>RESULTS</strong>
+                                                <json-formatter open="2" json="val.json"></json-formatter>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </md-card-content>
+                            </md-card>
+                        </md-list-item>
+                        <md-divider></md-divider>
+                    </md-content>
+                </md-content>
+            </md-list>
+        </md-tab-body>
+    </md-tab>
     <md-tab label="Vertex" md-on-select="onTabChanges('vertex')" ng-disabled="true">
         <md-tab-label>
             <md-icon md-svg-icon="checkbox-blank-circle"></md-icon>
@@ -171,15 +218,6 @@
         <md-tab-label>
             <md-icon md-svg-icon="ray-start-arrow"></md-icon>
             Edge<span ng-show="blinkers.edge" class="blink">&diams;</span>
-        </md-tab-label>
-        <md-tab-body ng-class="tab.style" layout="column" layout-fill>
-
-        </md-tab-body>
-    </md-tab>
-    <md-tab label="Console" md-on-select="onTabChanges('console')" ng-disabled="true">
-        <md-tab-label>
-            <md-icon md-svg-icon="code-greater-than-or-equal"></md-icon>
-            Console<span ng-show="blinkers.console" class="blink">&diams;</span>
         </md-tab-label>
         <md-tab-body ng-class="tab.style" layout="column" layout-fill>
 
