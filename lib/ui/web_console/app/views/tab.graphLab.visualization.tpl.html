@@ -37,26 +37,41 @@
                 }"></div>
                 <br>
                 <br>
-                <md-radio-group ng-model="filterRadio" layout="row">
-                    <md-radio-button value="show">
-                        <md-icon md-svg-icon="eye"></md-icon>
-                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            show on filter
-                        </md-tooltip>
-                    </md-radio-button>
-                    <!--<md-radio-button value="hide">-->
-                    <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
-                    <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
-                    <!--hide on filter-->
-                    <!--</md-tooltip>-->
-                    <!--</md-radio-button>-->
-                    <md-radio-button value="highlight">
-                        <md-icon md-svg-icon="marker"></md-icon>
-                        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                            highlight on filter
-                        </md-tooltip>
-                    </md-radio-button>
-                </md-radio-group>
+                <table>
+                    <tr>
+                        <td>
+                            <md-radio-group ng-model="filterRadio" layout="row">
+                                <md-radio-button value="show">
+                                    <md-icon md-svg-icon="eye"></md-icon>
+                                    <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                                        show on filter
+                                    </md-tooltip>
+                                </md-radio-button>
+                                <!--<md-radio-button value="hide">-->
+                                <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
+                                <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
+                                <!--hide on filter-->
+                                <!--</md-tooltip>-->
+                                <!--</md-radio-button>-->
+                                <md-radio-button value="highlight">
+                                    <md-icon md-svg-icon="marker"></md-icon>
+                                    <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                                        highlight on filter
+                                    </md-tooltip>
+                                </md-radio-button>
+                            </md-radio-group>
+                        </td>
+                        <td style="padding-top: 15px; padding-left: 10px;">
+
+                            <md-checkbox ng-click="neighborsOnClick(this)" ng-model="chk.fetchNeighbors" aria-label="Neighbors On Click">
+                                <md-icon md-svg-icon="arrow-all"></md-icon>
+                                <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+                                    fetch neighbors on click
+                                </md-tooltip>
+                            </md-checkbox>
+                        </td>
+                    </tr>
+                </table>
                 <md-chips class="custom-chips" ng-model="filterChips" style="float:left"
                           md-on-remove="removeFilter($chip, $index)">
                     <md-chip-template>
@@ -138,13 +153,15 @@
                                                     <tr>
                                                         <td>
                                                             <md-chips style="box-shadow:none">
-                                                                <md-chip ng-show="val.local" style="font-size: 10px; background: #EFAE2E;color:white">
+                                                                <md-chip ng-hide="!(val.local)"
+                                                                         style="font-size: 10px; background: #EFAE2E;color:white">
                                                                     L
                                                                     <md-tooltip md-direction="right">
                                                                         Computed Locally
                                                                     </md-tooltip>
                                                                 </md-chip>
-                                                                <md-chip ng-show="val.local" style="font-size: 10px; background: #DF5A49;color:white">
+                                                                <md-chip ng-hide="(val.local)"
+                                                                         style="font-size: 10px; background: #DF5A49;color:white">
                                                                     R
                                                                     <md-tooltip md-direction="right">
                                                                         Computed Remotelly
@@ -156,6 +173,14 @@
                                                     <tr>
                                                         <td>Graph:</td>
                                                         <td><strong>{{val.graph}}</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vertices:</td>
+                                                        <td><strong>{{val.vertices}}</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Edges:</td>
+                                                        <td><strong>{{val.edges}}</strong></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Start Time:</td>
