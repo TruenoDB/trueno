@@ -130,11 +130,33 @@
                         <md-list-item>
                             <md-card flex style="font-weight: normal;">
                                 <md-card-content>
-                                    <span><h5 style="margin: 0px">{{val.label}}</h5></span>
+                                    <span><strong><h5 style="margin: 0px">{{val.label}}</h5></strong></span>
                                     <table style="width: 100%">
                                         <tr>
                                             <td valign="top">
                                                 <table>
+                                                    <tr>
+                                                        <td>
+                                                            <md-chips style="box-shadow:none">
+                                                                <md-chip ng-show="val.local" style="font-size: 10px; background: #EFAE2E;color:white">
+                                                                    L
+                                                                    <md-tooltip md-direction="right">
+                                                                        Computed Locally
+                                                                    </md-tooltip>
+                                                                </md-chip>
+                                                                <md-chip ng-show="val.local" style="font-size: 10px; background: #DF5A49;color:white">
+                                                                    R
+                                                                    <md-tooltip md-direction="right">
+                                                                        Computed Remotelly
+                                                                    </md-tooltip>
+                                                                </md-chip>
+                                                            </md-chips>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Graph:</td>
+                                                        <td><strong>{{val.graph}}</strong></td>
+                                                    </tr>
                                                     <tr>
                                                         <td>Start Time:</td>
                                                         <td><strong>{{val.startTime}}</strong></td>
