@@ -7,14 +7,12 @@
     gremlinServer:
       name: "Gremlin Server"
       dir: "gremlin_server"
-      #config: "conf/gremlin-server-BioGridDB.yaml"
-      config: "conf/gremlin-server-modern.yaml"
+      config: "conf/gremlin-server-trueno.yaml"
       cmdUnix: "bin/gremlin-server.sh"
       interpreter: "bash"
       deploy: true
       cmdFlags:
-        - 'conf/gremlin-server-modern.yaml'
-        #- 'conf/gremlin-server-BioGridDB.yaml'
+        - 'conf/gremlin-server-trueno.yaml'
       configFlags:
         host: "localhost"
         port: 8002
