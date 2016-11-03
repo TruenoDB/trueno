@@ -17,10 +17,11 @@
 
                         <md-input-container flex="100">
                             <label>Graph Name</label>
-                            <input required name="name" ng-model="name" ng-pattern="/[a-zA-Z]*]/">
-                            <div ng-messages="graphForm.name.$error">
+                            <input required name="graphName" ng-model="name" ng-pattern="/^[a-zA-Z0_]*$/" maxlength="48">
+                            <div ng-messages="graphForm.graphName.$error">
                                 <div ng-message="required">Graph name is required.</div>
                                 <div ng-message="pattern">Graph name can only contain letters and underscore.</div>
+                                <div ng-message="maxlength">Graph name must be from 1 to 48 characters.</div>
                             </div>
                         </md-input-container>
                         <hr>
