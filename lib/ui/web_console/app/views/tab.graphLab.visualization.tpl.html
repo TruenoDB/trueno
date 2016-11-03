@@ -1,9 +1,16 @@
 <!--Download button-->
 <div class="graphLabvizControls">
-    <md-button class="md-fab md-mini md-primary" aria-label="save" ng-click="onCreate()">
+    <md-button class="md-fab md-mini md-accent" aria-label="save" ng-click="onCreate()">
         <md-icon md-svg-icon="database-plus"></md-icon>
         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
             create new graph from visualization
+        </md-tooltip>
+    </md-button>
+    <br>
+    <md-button class="md-fab md-mini md-primary" aria-label="save" ng-click="onDelete()">
+        <md-icon md-svg-icon="database-minus"></md-icon>
+        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+            delete current graph
         </md-tooltip>
     </md-button>
     <br>
