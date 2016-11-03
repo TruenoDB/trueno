@@ -1,0 +1,46 @@
+<md-dialog aria-label="Create Graph">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Create Graph</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-icon="close-box"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <form name="graphForm">
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-card>
+                    <md-card-content>
+
+                        <md-input-container flex="100">
+                            <label>Graph Name</label>
+                            <input required name="name" ng-model="name" ng-pattern="/[a-zA-Z]*]/">
+                            <div ng-messages="graphForm.name.$error">
+                                <div ng-message="required">Graph name is required.</div>
+                                <div ng-message="pattern">Graph name can only contain letters and underscore.</div>
+                            </div>
+                        </md-input-container>
+                        <hr>
+                        <span>Edges:<h3>{{edges}}</h3></span>
+                        <span>Vertices:<h3>{{vertices}}</h3></span>
+
+                    </md-card-content>
+                </md-card>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="answer(false)">
+                Cancel
+            </md-button>
+            <md-button type="submit" ng-click="graphForm.$valid && answer(true)">
+                Create
+            </md-button>
+        </md-dialog-actions>
+    </form>
+
+</md-dialog>

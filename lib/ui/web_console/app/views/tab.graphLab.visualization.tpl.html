@@ -1,5 +1,12 @@
 <!--Download button-->
 <div class="graphLabvizControls">
+    <md-button class="md-fab md-mini md-primary" aria-label="save" ng-click="onCreate()">
+        <md-icon md-svg-icon="database-plus"></md-icon>
+        <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
+            create new graph from visualization
+        </md-tooltip>
+    </md-button>
+    <br>
     <md-button class="md-fab md-mini" aria-label="download" ng-click="onDownload()">
         <md-icon md-svg-icon="download"></md-icon>
         <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
@@ -26,40 +33,40 @@
             <div id="graphRendererContainer"></div>
             <div id="filterDivision">
 
-                <div id="filterQueryBox" style="border-bottom: solid #FFAB40 1px" ui-ace="{
-                  useWrapMode : true,
-                  showGutter: false,
-                  theme:'xcode',
-                  mode: 'xquery',
-                  firstLineNumber: 1,
-                  onLoad: aceFilterLoaded,
-                  onChange: aceFilterChanged
-                }"></div>
+                <!--<div id="filterQueryBox" style="border-bottom: solid #FFAB40 1px" ui-ace="{-->
+                  <!--useWrapMode : true,-->
+                  <!--showGutter: false,-->
+                  <!--theme:'xcode',-->
+                  <!--mode: 'xquery',-->
+                  <!--firstLineNumber: 1,-->
+                  <!--onLoad: aceFilterLoaded,-->
+                  <!--onChange: aceFilterChanged-->
+                <!--}"></div>-->
                 <br>
                 <br>
                 <table>
                     <tr>
                         <td>
-                            <md-radio-group ng-model="filterRadio" layout="row">
-                                <md-radio-button value="show">
-                                    <md-icon md-svg-icon="eye"></md-icon>
-                                    <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                                        show on filter
-                                    </md-tooltip>
-                                </md-radio-button>
+                            <!--<md-radio-group ng-model="filterRadio" layout="row">-->
+                                <!--<md-radio-button value="show">-->
+                                    <!--<md-icon md-svg-icon="eye"></md-icon>-->
+                                    <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
+                                        <!--show on filter-->
+                                    <!--</md-tooltip>-->
+                                <!--</md-radio-button>-->
                                 <!--<md-radio-button value="hide">-->
                                 <!--<md-icon md-svg-icon="eye-off"></md-icon>-->
                                 <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
                                 <!--hide on filter-->
                                 <!--</md-tooltip>-->
                                 <!--</md-radio-button>-->
-                                <md-radio-button value="highlight">
-                                    <md-icon md-svg-icon="marker"></md-icon>
-                                    <md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">
-                                        highlight on filter
-                                    </md-tooltip>
-                                </md-radio-button>
-                            </md-radio-group>
+                                <!--<md-radio-button value="highlight">-->
+                                    <!--<md-icon md-svg-icon="marker"></md-icon>-->
+                                    <!--<md-tooltip md-direction="down" md-visible="tooltipVisible" md-autohide="false">-->
+                                        <!--highlight on filter-->
+                                    <!--</md-tooltip>-->
+                                <!--</md-radio-button>-->
+                            <!--</md-radio-group>-->
                         </td>
                         <td style="padding-top: 15px; padding-left: 10px;">
 
@@ -72,17 +79,17 @@
                         </td>
                     </tr>
                 </table>
-                <md-chips class="custom-chips" ng-model="filterChips" style="float:left"
-                          md-on-remove="removeFilter($chip, $index)">
-                    <md-chip-template>
-                    <span>
-                        <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">
-                            {{$chip.q}}
-                        </md-tooltip>
-                      <strong>[{{$index}}]</strong>
-                    </span>
-                    </md-chip-template>
-                </md-chips>
+                <!--<md-chips class="custom-chips" ng-model="filterChips" style="float:left"-->
+                          <!--md-on-remove="removeFilter($chip, $index)">-->
+                    <!--<md-chip-template>-->
+                    <!--<span>-->
+                        <!--<md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">-->
+                            <!--{{$chip.q}}-->
+                        <!--</md-tooltip>-->
+                      <!--<strong>[{{$index}}]</strong>-->
+                    <!--</span>-->
+                    <!--</md-chip-template>-->
+                <!--</md-chips>-->
             </div>
             <div id="visualizationControls">
                 <md-button aria-label="zoom in" class="md-fab md-raised md-mini" ng-click="zoomIn()">
