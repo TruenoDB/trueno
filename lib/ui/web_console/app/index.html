@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300" type="text/css"/>
     <link rel="stylesheet" href="styles/main.css"/>
 </head>
-<body ng-controller="AppCtrl">
+<body ng-controller="AppCtrl" layout="row">
 <!--[if lt IE 10]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -34,7 +34,7 @@
 <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">-->
     <!--<ng-include src="'views/sidebar.left.tpl.html'" style="height: 12px;"></ng-include>-->
 <!--</md-sidenav>-->
-<md-content style="height: 100%">
+<md-content layout-fill>
     <md-tabs flex md-selected="selectedIndex" style="height: inherit;">
         <md-tab label="Cluster">
             <ng-include src="'views/tab.monitor.tpl.html'"></ng-include>
