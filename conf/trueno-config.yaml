@@ -145,6 +145,9 @@
       dir: "trueno_compute_server"
       cmdUnix: "server_start.sh"
       deploy: false
+      cmdFlags:
+         - "--jars "
+         - "spark-cassandra-connector-1.6.0-M2-s_2.10.jar"
       readyString: "Job Server Started!"
     ui:
       name: "Trueno UI"
