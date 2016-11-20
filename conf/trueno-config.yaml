@@ -122,7 +122,8 @@
           - 'cmdFlags'
           - 2
       readyString: "Started REST server for submitting applications on port"
-      next: ['truenoComputeServer']
+      next: []
+      #next: ['truenoComputeServer']
     sparkWorker:
       name: "Spark Worker"
       dir: "spark"
