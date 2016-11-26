@@ -1,7 +1,7 @@
 {
   "development": true,
   "debug": true,
-  "version": "0.0.20",
+  "version": "0.0.1",
 
   "sparkJobServer": {
     "name": "sparkJobServer",
@@ -15,7 +15,7 @@
   "algorithmsPublishedJob": "algorithms",
   "schema": "citations",
   "DependenciesClassPath": "spark.jobserver.Dependencies",
-  "pageRankClassPath": "spark.jobserver.PageRankPersisted1",
+  "pageRankClassPath": "spark.jobserver.PageRankPersisted",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponentsPersisted",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
   "triangleCountingClassPath": "spark.jobserver.TriangleCountingPersisted",
