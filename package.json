@@ -54,7 +54,7 @@
     }
   },
   "repository": "git@github.com:TruenoDB/trueno.git",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bluebird": "^3.4.0",
     "bodybuilder": "^1.14.0",
