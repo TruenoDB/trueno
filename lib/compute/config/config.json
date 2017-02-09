@@ -15,7 +15,7 @@
   "algorithmsPublishedJob": "algorithms",
   "schema": "citations",
   "DependenciesClassPath": "spark.jobserver.Dependencies",
-  "pageRankClassPath": "spark.jobserver.PageRankPersisted",
+  "pageRankClassPath": "spark.jobserver.PageRankPersisted2",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponentsPersisted",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
   "triangleCountingClassPath": "spark.jobserver.TriangleCountingPersisted",
