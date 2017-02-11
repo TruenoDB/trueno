@@ -1,6 +1,6 @@
 ## Roadmap
 
-### Currently Features
+### Current Features
 * **Basic API operations**. 
 <br>Supports for add, delete, modify, retrieve for graphs, vertex and edges.
 * **External interface**. 
