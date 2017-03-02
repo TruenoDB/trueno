@@ -35,4 +35,12 @@
       dir: "trueno_compute_server"
       links:
         - "https://github.com/TruenoDB/trueno-compute-server/raw/master/release/trueno-compute-server-release-0.0.1.tar.gz"
+  trueno_elastic_bridge_server:
+      name: "Trueno ElasticSearch Bridge Server"
+      description: "Executable socket server to use the native Transport client instead of REST."
+      version: "0.0.1"
+      dir: "trueno_elastic_bridge_server"
+      links:
+        - "https://github.com/TruenoDB/trueno-elasticsearch-bridge/raw/master/dist/trueno-elastic-bridge-server.tar.gz"
+
 
