@@ -41,6 +41,6 @@
       version: "0.0.1"
       dir: "trueno_elastic_bridge_server"
       links:
-        - "https://github.com/TruenoDB/trueno-elasticsearch-bridge/raw/master/dist/trueno-elastic-bridge-server.tar.gz"
+        - "https://github.com/TruenoDB/trueno-elasticsearch-bridge/raw/master/build/trueno-elastic-bridge-server.tar.gz"
 
 

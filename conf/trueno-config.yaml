@@ -170,11 +170,11 @@
     truenoElasticBridgeServer:
       name: "Trueno ElasticSearch Bridge Server"
       dir: "trueno_elastic_bridge_server"
-      cmdUnix: "java -jar trueno-elastic-bridge-server.jar"
+      cmdUnix: "bridgeServer.sh"
       interpreter: "bash"
       deploy: false
       cmdFlags:
          - "localhost"
          - 8007
-      readyString: "server started at port"
+      readyString: "Bridge Server Started"
       next: []
