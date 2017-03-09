@@ -101,7 +101,7 @@
           - 'configFlags'
           - 'discovery.zen.ping.unicast.hosts'
       readyString: "] started"
-      next: ["truenoElasticBridgeServer"]
+      next: ["truenoElasticBridgeServer01", "truenoElasticBridgeServer02"]
     sparkMaster:
       name: "Spark Master"
       dir: "spark"
@@ -167,8 +167,8 @@
         -
           - 'host'
       next: []
-    truenoElasticBridgeServer:
-      name: "Trueno ElasticSearch Bridge Server"
+    truenoElasticBridgeServer01:
+      name: "Trueno ElasticSearch Bridge Server 01"
       dir: "trueno_elastic_bridge_server"
       cmdUnix: "bridgeServer.sh"
       interpreter: "bash"
@@ -176,5 +176,16 @@
       cmdFlags:
          - "localhost"
          - 8007
+      readyString: "Bridge Server Started"
+      next: []
+    truenoElasticBridgeServer02:
+      name: "Trueno ElasticSearch Bridge Server 02"
+      dir: "trueno_elastic_bridge_server"
+      cmdUnix: "bridgeServer.sh"
+      interpreter: "bash"
+      deploy: false
+      cmdFlags:
+         - "localhost"
+         - 8008
       readyString: "Bridge Server Started"
       next: []
