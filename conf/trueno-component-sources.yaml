@@ -16,11 +16,11 @@
   elasticsearch:
     name: "Elasticsearch"
     description: "Elasticsearch search engine."
-    version: "2.3.5"
+    version: "2.3.4"
     dir: "elasticsearch"
     links:
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.5/elasticsearch-2.3.5.tar.gz"
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.5/elasticsearch-2.3.5.zip"
+      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz"
+      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip"
   spark:
     name: "Spark"
     description: "The Apache Spark distributed computational engine."

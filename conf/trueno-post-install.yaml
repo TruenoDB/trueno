@@ -28,7 +28,7 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.5.0/elasticsearch-sql-2.3.5.0.zip'
+      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
     readyString: "Installed sql into"
     sanitize: true
   elasticDeleteByQuery:
@@ -46,6 +46,15 @@
     cmdUnix: "bin/plugin"
     cmdFlags:
       - 'install'
-      - 'solutions.siren/siren-join/2.3.5'
+      - 'solutions.siren/siren-join/2.3.4-1'
     readyString: "Installed siren-join into"
+    sanitize: true
+  knapsack:
+    name: "elasticsearch-knapsack"
+    dir: "elasticsearch"
+    cmdUnix: "bin/plugin"
+    cmdFlags:
+      - 'install'
+      - 'http://xbib.org/repository/org/xbib/elasticsearch/plugin/elasticsearch-knapsack/2.3.4.0/elasticsearch-knapsack-2.3.4.0-plugin.zip'
+    readyString: "Installed knapsack into"
     sanitize: true
