@@ -17,6 +17,7 @@
   "DependenciesClassPath": "spark.jobserver.Dependencies",
   "pageRankClassPath": "spark.jobserver.PageRankPersisted2",
   "connectedComponentsClassPath": "spark.jobserver.ConnectedComponentsPersisted",
+  "connectedComponentsESClassPath": "spark.jobserver.ConnectedComponentsES",
   "stronglyConnectedComponentsClassPath": "spark.jobserver.StronglyConnectedComponents",
   "triangleCountingClassPath": "spark.jobserver.TriangleCountingPersisted",
   "shortestPathsClassPath": "spark.jobserver.ShortestPath",
