@@ -88,6 +88,8 @@
         path.data: "elasticsearch"
         indices.requests.cache.size: "25%"
         indices.queries.cache.size: "20%"
+        trueno.api.port: 8012
+        trueno.api.hostname: "localhost"
       hostMappings:
         -
           - 'configFlags'
