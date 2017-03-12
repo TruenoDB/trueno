@@ -6,6 +6,8 @@
 ###GraphX
 Spark GraphX is a graph processing system rather than a graph database. GraphX is limited by the immutability of Spark RDDs.
 
+### Architecture using ElasticSearch
+
 
 
 ###References
@@ -34,6 +36,14 @@ Spark GraphX is a graph processing system rather than a graph database. GraphX i
 * [21] [Documentation] https://spark.apache.org/docs/1.1.0/api/scala/index.html#org.apache.spark.graphx.lib.ConnectedComponents$
 * [22] https://databricks-training.s3.amazonaws.com/graph-analytics-with-graphx.html
 
+###ElasticSearch References
+* [30] https://stackoverflow.com/questions/26351382/how-to-convert-scala-rdd-to-map
+* [31] https://stackoverflow.com/questions/34371440/how-to-convert-a-map-containing-vertexid-edgeid-into-graphx-rdds
+* [32] https://stackoverflow.com/questions/34545333/how-to-convert-vertexrdd-to-dataframe
+* [33] https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html
+* [34] https://github.com/elastic/elasticsearch-hadoop
+* [35] https://spark-packages.org/package/elastic/elasticsearch-hadoop
+* [36] https://www.youtube.com/watch?v=afy4PkSJuzk
 
 ####How to create EdgeRDD from data frame in Spark
 * https://stackoverflow.com/questions/34135288/how-to-create-edgerdd-from-data-frame-in-spark
