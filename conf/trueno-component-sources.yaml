@@ -6,13 +6,6 @@
     dir: "gremlin_server"
     links:
       - "https://archive.apache.org/dist/tinkerpop/3.2.3/apache-tinkerpop-gremlin-server-3.2.3-bin.zip"
-  cassandra:
-      name: "Cassandra"
-      description: "The Apache Cassandra distributed key-value store."
-      version: "3.7"
-      dir: "cassandra"
-      links:
-        - "http://archive.apache.org/dist/cassandra/3.7/apache-cassandra-3.7-bin.tar.gz"
   elasticsearch:
     name: "Elasticsearch"
     description: "Elasticsearch search engine."
@@ -41,6 +34,6 @@
       version: "0.0.1"
       dir: "trueno_elastic_bridge_server"
       links:
-        - "https://github.com/TruenoDB/trueno-elasticsearch-bridge/raw/master/build/trueno-elastic-bridge-server.tar.gz"
+        - "https://github.com/TruenoDB/trueno-elasticsearch-bridge/raw/dev/build/trueno-elastic-bridge-server.tar.gz"
 
 

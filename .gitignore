@@ -4,7 +4,6 @@ dist
 .idea
 logs
 *.DS_Store
-cassandra
 elasticsearch
 spark
 gremlin_server

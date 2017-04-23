@@ -1,1 +1,0 @@
-SELECT id, partition, comp, prop, meta FROM <%= keyspace %>.VERTICES;

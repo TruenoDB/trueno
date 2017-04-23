@@ -1,1 +1,0 @@
-SELECT source, target, comp, prop, meta FROM <%= keyspace %>.EDGES;

@@ -22,55 +22,6 @@
           - 'host'
       readyString: "Channel started at port"
       next: []
-    cassandra:
-      name: "Cassandra"
-      dir: "cassandra"
-      config: "conf/cassandra.yaml"
-      cmdUnix: "bin/cassandra"
-      interpreter: "bash"
-      deploy: true
-      cmdFlags:
-        - "-f"
-      configFlags:
-        cluster_name: "trueno"
-        rpc_address: "0.0.0.0"
-        broadcast_rpc_address: "1.2.3.4"
-        listen_address: "localhost"
-        native_transport_port: 9042
-        auto_bootstrap: false
-        endpoint_snitch: GossipingPropertyFileSnitch
-        seed_provider:
-          - class_name: org.apache.cassandra.locator.SimpleSeedProvider
-            parameters:
-              - seeds: "localhost"
-        data_file_directories:
-          - "cassandra/data"
-        commitlog_directory: "cassandra/commitlog"
-        saved_caches_directory: "cassandra/saved_caches"
-        batch_size_warn_threshold_in_kb: 25000
-        batch_size_fail_threshold_in_kb: 25000
-        unlogged_batch_across_partitions_warn_threshold: 25000
-      hostMappings:
-        -
-          - 'configFlags'
-          - 'listen_address'
-        -
-          - 'configFlags'
-          - 'seed_provider'
-          - 0
-          - 'parameters'
-          - 0
-          - 'seeds'
-      clusterMappings:
-        -
-          - 'configFlags'
-          - 'seed_provider'
-          - 0
-          - 'parameters'
-          - 0
-          - 'seeds'
-      readyString: "Starting listening for CQL clients on"
-      next: []
     elasticsearch:
       name: "Elasticsearch"
       dir: "elasticsearch"
@@ -83,11 +34,11 @@
         http.port: 8004
         network.host: 'localhost'
         action.auto_create_index: false
-        node.name: ${HOSTNAME}
+        node.name: bridge
         discovery.zen.ping.unicast.hosts: ["localhost"]
         path.data: "elasticsearch"
-        indices.requests.cache.size: "25%"
-        indices.queries.cache.size: "20%"
+        indices.requests.cache.size: "35%"
+        indices.queries.cache.size: "30%"
         trueno.api.port: 8012
         trueno.api.hostname: "localhost"
       hostMappings:
@@ -103,7 +54,7 @@
           - 'configFlags'
           - 'discovery.zen.ping.unicast.hosts'
       readyString: "] started"
-      next: ["truenoElasticBridgeServer01", "truenoElasticBridgeServer02"]
+      next: ["truenoElasticBridgeServer"]
     sparkMaster:
       name: "Spark Master"
       dir: "spark"
@@ -169,8 +120,8 @@
         -
           - 'host'
       next: []
-    truenoElasticBridgeServer01:
-      name: "Trueno ElasticSearch Bridge Server 01"
+    truenoElasticBridgeServer:
+      name: "Trueno ElasticSearch Bridge Server"
       dir: "trueno_elastic_bridge_server"
       cmdUnix: "bridgeServer.sh"
       interpreter: "bash"
@@ -178,16 +129,5 @@
       cmdFlags:
          - "localhost"
          - 8007
-      readyString: "Bridge Server Started"
-      next: []
-    truenoElasticBridgeServer02:
-      name: "Trueno ElasticSearch Bridge Server 02"
-      dir: "trueno_elastic_bridge_server"
-      cmdUnix: "bridgeServer.sh"
-      interpreter: "bash"
-      deploy: false
-      cmdFlags:
-         - "localhost"
-         - 8008
       readyString: "Bridge Server Started"
       next: []

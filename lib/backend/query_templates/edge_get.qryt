@@ -1,1 +1,0 @@
-SELECT source, from, comp, prop, meta FROM <%= keyspace %>.EDGES WHERE source = <%= source %> AND target = <% target %> ;
