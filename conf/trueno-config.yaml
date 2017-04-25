@@ -129,5 +129,5 @@
       cmdFlags:
          - "localhost"
          - 8007
-      readyString: "Bridge Server Started"
+      readyString: "Trueno Bridge server is up"
       next: []
