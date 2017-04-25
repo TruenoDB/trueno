@@ -34,7 +34,7 @@
         http.port: 8004
         network.host: 'localhost'
         action.auto_create_index: false
-        node.name: bridge
+        node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
         path.data: "elasticsearch"
         indices.requests.cache.size: "35%"
