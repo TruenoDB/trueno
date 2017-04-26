@@ -11,3 +11,5 @@ trueno_compute_server
 pm2-gui-custom.ini
 yarn.lock
 binaries
+cassandra
+lib/core/data
