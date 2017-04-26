@@ -129,5 +129,9 @@
       cmdFlags:
          - "localhost"
          - 8007
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 0
       readyString: "Trueno Bridge server is up"
       next: []
