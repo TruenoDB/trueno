@@ -126,9 +126,13 @@
       cmdUnix: "bridgeServer.sh"
       interpreter: "bash"
       deploy: false
+      numberOfShards: 2
+      replicaPercent: 0.8
       cmdFlags:
          - "localhost"
          - 8007
+         - 2
+         - 1
       hostMappings:
         -
           - 'cmdFlags'
