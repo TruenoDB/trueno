@@ -32,22 +32,22 @@
       configFlags:
         cluster.name: "trueno"
         http.port: 8004
-        network.host: '0.0.0.0'
-        network.bind_host: "0.0.0.0"
+        network.host: 127.0.0.1
+        http.host: 0.0.0.0
         action.auto_create_index: false
         node.name: ${HOSTNAME}
-        discovery.zen.ping.unicast.hosts: ["0.0.0.0"]
+        discovery.zen.ping.unicast.hosts: ["localhost"]
         path.data: "elasticsearch"
         indices.requests.cache.size: "35%"
         indices.queries.cache.size: "30%"
-      # hostMappings:
+      hostMappings:
       #   -
       #     - 'configFlags'
       #     - 'network.host'
-      #   -
-      #     - 'configFlags'
-      #     - 'discovery.zen.ping.unicast.hosts'
-      #     - 0
+        -
+          - 'configFlags'
+          - 'discovery.zen.ping.unicast.hosts'
+          - 0
       clusterMappings:
         -
           - 'configFlags'
