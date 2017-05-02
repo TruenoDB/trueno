@@ -33,6 +33,7 @@
         cluster.name: "trueno"
         http.port: 8004
         network.host: 0.0.0.0
+        transport.host: localhost
         action.auto_create_index: false
         node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
@@ -41,6 +42,9 @@
         indices.queries.cache.size: "30%"
         bootstrap.system_call_filter: false
       hostMappings:
+        -
+          - 'configFlags'
+          - 'network.host'
         -
           - 'configFlags'
           - 'discovery.zen.ping.unicast.hosts'
