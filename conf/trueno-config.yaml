@@ -143,14 +143,19 @@
       cmdUnix: "bin/cerebro"
       interpreter: "bash"
       deploy: true
-      suppressErrors: true
       joinCmdFlags: ""
       cmdFlags:
         - "-Dhttp.port="
         - 8008
         - " "
         - "-Dhttp.address="
+        - "0.0.0.0"
+        - " "
+        - "-Dhosts.0.host="
+        - "http://"
         - "localhost"
+        - ":"
+        - 8004
       hostMappings:
         -
           - 'cmdFlags'

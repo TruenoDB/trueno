@@ -13,6 +13,17 @@
       - "echo done"
     readyString: "done"
     sanitize: false
+  config-cerebro:
+    name: "config-cerebro"
+    dir: "cerebro"
+    cmdUnix: "chmod"
+    cmdFlags:
+      - "+x"
+      - "bin/cerebro"
+      - "&&"
+      - "echo done"
+    readyString: "done"
+    sanitize: false
   # elasticKopf:
   #   name: "kopf"
   #   dir: "elasticsearch"
