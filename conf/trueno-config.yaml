@@ -41,7 +41,6 @@
         path.data: "elasticsearch"
         indices.requests.cache.size: "35%"
         indices.queries.cache.size: "30%"
-        bootstrap.ignore_system_bootstrap_checks: true
       hostMappings:
         -
           - 'configFlags'
