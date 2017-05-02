@@ -45,6 +45,9 @@
       hostMappings:
         -
           - 'configFlags'
+          - 'transport.host'
+        -
+          - 'configFlags'
           - 'network.host'
         -
           - 'configFlags'
