@@ -34,7 +34,6 @@
         http.port: 8004
         network.host: 0.0.0.0
         transport.host: localhost
-        http.host: 0.0.0.0
         action.auto_create_index: false
         node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
