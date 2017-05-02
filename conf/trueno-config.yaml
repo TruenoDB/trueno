@@ -150,17 +150,14 @@
         - 8008
         - " "
         - "-Dhttp.address="
-        - "localhost"
+        - "0.0.0.0"
         - " "
         - "-Dhosts.0.host="
         - "http://"
-        - "localhost"
+        - ${HOSTNAME}
         - ":"
         - 8004
       hostMappings:
-        -
-          - 'cmdFlags'
-          - 4
         -
           - 'cmdFlags'
           - 8
