@@ -4,10 +4,13 @@ dist
 .idea
 logs
 *.DS_Store
-cassandra
 elasticsearch
 spark
 gremlin_server
 trueno_compute_server
 pm2-gui-custom.ini
 yarn.lock
+binaries
+cassandra
+lib/core/data
+cerebro
