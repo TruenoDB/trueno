@@ -13,51 +13,51 @@
       - "echo done"
     readyString: "done"
     sanitize: false
-  elasticKopf:
-    name: "kopf"
-    dir: "elasticsearch"
-    cmdUnix: "bin/plugin"
-    cmdFlags:
-      - 'install'
-      - 'lmenezes/elasticsearch-kopf/2.0'
-    readyString: "Installed kopf into"
-    sanitize: true
-  dejavu:
-    name: "dejavu"
-    dir: "elasticsearch"
-    cmdUnix: "bin/plugin"
-    cmdFlags:
-      - 'install'
-      - 'appbaseio/dejavu'
-    readyString: "Installed dejavu into"
-    sanitize: true
-  elasticSql:
-    name: "sql"
-    dir: "elasticsearch"
-    cmdUnix: "bin/plugin"
-    cmdFlags:
-      - 'install'
-      - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
-    readyString: "Installed sql into"
-    sanitize: true
-  elasticDeleteByQuery:
-    name: "delete-by-query"
-    dir: "elasticsearch"
-    cmdUnix: "bin/plugin"
-    cmdFlags:
-      - 'install'
-      - 'delete-by-query'
-    readyString: "Installed delete-by-query into"
-    sanitize: true
-  elasticSiren-join:
-    name: "siren-join"
-    dir: "elasticsearch"
-    cmdUnix: "bin/plugin"
-    cmdFlags:
-      - 'install'
-      - 'solutions.siren/siren-join/2.3.4-1'
-    readyString: "Installed siren-join into"
-    sanitize: true
+  # elasticKopf:
+  #   name: "kopf"
+  #   dir: "elasticsearch"
+  #   cmdUnix: "bin/plugin"
+  #   cmdFlags:
+  #     - 'install'
+  #     - 'lmenezes/elasticsearch-kopf/2.0'
+  #   readyString: "Installed kopf into"
+  #   sanitize: true
+  # dejavu:
+  #   name: "dejavu"
+  #   dir: "elasticsearch"
+  #   cmdUnix: "bin/plugin"
+  #   cmdFlags:
+  #     - 'install'
+  #     - 'appbaseio/dejavu'
+  #   readyString: "Installed dejavu into"
+  #   sanitize: true
+  # elasticSql:
+  #   name: "sql"
+  #   dir: "elasticsearch"
+  #   cmdUnix: "bin/plugin"
+  #   cmdFlags:
+  #     - 'install'
+  #     - 'https://github.com/NLPchina/elasticsearch-sql/releases/download/2.3.4.0/elasticsearch-sql-2.3.4.0.zip'
+  #   readyString: "Installed sql into"
+  #   sanitize: true
+  # elasticDeleteByQuery:
+  #   name: "delete-by-query"
+  #   dir: "elasticsearch"
+  #   cmdUnix: "bin/plugin"
+  #   cmdFlags:
+  #     - 'install'
+  #     - 'delete-by-query'
+  #   readyString: "Installed delete-by-query into"
+  #   sanitize: true
+  # elasticSiren-join:
+  #   name: "siren-join"
+  #   dir: "elasticsearch"
+  #   cmdUnix: "bin/plugin"
+  #   cmdFlags:
+  #     - 'install'
+  #     - 'solutions.siren/siren-join/2.3.4-1'
+  #   readyString: "Installed siren-join into"
+  #   sanitize: true
   # knapsack:
   #   name: "elasticsearch-knapsack"
   #   dir: "elasticsearch"

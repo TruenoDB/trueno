@@ -39,8 +39,6 @@
         path.data: "elasticsearch"
         indices.requests.cache.size: "35%"
         indices.queries.cache.size: "30%"
-        trueno.api.port: 8012
-        trueno.api.hostname: "localhost"
       hostMappings:
         -
           - 'configFlags'
@@ -138,4 +136,24 @@
           - 'cmdFlags'
           - 0
       readyString: "Trueno Bridge server is up"
+      next: []
+    cerebro:
+      name: "Cerebro"
+      dir: "cerebro"
+      cmdUnix: "bin/cerebro"
+      interpreter: "bash"
+      deploy: true
+      suppressErrors: true
+      joinCmdFlags: ""
+      cmdFlags:
+        - "-Dhttp.port="
+        - 8008
+        - " "
+        - "-Dhttp.address="
+        - "localhost"
+      hostMappings:
+        -
+          - 'cmdFlags'
+          - 4
+      readyString: "Listening for HTTP on"
       next: []

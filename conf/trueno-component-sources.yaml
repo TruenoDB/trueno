@@ -9,11 +9,19 @@
   elasticsearch:
     name: "Elasticsearch"
     description: "Elasticsearch search engine."
-    version: "2.3.4"
+    version: "5.3.2"
     dir: "elasticsearch"
     links:
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.3.4/elasticsearch-2.3.4.tar.gz"
-      - "https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip"
+      - "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.2.tar.gz"
+      - "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.2.zip"
+  cerebro:
+    name: "cerebro"
+    description: "Elasticsearch web admin tool built using Scala, Play Framework, AngularJS and Bootstrap."
+    version: "0.6.5"
+    dir: "cerebro"
+    links:
+      - "https://github.com/lmenezes/cerebro/releases/download/v0.6.5/cerebro-0.6.5.tgz"
+      - "https://github.com/lmenezes/cerebro/releases/download/v0.6.5/cerebro-0.6.5.zip"
   spark:
     name: "Spark"
     description: "The Apache Spark distributed computational engine."
