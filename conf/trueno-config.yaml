@@ -31,7 +31,7 @@
       deploy: true
       configFlags:
         cluster.name: "trueno"
-        http.port: 8004
+        network.port: 8004
         network.host: 0.0.0.0
         transport.host: localhost
         action.auto_create_index: false
