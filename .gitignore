@@ -13,3 +13,4 @@ yarn.lock
 binaries
 cassandra
 lib/core/data
+cerebro
