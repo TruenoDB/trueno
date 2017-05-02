@@ -31,11 +31,12 @@
       deploy: true
       configFlags:
         cluster.name: "trueno"
+        node.name: ${HOSTNAME}
         http.port: 8004
         network.host: 0.0.0.0
+        transport.tcp.port: 9300
         transport.host: localhost
         action.auto_create_index: false
-        node.name: ${HOSTNAME}
         discovery.zen.ping.unicast.hosts: ["localhost"]
         path.data: "elasticsearch"
         indices.requests.cache.size: "35%"
