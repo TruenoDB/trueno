@@ -10,7 +10,7 @@
       config: "conf/gremlin-server-trueno.yaml"
       cmdUnix: "bin/gremlin-server.sh"
       interpreter: "bash"
-      deploy: false
+      deploy: true
       cmdFlags:
         - 'conf/gremlin-server-trueno.yaml'
       configFlags:
