@@ -25,7 +25,7 @@
   spark:
     name: "Spark"
     description: "The Apache Spark distributed computational engine."
-    version: "2.1.0 with hadoop 2.7"
+    version: "2.1.1 with hadoop 2.7"
     dir: "spark"
     links:
       - "http://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz"
