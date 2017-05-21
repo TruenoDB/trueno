@@ -25,10 +25,10 @@
   spark:
     name: "Spark"
     description: "The Apache Spark distributed computational engine."
-    version: "1.6.1 with hadoop 2.6"
+    version: "2.1.1 with hadoop 2.7"
     dir: "spark"
     links:
-      - "http://archive.apache.org/dist/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz"
+      - "http://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz"
   trueno_compute_server:
       name: "Trueno Compute Server"
       description: "The Apache Spark Job Server."

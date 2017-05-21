@@ -29,7 +29,7 @@
     "papaparse": "^4.1.2"
   },
   "resolutions": {
-    "angular": "1.5.8",
+    "angular": "1.6.4",
     "tv4": "~1.0.15",
     "objectpath": "~1.1.0",
     "jquery": "^2.2"
