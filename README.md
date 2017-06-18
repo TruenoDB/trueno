@@ -42,7 +42,7 @@
 ## Architecture:
 
 <p align="center">
-  <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
+  <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_architecture_2.png">
 </p>
 
 > **Components:**
@@ -81,7 +81,7 @@
 ----------
 
 <p align="center">
-  <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
+  <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_laboratory.png">
 </p>
 
 > **TruenoDB Interface Features:**
