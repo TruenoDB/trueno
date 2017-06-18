@@ -53,11 +53,11 @@
 > 4. **Trueno Core**: Database/Computational Engine Core.
 > 5. **Apache Solr** [3]: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
 > 6. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
-> 7. **Scylla DB** [6]: World's fastest NoSQL column store database. Fully compatible with Apache **Cassandra** [7] at 10x the throughput and low latency. Stores all graph structures.
+> 7. **Elasticsearch** [6]: Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. Stores all graph structures.
 
 
-##Storage Schema:
-* Each **Keyspace** is a graph.
+## Storage Schema:
+* Each **Index** is a graph.
 * **Distributed** workload and storage.
 * **Data replication** to increase availability.
 * **Data sharding** support for horizontal scaling.
@@ -65,20 +65,18 @@
 * **Analytic results** (built-in collection of algorithms) stored in graph structure for easier post-analysis.
 
 
-##Roadmap to alpha version:
+## Roadmap to alpha version:
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
-| Core                            |      30%      |
-| Web Console                     |      30%      |
+| Core                            |      50%      |
+| Web Console                     |      50%      |
 | Connectors                      |      20%      |
-| Graph Compute Engine            |      20%      |
-| Backend Storage                 |      20%      |
-| Indexing                        |      10%      |
-| Gremlin Tinkerpop Integration   |      20%      |
+| Graph Compute Engine            |      50%      |
+| Backend Storage / Indexing      |      50%      |
+| Gremlin Tinkerpop Integration   |      40%      |
 | Dynamic Graphs                  |      10%      |
 | Tensorflow Integration          |      05%      |
-
 
 ----------
 
@@ -107,8 +105,7 @@ $ npm install -g trueno
 
 ```
 
-
-###References:
+### References:
  * [1] https://tinkerpop.apache.org/
  * [2] https://www.tensorflow.org/
  * [3] https://lucene.apache.org/solr/
@@ -120,6 +117,6 @@ $ npm install -g trueno
  * [9] https://www.websocket.org/aboutwebsocket.html
  * [10] http://sigmajs.org/
  * [11] https://github.com/tinkerpop/gremlin/wiki
-
+ * [12] https://www.elastic.co/products/elasticsearch
 
  © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
