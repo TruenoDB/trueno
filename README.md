@@ -30,7 +30,7 @@
 ## Building blocks:
 
 <p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
+  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_components.png">
 </p>
 
 ## Workflow with **TruenoDB**:
