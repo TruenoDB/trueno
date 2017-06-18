@@ -49,11 +49,9 @@
 
 > 1. **Gremlin (Apache Tinkerpop)** [1]: A graph traversal language for intuitive and easy graph analysis.
 > 2. **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
-> 3. **TensorFlow** [2]: Open Source Software Library for Machine Intelligence
-> 4. **Trueno Core**: Database/Computational Engine Core.
-> 5. **Apache Solr** [3]: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
-> 6. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
-> 7. **Elasticsearch** [6]: Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. Stores all graph structures.
+> 3. **Trueno Core**: Database/Computational Engine Core.
+> 4. **Elasticsearch** [6]: Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. Stores all graph structures.
+> 5. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
 
 
 ## Storage Schema:
