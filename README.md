@@ -30,7 +30,7 @@
 ## Building blocks:
 
 <p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/building_blocks.png">
+  <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_components.png">
 </p>
 
 ## Workflow with **TruenoDB**:
@@ -42,22 +42,20 @@
 ## Architecture:
 
 <p align="center">
-  <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/architecture.png">
+  <img height="400" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_architecture_2.png">
 </p>
 
 > **Components:**
 
 > 1. **Gremlin (Apache Tinkerpop)** [1]: A graph traversal language for intuitive and easy graph analysis.
 > 2. **Web Console**: Web Interface for graph processing, analytics, visualization, and database management. Data laboratory that connects directly to the database/processing engine.
-> 3. **TensorFlow** [2]: Open Source Software Library for Machine Intelligence
-> 4. **Trueno Core**: Database/Computational Engine Core.
-> 5. **Apache Solr** [3]: The popular, blazing-fast, open source enterprise search platform built on Apache Lucene™ used for vertices and edges properties indexing.
-> 6. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
-> 7. **Scylla DB** [6]: World's fastest NoSQL column store database. Fully compatible with Apache **Cassandra** [7] at 10x the throughput and low latency. Stores all graph structures.
+> 3. **Trueno Core**: Database/Computational Engine Core.
+> 4. **Elasticsearch** [6]: Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. Stores all graph structures.
+> 5. **Apache Spark** [4]: a fast and general engine for large-scale data processing. Used for Distributed Graph Processing (GraphX [5]).
 
 
-##Storage Schema:
-* Each **Keyspace** is a graph.
+## Storage Schema:
+* Each **Index** is a graph.
 * **Distributed** workload and storage.
 * **Data replication** to increase availability.
 * **Data sharding** support for horizontal scaling.
@@ -65,25 +63,23 @@
 * **Analytic results** (built-in collection of algorithms) stored in graph structure for easier post-analysis.
 
 
-##Roadmap to alpha version:
+## Roadmap to alpha version:
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
-| Core                            |      30%      |
-| Web Console                     |      30%      |
+| Core                            |      50%      |
+| Web Console                     |      50%      |
 | Connectors                      |      20%      |
-| Graph Compute Engine            |      20%      |
-| Backend Storage                 |      20%      |
-| Indexing                        |      10%      |
-| Gremlin Tinkerpop Integration   |      20%      |
+| Graph Compute Engine            |      50%      |
+| Backend Storage / Indexing      |      50%      |
+| Gremlin Tinkerpop Integration   |      40%      |
 | Dynamic Graphs                  |      10%      |
 | Tensorflow Integration          |      05%      |
-
 
 ----------
 
 <p align="center">
-  <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_interface.png">
+  <img height="500" src="https://raw.githubusercontent.com/TruenoDB/trueno/master/assets/images/trueno_laboratory.png">
 </p>
 
 > **TruenoDB Interface Features:**
@@ -107,8 +103,7 @@ $ npm install -g trueno
 
 ```
 
-
-###References:
+### References:
  * [1] https://tinkerpop.apache.org/
  * [2] https://www.tensorflow.org/
  * [3] https://lucene.apache.org/solr/
@@ -120,6 +115,6 @@ $ npm install -g trueno
  * [9] https://www.websocket.org/aboutwebsocket.html
  * [10] http://sigmajs.org/
  * [11] https://github.com/tinkerpop/gremlin/wiki
-
+ * [12] https://www.elastic.co/products/elasticsearch
 
  © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)

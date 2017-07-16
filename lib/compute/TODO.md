@@ -1,22 +1,22 @@
-#Compute TODO
+# Compute TODO
 
 **Please refer to https://github.com/TruenoDB/trueno-compute-server**
 
 (There is a Spark Compute Server Algorithm's Generator.)
 
-###Spark job Server
+### Spark job Server
  * Distributed configuration
  * Installer
  * Complementary options
  
-###Algorithms
+### Algorithms
  * [1] Include RDD Persistence API (Transformations **persist** **cache**)
  * [2] Organize data using Key/Value pairs (**Grouping and Sorting**, **Joins**)
  * [3] Understand Tuning and Partitioning, implement techniques on new algorithms
  * [4] There exist a way to **join** Cassandra tables using Spark/Cassandra connector (requires expensive shuffling)
  * [5] Test DataFrames and validate implementation on new algorithms.
 
-###Implement well known algorithms (equivalent to NetworkX)
+### Implement well known algorithms (equivalent to NetworkX)
  * Clustering
  * Centrality
  * Closeness
