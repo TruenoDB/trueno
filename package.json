@@ -57,7 +57,7 @@
   "private": false,
   "dependencies": {
     "bluebird": "^3.4.0",
-    "bodybuilder": "^1.14.0",
+    "bodybuilder": "^2.2.0",
     "bower": "^1.7.9",
     "commander": "^2.9.0",
     "download": "^5.0.2",
