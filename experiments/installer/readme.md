@@ -1,12 +1,12 @@
-##Trueno from Dev branch as global
+## Trueno from Dev branch as global
 
 ```
 npm install -g git://github.com/TruenoDB/trueno.git#dev
 ```
 
-##Spark-Cassandra
+## Spark-Cassandra
 
-###Installing SBT on linux
+### Installing SBT on linux
 Ubuntu and other Debian-based distributions DEB package is officially supported by sbt.
 
 You can download .tgz here: https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz
@@ -21,22 +21,22 @@ sudo apt-get install sbt
 ```
 
 
-###Spark-Cassandra-Connector Installation
+### Spark-Cassandra-Connector Installation
 
-####Clone repository
+#### Clone repository
 
 ```
 maverick@ubuntu:~/Desktop/repos$ git clone https://github.com/datastax/spark-cassandra-connector
 ```
 
 
-####Build the Spark Cassandra Connector
+#### Build the Spark Cassandra Connector
 
 ```
 maverick@ubuntu:~/Desktop/repos/spark-cassandra-connector$ ./sbt/sbt assembly
 ```
 
-#####Result
+##### Result
 ```
 Attempting to fetch sbt
 Launching sbt from sbt/sbt-launch-0.13.8.jar
@@ -70,22 +70,22 @@ Test run finished: 0 failed, 0 ignored, 50 total, 0.227s
 
 ```
 
-###Spark-JobServer Installation
+### Spark-JobServer Installation
 
-####Clone repository
+#### Clone repository
 
 ```
 maverick@ubuntu:~/Desktop/repos$ git clone https://github.com/spark-jobserver/spark-jobserver.git
 ```
 
 
-####Build the Spark Job Server
+#### Build the Spark Job Server
 
 ```
 maverick@ubuntu:~/Desktop/repos/spark-jobserver$ ./sbt/sbt assembly
 ```
 
-####Initiating the Spark Job Server
+#### Initiating the Spark Job Server
 ```
 cd /home/maverick/Desktop/repos/spark-jobserver/
 
