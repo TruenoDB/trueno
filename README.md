@@ -67,12 +67,12 @@
 
 | Component                       | Percentage    |
 | ------------------------------- | ------------- |
-| Core                            |      50%      |
-| Web Console                     |      50%      |
-| Connectors                      |      20%      |
-| Graph Compute Engine            |      50%      |
-| Backend Storage / Indexing      |      50%      |
-| Gremlin Tinkerpop Integration   |      40%      |
+| Core                            |      90%      |
+| Web Console                     |      70%      |
+| Connectors                      |      40%      |
+| Graph Compute Engine            |      70%      |
+| Backend Storage / Indexing      |      90%      |
+| Gremlin Tinkerpop Integration   |      90%      |
 | Dynamic Graphs                  |      10%      |
 | Tensorflow Integration          |      05%      |
 
