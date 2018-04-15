@@ -1,14 +1,14 @@
-#Compute
+# Compute
 
-###Spark Architecture
+### Spark Architecture
 ![spark architecture](./images/spark_architecture.png)
 
-###GraphX
+### GraphX
 Spark GraphX is a graph processing system rather than a graph database. GraphX is limited by the immutability of Spark RDDs.
 
+-----------
 
-
-###References
+### References
 * [1] http://wiki.apache.org/cassandra/GettingStarted
 * [2] https://chongyaorobin.wordpress.com/2015/07/16/step-by-step-of-how-to-configure-apache-spark-to-connect-with-cassandra/
 * [3] [Step by Step of Building Scala SBT project on Intellij] https://chongyaorobin.wordpress.com/2015/07/01/hello-world/
@@ -34,6 +34,6 @@ Spark GraphX is a graph processing system rather than a graph database. GraphX i
 * [21] [Documentation] https://spark.apache.org/docs/1.1.0/api/scala/index.html#org.apache.spark.graphx.lib.ConnectedComponents$
 * [22] https://databricks-training.s3.amazonaws.com/graph-analytics-with-graphx.html
 
-
-####How to create EdgeRDD from data frame in Spark
+-----------
+#### How to create EdgeRDD from data frame in Spark
 * https://stackoverflow.com/questions/34135288/how-to-create-edgerdd-from-data-frame-in-spark
