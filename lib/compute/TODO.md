@@ -27,7 +27,6 @@
  * Topological Sort
  * Trees
  * Shortest Paths
- * Professor Mehmet suggested algorithms
  
-Notes:
+*Notes*:
 * The idea is to enrich the current GraphX stack using Scala and Spark.
