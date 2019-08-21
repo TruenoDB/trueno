@@ -116,5 +116,6 @@ $ npm install -g trueno
  * [10] http://sigmajs.org/
  * [11] https://github.com/tinkerpop/gremlin/wiki
  * [12] https://www.elastic.co/products/elasticsearch
+ * [13] https://doi.org/10.1007/s11042-018-6940-2
 
  © [Victor O. Santos, Servio Palacios, Edgardo Barsallo, Miguel Rivera, Peng Hao, Chih-Hao Fang, Ananth Grama](https://github.com/TruenoDB)
