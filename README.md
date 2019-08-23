@@ -3,6 +3,10 @@
 <img height="300" src="https://raw.githubusercontent.com/TruenoDB/trueno/dev/assets/images/logo_medium.png" align="middle">
 
 ----------
+## Acknowledgments
+<b>The work was partially supported by the National Science Foundation Grant number CCF 1533795, Division of Computing and Communication Foundations under the XPS program
+
+----------
 
 ## WARNING
 <b>THIS PROJECT IS UNDER HEAVY DEVELOPMENT AND ITS NOT PRODUCTION READY.</b>
