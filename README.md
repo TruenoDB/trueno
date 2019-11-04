@@ -108,6 +108,9 @@ $ npm install -g trueno
 
 ```
 
+## Talks
+* "Secure Architecture for Graph Database Systems". Invited Talk at JPL/NASA. August 29, 2019.
+
 ### References:
  * [1] https://tinkerpop.apache.org/
  * [2] https://www.tensorflow.org/
