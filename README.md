@@ -74,7 +74,7 @@
 | Core                            |      90%      |
 | Web Console                     |      70%      |
 | Connectors                      |      40%      |
-| Oblivious Computation           |      20%      |
+| Oblivious Computation           |      30%      |
 | Graph Compute Engine            |      70%      |
 | Backend Storage / Indexing      |      90%      |
 | Gremlin Tinkerpop Integration   |      90%      |
